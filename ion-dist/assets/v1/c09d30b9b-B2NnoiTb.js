@@ -1,0 +1,1 @@
+import{Mt as e}from"./shared-19-CxubpVir.js";var t=[["cxdir-granular"],e];function n(e,t){return r(e).flatMap(e=>e.plugins).find(e=>e.isRegistry===!0&&e.pluginId===t&&e.omitted===void 0)}function r(e){return t.flatMap(t=>e.getQueriesData({queryKey:t})).flatMap(([,e])=>i(e))}function i(e){return e===void 0?[]:"pages"in e?e.pages:[e]}export{n,r as t};

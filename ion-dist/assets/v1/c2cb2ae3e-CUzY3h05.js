@@ -1,0 +1,1 @@
+import{$a as e}from"./vendor-frame-Dy-urf5a.js";import{xs as t}from"./shared-frame-DeSSgTpM.js";import{c as n}from"./cbf215181-DdDMgKXK.js";function r(r){return i=>e(t,{external:!0,href:n(r)},i)}export{r as t};

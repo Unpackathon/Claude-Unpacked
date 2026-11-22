@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{cr as t}from"./shared-41-CFsocOl8.js";function n(n){let $=J9(2),{className:r}=n;return J1($,0,r)?K1($,0,r,e(t,{standalone:!0,className:r})):$[1]}export{n as t};

@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({install:{defaultMessage:"Couldn\u2019t install the extension.",id:"ZeQoFY9BeV"},update:{defaultMessage:"Couldn\u2019t update the extension.",id:"UPZQZa9dSO"}});export{t};

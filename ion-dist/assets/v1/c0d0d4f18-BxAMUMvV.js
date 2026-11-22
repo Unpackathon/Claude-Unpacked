@@ -1,0 +1,1 @@
+import{Bs as e}from"./shared-107-D8fgcL1q.js";function t(t,n){let[r,i=""]=t.split(",",2),a=/data:([^;]+)/.exec(r)?.[1]??"image/png",o=e(i);return new File([o],n,{type:a})}export{t};

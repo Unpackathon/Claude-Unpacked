@@ -1,0 +1,1 @@
+function e(e,t){let n=e.closest('[aria-hidden="true"]');return n!==null&&t.contains(n)}function t(t){for(let n of t.querySelectorAll('[data-settle-slot="hidden"], [data-settle-slot="late"]'))if(!e(n,t))return!0;return!1}export{t as n,e as t};

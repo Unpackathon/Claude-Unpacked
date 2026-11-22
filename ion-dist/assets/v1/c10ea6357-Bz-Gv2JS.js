@@ -1,0 +1,1 @@
+import{i as e,t}from"./ccd3ea1d1-p-Cr-GUl.js";function n(n,r){let i={type:n.type};return r===null?i:{...i,error_kind:t(r),...e(r)}}export{n as t};

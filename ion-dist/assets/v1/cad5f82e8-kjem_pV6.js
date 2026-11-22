@@ -1,0 +1,1 @@
+var e=/^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;function t(t){return e.test(t)}function n(e){if(!e||e.startsWith("https://")||e.startsWith("http://")||/:[0-9]+/.test(e.split("/")[0]??""))return!1;let n=e.indexOf("/"),r=n===-1?e:e.substring(0,n),i=n===-1?"":e.substring(n);return!(r.includes("*")||!t(r)||i&&!/^\/[a-zA-Z0-9\-._~/%*]*$/.test(i))}export{n,t};

@@ -1,0 +1,1 @@
+function e(e){return e.typeTitle!==void 0&&e.typeTitle.trim().toLowerCase()!==e.label.trim().toLowerCase()?e.typeTitle:void 0}function t(e,t,n,r,i){return!t||e.some(e=>e.key===t)?e:[...e,{key:t,label:n||t,reference:"read",...r===void 0?{}:{typeTitle:r},...i===void 0?{}:{icon:i}}]}export{t as n,e as t};

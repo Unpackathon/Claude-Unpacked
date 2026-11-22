@@ -1,0 +1,1 @@
+function e(e){return e.isInsideGate===!0&&e.hasLinkWords===!0&&e.isTeam===!0&&e.canManageLibrary===!0}var t="/admin-settings/connectors?modal=add-custom-connector";export{e as n,t};

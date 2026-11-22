@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Qi as t}from"./shared-25-DapkFWlH.js";import{ya as n}from"./shared-1-uKWXuHc9.js";function r(){let $=J9(2),r=t();return J1($,0,r)?K1($,0,r,r==="claude_pro"||r==="claude_max"?null:e(n,{})):$[1]}export{r as t};

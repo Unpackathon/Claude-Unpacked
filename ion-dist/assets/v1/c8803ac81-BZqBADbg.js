@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{U_ as t}from"./shared-206-DmJmFrn0.js";import{Dt as n}from"./vendor-all-1-BocQA2O8.js";function r({testId:r}){return e("p",{role:"status",className:"py-sm text-body text-muted-as-secondary","data-testid":r,children:e(n,{...t.localConnectorsNotUsed})})}export{r as t};

@@ -1,0 +1,1 @@
+import"./shared-41-CFsocOl8.js";import{n as e}from"./cea310427-BPu0h6Dm.js";function t(t,n){if(!n.startsWith(t))return null;let r=n.slice(t.length);return r.length<=256&&e(r)?r:null}function n(e){return t("/mnt/project-files/",e)}function r(e){return t("/mnt/attach/my-files/",e)}export{r as t,n as i};

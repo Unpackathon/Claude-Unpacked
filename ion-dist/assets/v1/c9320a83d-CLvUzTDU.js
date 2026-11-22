@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{Zd as t}from"./shared-0-D23kmOCB.js";import{vT as n}from"./shared-107-D8fgcL1q.js";import{t as r}from"./c4971b21e-1MZ5bC-Z.js";var i=t(()=>RegExp("^\\p{L}(?:.*[\\p{L}\\p{N}]\\p{M}*)?$","su"));function a(t){return t&&(n(t)||!i().test(t))?e(r,{children:t}):t}export{a as t};

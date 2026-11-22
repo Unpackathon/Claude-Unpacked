@@ -1,0 +1,1 @@
+function e(e,t=0){let n=new Date(e);return new Date(n.getFullYear(),n.getMonth(),n.getDate()-t).getTime()}export{e as t};

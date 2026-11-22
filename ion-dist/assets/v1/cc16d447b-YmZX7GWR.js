@@ -1,0 +1,1 @@
+import{tp as e}from"./shared-73-DfCPGdCT.js";function t(){return e("persisted.kind-breeze","off")[0]==="on"}export{t};

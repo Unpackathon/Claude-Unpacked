@@ -1,0 +1,1 @@
+import{Va as e,io as t}from"./vendor-frame-Dy-urf5a.js";var n=t(function(){return e("span",{className:"text-body text-muted-as-secondary","aria-hidden":!0,"data-empty-cell":"",children:"\u2014"})});export{n as t};

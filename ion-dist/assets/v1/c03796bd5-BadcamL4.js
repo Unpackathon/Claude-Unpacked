@@ -1,0 +1,1 @@
+var e="/admin-settings/claude-tag?entry=spotlight";function t(e){return e.complianceBlocked?"none":e.launchedUnconnected?"launched":e.resumable?"resume":e.profilesOnly?"pair-first":e.setupNeeded?"start":"none"}export{t as n,e as t};

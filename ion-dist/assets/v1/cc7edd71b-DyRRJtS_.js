@@ -1,0 +1,1 @@
+function e(e){return(e?.organizations?.length??0)>1||e?.centralized_management_enabled===!0}function t(t){return!t||e(t)}function n(e){return e?.centralized_management_enabled?void 0:e?.organizations}export{n,t as r,e as t};

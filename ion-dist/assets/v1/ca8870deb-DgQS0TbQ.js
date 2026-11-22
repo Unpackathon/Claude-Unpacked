@@ -1,0 +1,2 @@
+import{t as e}from"./c19cfecfb-Cdb5CK6C.js";import{a as t}from"./c476e9be4-D9bo5EyU.js";function n(n,r){let i=n.join(`
+`),a;try{a=e(i,{cacheKey:`${r}:${i}`})}catch{return null}return!a||a.hunks.length===0?null:(a.lang||(a.lang=t(a.name)),a)}export{n as t};

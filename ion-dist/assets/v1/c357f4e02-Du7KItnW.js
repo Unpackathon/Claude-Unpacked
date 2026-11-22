@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import{s_ as e}from"./shared-0-D23kmOCB.js";var t=e(),n;function r(e){e!==n&&(n=e,t.notify())}export{n as _Vz,t as _Cp,r as t};

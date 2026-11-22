@@ -1,0 +1,1 @@
+import{so as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Yd as J3,rf as K3}from"./shared-frame-DeSSgTpM.js";import{d as t}from"./vendor-query-DjWagZkY.js";import{It as n}from"./shared-38-BJgM_wzP.js";function r(r){let $=J9(4),i=e(t),a=n();return J3($,0,i,a,r)?K3($,0,i,a,r,e=>{}):$[3]}export{r as t};

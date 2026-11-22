@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{At as e}from"./shared-8-DsNRSgHE.js";import{r as t}from"./ce19b039c-7kk0lS0_.js";function n(){let $=J9(2),n=t(),r=J1($,0,n)?K1($,0,n,{item:n}):$[1];return e(r)}export{n as default};import"./c9c00352a-fnkrXEce.js";

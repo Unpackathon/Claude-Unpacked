@@ -1,0 +1,1 @@
+import{Tg as e}from"./shared-107-D8fgcL1q.js";import{n as t}from"./cc334f1f2-C4gkBBUX.js";function n(e){return t(e+e)==="\u2019"}function r(e){return Array.from(e).filter(e=>!n(e)).join("")}function i(t){return e(r(r(t).normalize("NFKD")))}function a(e,n){return Array.from(e).length<=100&&(n||!i(e))?t(e):""}export{i as n,a as t};

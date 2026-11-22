@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({need_to_know:{defaultMessage:"Restricted",id:"vP8d/Xd50M"}}),n=e({other:{defaultMessage:"Label",id:"bwZo4FMOuo"}});function r(e){return e==="need_to_know"?t.need_to_know:n.other}export{r as t};

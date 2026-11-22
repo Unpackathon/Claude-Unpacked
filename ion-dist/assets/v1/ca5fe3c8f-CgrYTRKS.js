@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";import{r as t}from"./caac14df6-CSrJvJBk.js";var n=e({line:{defaultMessage:"Not found on this computer: \u201C{program}\u201D",id:"oRMeTMGFQr"}});function r(e,r,i=!1){return e.formatMessage(n.line,{program:i?r:t(e,r)})}export{r as t};

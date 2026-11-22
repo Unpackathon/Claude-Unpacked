@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";function t(){return e("amber_tributary_sanderling_viewer")}function n(){let n=e("amber_tributary_sanderling_viewer_library");return t()&&n}export{n,t};

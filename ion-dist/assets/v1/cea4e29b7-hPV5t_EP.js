@@ -1,0 +1,1 @@
+import"./shared-174-Uzjlgfhw.js";import{f as e}from"./cb3e6bb79-CGoK9Kt7.js";import{_Tn as t}from"./c24ec5e54-CNPgkwf0.js";function n(n,r){let i=new URLSearchParams({filter:e("",r)});return`${t("plugins",n)}?${i.toString()}`}function r(e){return n({kind:"all"},e)}export{r as t,n};

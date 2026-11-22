@@ -1,0 +1,1 @@
+function e(e,t){let n=3;return{get handle(){return e()},subscribe:t=>e().onSettled(t),mounts:t,askAgain:()=>{let t=e();n>0&&!t.resident&&!t.pending&&(--n,t.warm("open"))}}}export{e as t};

@@ -1,0 +1,1 @@
+function e(){if(typeof window>"u")return!1;let e=window.desktopDeviceClass;if(typeof e=="string")return e==="le4"||e==="8";let t=navigator.deviceMemory;return typeof t=="number"&&t<8}export{e as t};

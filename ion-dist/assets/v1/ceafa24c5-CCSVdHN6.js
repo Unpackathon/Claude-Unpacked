@@ -1,0 +1,1 @@
+import{q as e}from"./shared-25-DapkFWlH.js";function t(t){let{Event:n}=e(t);t.dispatchEvent(new n("ant-layout-settled",{bubbles:!0}))}export{t};

@@ -1,0 +1,1 @@
+import{kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e({defaultMessage:"Claude Security stays on, but members can\u2019t start new fixes in the cloud. They can still copy a fix prompt into their own Claude Code.",id:"nFIl/WnoBj"});export{t};

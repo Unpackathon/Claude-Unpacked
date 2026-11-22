@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{t}from"./frame-shell-combobox-BVsMUt1y.js";function n(n){let $=J9(2);return J1($,0,n)?K1($,0,n,e(t,{searchable:!1,...n})):$[1]}export{n as LoadedCombobox};

@@ -1,0 +1,1 @@
+import{C_ as e}from"./shared-206-DmJmFrn0.js";var t=`${e.selector("menu")}, [role="listbox"], [role="dialog"], [data-open][role="alertdialog"], [data-app-menu-trigger], [data-tile-divider]`,n=new Set(["Alt","AltGraph","CapsLock","Control","Fn","Meta","NumLock","OS","ScrollLock","Shift"]);export{n,t};

@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";import{kt as t}from"./vendor-all-1-BocQA2O8.js";function n(){return e("__gb__532163417")}var r=t({defaultMessage:"This tool has changed since you chose to always allow it, so it needs your approval again.",id:"f++IsFmDtW"});export{n,r as t};

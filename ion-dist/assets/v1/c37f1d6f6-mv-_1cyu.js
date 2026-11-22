@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";function t(t){let $=J9(3),{id:n,children:r}=t;return J2($,0,r,n)?K2($,0,r,n,e("h3",{id:n,className:"text-footnote text-muted-as-secondary",children:r})):$[2]}export{t};

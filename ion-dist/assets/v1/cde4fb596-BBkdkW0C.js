@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Ea as e}from"./shared-8-DsNRSgHE.js";function t(t){let $=J9(2),n=J1($,0,t)?K1($,0,t,e=>t?e.sessions.find(e=>e.sessionId===t):void 0):$[1];return e(n)}export{t};

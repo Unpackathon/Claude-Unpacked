@@ -1,0 +1,1 @@
+function e({connectorsRecord:e,hasListing:t}){return e==="being_read"&&t===!1}export{e as t};

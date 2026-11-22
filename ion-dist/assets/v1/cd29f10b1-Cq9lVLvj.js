@@ -1,0 +1,1 @@
+import{t as e}from"./c704509be-BRGyZolb.js";var t=["USD"];function n(t,n){let r=Math.max(t,n,0);for(let t of e){let e=t*100;if(e>r)return e}let i=5e4;return(Math.floor(r/i)+1)*i}function r(e,r,i){if(!t.includes(i)||r<=0)return null;let a=n(e,r);return a<=r*4?a:null}export{r as t};

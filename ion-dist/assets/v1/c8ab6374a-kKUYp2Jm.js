@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/v1/shared-frame-kvmio2lb.css","assets/v1/shared-styles-DyIGYKNa.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-sR4dxpO6.js";import{my as t,py as n}from"./shared-206-DmJmFrn0.js";var r=n({entry:{id:"district_lc_consent_dialog",tier:"T3",load:()=>e(()=>import("./c14958c95-xrwa5DH-.js"),__vite__mapDeps([0,1]))},pick:e=>e.DistrictLearningCommonsDialog,options:{ssr:!1,loading:t("placeholder-would-mislead"),onChunkError:"fail-open"}}),i=r.Component,a=r.handle;export{a as n,i as t};

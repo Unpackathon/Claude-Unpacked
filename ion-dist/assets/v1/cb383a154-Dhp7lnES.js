@@ -1,0 +1,1 @@
+import{xo as e}from"./vendor-frame-Dy-urf5a.js";import{qa as t}from"./shared-0-D23kmOCB.js";function n(){let[n]=e(t);return n}export{n as t};

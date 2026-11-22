@@ -1,0 +1,1 @@
+import{Y as e}from"./shared-25-DapkFWlH.js";import{R_ as t}from"./shared-1-uKWXuHc9.js";function n(){return e()?"ccd":"ccr"}function r(){let e=n();return t(e).cdsCatalog===void 0?"code":e}export{n as t,r as n};

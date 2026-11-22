@@ -1,0 +1,1 @@
+function e(e){return e.mcp_app_opened_by_page===!0}export{e as t};

@@ -1,0 +1,1 @@
+import{O as e}from"./shared-107-D8fgcL1q.js";import{o as t}from"./shared-238-CGzDEQRA.js";function n(n){let r=t(n);return n.plugin.isShared?JSON.stringify([r,e(n.plugin)]):r}export{n as t};

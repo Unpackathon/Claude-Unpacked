@@ -1,0 +1,6 @@
+import{If as e}from"./shared-141-K5japEQk.js";import{E as t,M as n,m as r}from"./c9081d688-Dt5Zx8YP.js";function i(e,i){let a=t(e,i);if(a!==void 0)return e.status==="failed"&&!r(e)||e.hostNote==="settings_connectors_off"?void 0:{kind:"account",id:a};let o=n(e);return o===void 0?void 0:{kind:"session",id:o}}function a(t){return`mcp__${e(t)}__`}function o(e,t){let n=e.listedNames.split(`
+`),r=e.listedTargets.split(`
+`);return new Map(e.listedToolPrefixes.split(`
+`).flatMap((e,i)=>{let a=n[i];return e!==""&&a!==void 0&&(!t||(r[i]??"")!=="")?[[e,a]]:[]}))}function s({listedToolPrefixes:e,listedTargets:t}){let n=t.split(`
+`);return e.split(`
+`).flatMap((e,t)=>{let r=l(n[t]);return e!==""&&r?.kind==="account"?[[e,r.id]]:[]})}function c(e){try{return e===void 0?"":`${e.kind}:${encodeURIComponent(e.id)}`}catch{return""}}function l(e){let[,t,n]=/^(account|session):([^:]+)$/.exec(e??"")??[];try{return(t==="account"||t==="session")&&n!==void 0?{kind:t,id:decodeURIComponent(n)}:void 0}catch{return}}export{c as a,l as i,o as n,a as o,i as r,s as t};

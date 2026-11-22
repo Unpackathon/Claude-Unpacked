@@ -1,0 +1,1 @@
+import"./shared-frame-DeSSgTpM.js";import{yl as e}from"./shared-25-DapkFWlH.js";import{Wp as t,ou as n,wf as r}from"./shared-141-K5japEQk.js";import"./shared-238-CGzDEQRA.js";function i(){return e("__gb__4058187783")}function a(e,i){return e!==void 0&&e.type==="remote"&&!i&&!t(e)&&!e.id_jag_config&&n(e)&&!!e.url&&r(e.url)!==null}export{a as t,i as _2x};

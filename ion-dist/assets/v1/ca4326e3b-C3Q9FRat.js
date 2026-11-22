@@ -1,0 +1,1 @@
+function e(e){return/^\/customize\/connectors(\/|$)/i.test(e)}export{e as t};

@@ -1,0 +1,1 @@
+function e(e){return(e??"").replace(/[^\x21-\x5b\x5d-\x7e]/gu,e=>`\\u{${(e.codePointAt(0)??0).toString(16).toUpperCase()}}`)}function t(t){return e(t)!==t}export{e as n,t};

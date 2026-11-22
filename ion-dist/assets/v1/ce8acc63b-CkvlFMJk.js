@@ -1,0 +1,1 @@
+import{t as e}from"./ce8acc63b-CVCAubZP.js";function t(t){e(t,[/\r?\n|\r/g,n])}function n(){return{type:"break"}}function r(){return function(e){t(e)}}export{r as t};

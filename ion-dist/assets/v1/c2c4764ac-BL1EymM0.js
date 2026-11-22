@@ -1,0 +1,1 @@
+import{py as e}from"./shared-25-DapkFWlH.js";function t(){return e(Date.now,0)}function n(e,t){return(t-Math.max(...e.map(e=>Date.parse(e.created_at??""))))/864e5>=3}export{t as n,n as t};

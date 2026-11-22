@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{Wd as e,ff as t}from"./shared-206-DmJmFrn0.js";var n="/settings/capabilities?highlight=memory";function r(){let $=J9(3),r=t(),i=e(n);return J2($,0,i,r)?K2($,0,i,r,r?{href:n,onClick:i}:void 0):$[2]}export{r as t};

@@ -1,0 +1,1 @@
+var e=["description","tools","prompts"],t=["cowork","claude_code","claude_ai","claude_desktop"];export{e as n,t};

@@ -1,0 +1,1 @@
+import{hf as e}from"./shared-0-D23kmOCB.js";function t(t){return t instanceof e&&(t.errorCode==="missing_client_attestation"||t.extra.reason==="missing_client_attestation")}export{t};

@@ -1,0 +1,1 @@
+function e(e){if("timeout"in AbortSignal)return AbortSignal.timeout(e);let t=new AbortController;return setTimeout(()=>t.abort(),e),t.signal}export{e as t};

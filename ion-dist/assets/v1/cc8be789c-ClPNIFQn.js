@@ -1,0 +1,1 @@
+function e(e){let t=e.replace(/^#/,"");try{return decodeURIComponent(t)}catch{return t}}export{e as t};

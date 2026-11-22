@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{oo as t}from"./shared-1-uKWXuHc9.js";import{Ct as n}from"./vendor-all-0-D8Jg02mn.js";function r(r){return function(){let i=n({select:e=>e.location.searchStr}),a=n({select:e=>e.location.hash});return e(t,{to:`${r}${i}${a?`#${a}`:""}`})}}export{r as t};

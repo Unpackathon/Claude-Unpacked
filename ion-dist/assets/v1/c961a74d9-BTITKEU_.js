@@ -1,0 +1,1 @@
+import{DS as e}from"./shared-107-D8fgcL1q.js";function t(t){return e(t.replace(/^computer:\/\//,""))==="SKILL.md"}function n(e){return/\.skill$/i.test(e)||t(e)}export{n,t};

@@ -1,0 +1,2 @@
+import{Tu as e}from"./shared-1-uKWXuHc9.js";var t=/^([^<>]+\n\n)<goal>\n([^\n<>]+)\n<\/goal>(\n\n[^<>]+)$/;function n(n,r=!1){if(r)return n.trim();let i=e(n.includes(`<goal>
+`)?n.replace(t,"$1$2$3"):n);return i.includes("<claudeai_review_comments>")?n.trim():i}export{n as t};

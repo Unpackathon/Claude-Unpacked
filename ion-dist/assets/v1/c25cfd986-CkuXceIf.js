@@ -1,0 +1,1 @@
+function e(e){return e.isLoading&&!e.errorUpdateCount}function t(e){return e.data===void 0&&(e.failureCount>0||e.errorUpdateCount>0)}export{e as n,t};

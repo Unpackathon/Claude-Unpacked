@@ -1,0 +1,538 @@
+<!-- this is the html for the app's load-error UI. everything else gets loaded from claude.ai -->
+<!doctype html>
+<!-- CDS token scope stamp, static so every CDS custom property resolves from
+     the first frame (precedent: apps/claude-ai/index.html). data-mode="system"
+     follows the app's saved theme via Electron's nativeTheme. Deliberately no
+     data-font, no CDS text color class, and no inline font size: those change
+     the document's inherited font and color. Add them only when this window's
+     styles are CDS-based. -->
+<html
+  class="cds-root"
+  data-mode="system"
+  data-density="comfortable"
+  data-platform="desktop"
+>
+  <head>
+    <script>(function (placeholder, phase) {
+  try {
+    var root = document.documentElement;
+    var paintShapes = function (shapes, scale) {
+      var host = document.getElementById("boot-placeholder-sidebar-rows");
+      if (!host) {
+        return;
+      }
+      host.textContent = "";
+      var highest = null;
+      for (var j = 0; shapes && j < shapes.length; j++) {
+        if (
+          shapes[j].bottom >= 0 &&
+          (!highest ||
+            shapes[j].bottom + shapes[j].height > highest.bottom + highest.height)
+        ) {
+          highest = shapes[j];
+        }
+      }
+      var fold = Infinity;
+      var list = host;
+      if (highest && highest.height === 0) {
+        list = host.appendChild(document.createElement("div"));
+        list.style.inset = "0 0 " + highest.bottom * scale + "px";
+        list.style.overflow = "hidden";
+        list.style.background = "none";
+        if (highest.fade > 0) {
+          var above = function (share) {
+            return " calc(100% - " + highest.fade * scale * share + "px),";
+          };
+          list.style.maskImage =
+            "linear-gradient(#000" + above(1) + "#0008" + above(0.6) + "#0002" + above(0.3) + "#0000)";
+        }
+      } else if (highest && window.innerHeight > 0) {
+        var bandTop =
+          parseFloat(
+            root.style.getPropertyValue("--boot-placeholder-sidebar-top"),
+          ) || 0;
+        fold =
+          (window.innerHeight - bandTop) / scale - highest.bottom - highest.height;
+      }
+      for (var i = 0; shapes && i < shapes.length; i++) {
+        var s = shapes[i];
+        var el = document.createElement("div");
+        var line = s.line || s.rule;
+        if (s.bottom >= 0 && line > 0) {
+          el.style.top = "calc(100% - " + s.bottom * scale + "px)";
+        } else if (s.bottom >= 0) {
+          el.style.bottom = s.bottom * scale + "px";
+        } else if (s.top + s.height > fold) {
+          continue;
+        } else {
+          el.style.top = s.top * scale + "px";
+        }
+        el.style.insetInlineStart = s.left * scale + "px";
+        el.style.width = s.width * scale + "px";
+        el.style.height = s.height * scale + "px";
+        el.style.borderRadius = s.radius * scale + "px";
+        if (s.line > 0) {
+          el.style.insetInlineStart = "0";
+          el.style.width = "100%";
+        }
+        if (line > 0) {
+          el.style.background = "none";
+          el.style.borderTop =
+            line * scale +
+            "px solid var(--boot-placeholder-reported-line, var(--boot-placeholder-seam))";
+        }
+        if (s.shade > 0) {
+          el.style.insetInlineStart = "0";
+          el.style.width = "100%";
+          el.style.height = s.shade * scale + "px";
+          el.style.background = "var(--boot-placeholder-shade)";
+        }
+        (s.bottom >= 0 ? host : list).appendChild(el);
+      }
+    };
+    var paintColors = function (colors) {
+      var painted = [];
+      ["page", "sidebar", "seam", "line", "rail"].forEach(function (name) {
+        var c = colors && colors[name];
+        var property = "--boot-placeholder-reported-" + name;
+        if (c) {
+          var rgba = "rgba(" + [c.red, c.green, c.blue, c.alpha].join(",") + ")";
+          root.style.setProperty(property, rgba);
+          painted.push(name);
+        } else {
+          root.style.removeProperty(property);
+        }
+      });
+      if (colors && colors.sidebar && colors.sidebar.alpha < 1) {
+        root.style.setProperty("--boot-placeholder-sidebar-clip", "border-box");
+      } else {
+        root.style.removeProperty("--boot-placeholder-sidebar-clip");
+      }
+      if (painted.length) {
+        root.setAttribute("data-boot-placeholder-colors", painted.join(" "));
+      } else {
+        root.removeAttribute("data-boot-placeholder-colors");
+      }
+    };
+    var frame = placeholder && placeholder.frame;
+    if (phase === "body") {
+      var stamped = parseFloat(
+        root.style.getPropertyValue("--boot-placeholder-scale"),
+      );
+      if (root.getAttribute("data-boot-placeholder-frame") === "sidebar") {
+        var shows = root.hasAttribute("data-boot-placeholder-rail")
+          ? frame.rail
+          : frame;
+        paintShapes(shows && shows.shapes, stamped > 0 ? stamped : 1);
+      }
+      return;
+    }
+    var create = phase === "head";
+    if (create) {
+      if (!placeholder || placeholder.enabled !== true) {
+        return;
+      }
+      root.setAttribute("data-boot-placeholder", "");
+      root.setAttribute("data-boot-placeholder-drag", "");
+      if (placeholder.reportFirstPaint === true) {
+        root.setAttribute("data-boot-placeholder-ground", "");
+      }
+    } else if (!root.hasAttribute("data-boot-placeholder")) {
+      return;
+    }
+    var colors = placeholder.colors;
+    if (
+      create &&
+      colors &&
+      colors.dark !== matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      colors = null;
+    }
+    if (colors || !create) {
+      paintColors(colors);
+    }
+    var shown =
+      root.getAttribute("data-boot-placeholder-frame") === "sidebar";
+    root.removeAttribute("data-boot-placeholder-frame");
+    root.removeAttribute("data-boot-placeholder-rtl");
+    root.removeAttribute("data-boot-placeholder-rail");
+    root.style.removeProperty("--boot-placeholder-rail-row");
+    root.style.removeProperty("--boot-placeholder-sidebar-width");
+    root.style.removeProperty("--boot-placeholder-sidebar-top");
+    paintShapes(null, 1);
+    if (!frame || (!create && !shown)) {
+      return;
+    }
+    var shellZoom = placeholder.shellZoomFactor;
+    if (!(shellZoom > 0)) {
+      shellZoom = 1;
+    }
+    var scale = frame.zoomFactor / shellZoom;
+    if (!(scale > 0)) {
+      return;
+    }
+    var width = window.innerWidth;
+    var collapsed =
+      frame.collapsed ||
+      (width > 0 && width / scale <= frame.narrowViewportMaxWidth);
+    root.style.setProperty("--boot-placeholder-scale", String(scale));
+    var rail = collapsed && frame.rail;
+    if (rail) {
+      collapsed = false;
+      root.setAttribute("data-boot-placeholder-rail", "");
+      root.style.setProperty(
+        "--boot-placeholder-rail-row",
+        rail.titleRow * scale + "px",
+      );
+    }
+    if (!collapsed) {
+      root.style.setProperty(
+        "--boot-placeholder-sidebar-width",
+        (rail ? rail.width : frame.sidebarWidth) * scale + "px",
+      );
+      if (frame.top > 0) {
+        root.style.setProperty(
+          "--boot-placeholder-sidebar-top",
+          frame.top * scale + "px",
+        );
+      }
+      if (frame.rtl) {
+        root.setAttribute("data-boot-placeholder-rtl", "");
+      }
+      paintShapes((rail || frame).shapes, scale);
+    }
+    root.setAttribute(
+      "data-boot-placeholder-frame",
+      collapsed ? "collapsed" : "sidebar",
+    );
+  } catch (_e) {}
+})(globalThis.desktopBootPlaceholder, "head");</script>
+
+    <!-- First-frame rules and the plain error screen's only. The page ground resolves light/dark from
+         nativeTheme via prefers-color-scheme, then from .darkTheme once
+         windowBaseCore runs (values = window-shared.css's
+         --claude-*-color, pinned equal by build/mainWindowFirstFrame.test.ts:
+         these unlayered rules outrank that sheet's @layer base for the
+         document's life; the boot placeholder, when this launch enables it,
+         paints its own ground over this). Tailwind/CDS and the fonts arrive
+         with the lazy MainWindowPage chunk: the shell draws no text and no
+         styled element at rest. -->
+    <style>html,body{height:100%;margin:0;padding:0}body{color:#000;background-color:#fcfcfb}@media (prefers-color-scheme:dark){body{color:#fff;background-color:#151515}}body.darkTheme{color:#fff;background-color:#151515}.nc-no-drag{-webkit-app-region:no-drag}.nc-drag{-webkit-app-region:drag}.load-error-fallback{z-index:50;background-color:inherit;text-align:center;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:0 48px;font:14px system-ui;display:flex;position:fixed;inset:0}.load-error-fallback>*{font:inherit;margin:0}.load-error-fallback>button{all:revert;font:inherit;-webkit-app-region:no-drag}.load-error-fallback>h1{font-size:20px}</style>
+    <script type="module" crossorigin src="./assets/main-FILtpTCH.js"></script>
+    <style>
+  html[data-boot-placeholder] body {
+    background-color: #ffffff;
+    --boot-placeholder-sidebar: #fafafa;
+    --boot-placeholder-seam: rgb(0 0 0 / 0.1);
+    --boot-placeholder-row: rgba(11, 11, 11, 0.05);
+    --boot-placeholder-shade: linear-gradient(to top, rgba(11, 11, 11, 0.08), color-mix(in srgb, rgba(11, 11, 11, 0.08) 35%, transparent) 40%, transparent);
+  }
+  @media (prefers-color-scheme: dark) {
+    html[data-boot-placeholder] body {
+      background-color: #191919;
+      --boot-placeholder-sidebar: #1f1f1f;
+      --boot-placeholder-seam: rgb(255 255 255 / 0.1);
+      --boot-placeholder-row: rgba(255, 255, 255, 0.075);
+      --boot-placeholder-shade: linear-gradient(to top, rgba(0, 0, 0, 0.24), color-mix(in srgb, rgba(0, 0, 0, 0.24) 35%, transparent) 40%, transparent);
+    }
+  }
+  html[data-boot-placeholder] body.darkTheme {
+    background-color: #191919;
+    --boot-placeholder-sidebar: #1f1f1f;
+    --boot-placeholder-seam: rgb(255 255 255 / 0.1);
+    --boot-placeholder-row: rgba(255, 255, 255, 0.075);
+    --boot-placeholder-shade: linear-gradient(to top, rgba(0, 0, 0, 0.24), color-mix(in srgb, rgba(0, 0, 0, 0.24) 35%, transparent) 40%, transparent);
+  }
+  html[data-boot-placeholder][data-boot-placeholder-colors~="page"] body {
+    background-color: var(--boot-placeholder-reported-page);
+  }
+  html[data-boot-placeholder][data-boot-placeholder-colors~="sidebar"] body {
+    --boot-placeholder-sidebar: var(--boot-placeholder-reported-sidebar);
+  }
+  html[data-boot-placeholder][data-boot-placeholder-colors~="seam"] body {
+    --boot-placeholder-seam: var(--boot-placeholder-reported-seam);
+  }
+  html[data-boot-placeholder][data-boot-placeholder-ground] body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: inherit;
+    pointer-events: none;
+  }
+  #boot-placeholder-sidebar {
+    display: none;
+    position: fixed;
+    top: var(--boot-placeholder-sidebar-top, 0px);
+    bottom: 0;
+    left: 0;
+    width: var(--boot-placeholder-sidebar-width);
+    box-sizing: border-box;
+    direction: ltr;
+    border-inline-end: calc(1px * var(--boot-placeholder-scale, 1)) solid var(--boot-placeholder-seam);
+    background-color: var(--boot-placeholder-sidebar);
+    background-clip: var(--boot-placeholder-sidebar-clip, padding-box);
+    pointer-events: none;
+    font-family: system-ui;
+  }
+  html[data-boot-placeholder][data-boot-placeholder-frame="sidebar"] #boot-placeholder-sidebar {
+    display: block;
+  }
+  html[data-boot-placeholder][data-boot-placeholder-rtl] #boot-placeholder-sidebar {
+    left: auto;
+    right: 0;
+    direction: rtl;
+  }
+  html[data-boot-placeholder][data-boot-placeholder-rail] #boot-placeholder-sidebar {
+    width: 100%;
+    border-width: 0;
+    background: none;
+  }
+  html[data-boot-placeholder][data-boot-placeholder-rail] #boot-placeholder-sidebar::before,
+  html[data-boot-placeholder][data-boot-placeholder-rail] #boot-placeholder-sidebar::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    box-sizing: border-box;
+    border: 0 solid var(--boot-placeholder-reported-rail, var(--boot-placeholder-seam));
+  }
+  html[data-boot-placeholder][data-boot-placeholder-rail] #boot-placeholder-sidebar::before {
+    width: 100%;
+    height: var(--boot-placeholder-rail-row);
+    border-bottom-width: calc(1px * var(--boot-placeholder-scale, 1));
+  }
+  html[data-boot-placeholder][data-boot-placeholder-rail] #boot-placeholder-sidebar::after {
+    top: var(--boot-placeholder-rail-row);
+    bottom: 0;
+    width: var(--boot-placeholder-sidebar-width);
+    border-inline-end-width: min(1px * var(--boot-placeholder-scale, 1), var(--boot-placeholder-sidebar-width));
+  }
+  html[data-boot-placeholder] body:has([data-load-error-overlay]) #boot-placeholder-sidebar {
+    display: none;
+  }
+  #boot-placeholder-sidebar-rows {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  #boot-placeholder-sidebar-rows div {
+    position: absolute;
+    background-color: var(--boot-placeholder-row);
+  }
+  #boot-placeholder-drag-strip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(48px * var(--boot-placeholder-scale, 1));
+    -webkit-app-region: drag;
+  }
+  html[data-boot-placeholder][data-boot-placeholder-drag] #boot-placeholder-drag-strip {
+    display: block;
+  }
+</style>
+  </head>
+
+  <body class="light">
+    <div id="boot-placeholder-sidebar" aria-hidden="true">      <div id="boot-placeholder-sidebar-rows"></div>
+</div>
+    <script>(function (placeholder, phase) {
+  try {
+    var root = document.documentElement;
+    var paintShapes = function (shapes, scale) {
+      var host = document.getElementById("boot-placeholder-sidebar-rows");
+      if (!host) {
+        return;
+      }
+      host.textContent = "";
+      var highest = null;
+      for (var j = 0; shapes && j < shapes.length; j++) {
+        if (
+          shapes[j].bottom >= 0 &&
+          (!highest ||
+            shapes[j].bottom + shapes[j].height > highest.bottom + highest.height)
+        ) {
+          highest = shapes[j];
+        }
+      }
+      var fold = Infinity;
+      var list = host;
+      if (highest && highest.height === 0) {
+        list = host.appendChild(document.createElement("div"));
+        list.style.inset = "0 0 " + highest.bottom * scale + "px";
+        list.style.overflow = "hidden";
+        list.style.background = "none";
+        if (highest.fade > 0) {
+          var above = function (share) {
+            return " calc(100% - " + highest.fade * scale * share + "px),";
+          };
+          list.style.maskImage =
+            "linear-gradient(#000" + above(1) + "#0008" + above(0.6) + "#0002" + above(0.3) + "#0000)";
+        }
+      } else if (highest && window.innerHeight > 0) {
+        var bandTop =
+          parseFloat(
+            root.style.getPropertyValue("--boot-placeholder-sidebar-top"),
+          ) || 0;
+        fold =
+          (window.innerHeight - bandTop) / scale - highest.bottom - highest.height;
+      }
+      for (var i = 0; shapes && i < shapes.length; i++) {
+        var s = shapes[i];
+        var el = document.createElement("div");
+        var line = s.line || s.rule;
+        if (s.bottom >= 0 && line > 0) {
+          el.style.top = "calc(100% - " + s.bottom * scale + "px)";
+        } else if (s.bottom >= 0) {
+          el.style.bottom = s.bottom * scale + "px";
+        } else if (s.top + s.height > fold) {
+          continue;
+        } else {
+          el.style.top = s.top * scale + "px";
+        }
+        el.style.insetInlineStart = s.left * scale + "px";
+        el.style.width = s.width * scale + "px";
+        el.style.height = s.height * scale + "px";
+        el.style.borderRadius = s.radius * scale + "px";
+        if (s.line > 0) {
+          el.style.insetInlineStart = "0";
+          el.style.width = "100%";
+        }
+        if (line > 0) {
+          el.style.background = "none";
+          el.style.borderTop =
+            line * scale +
+            "px solid var(--boot-placeholder-reported-line, var(--boot-placeholder-seam))";
+        }
+        if (s.shade > 0) {
+          el.style.insetInlineStart = "0";
+          el.style.width = "100%";
+          el.style.height = s.shade * scale + "px";
+          el.style.background = "var(--boot-placeholder-shade)";
+        }
+        (s.bottom >= 0 ? host : list).appendChild(el);
+      }
+    };
+    var paintColors = function (colors) {
+      var painted = [];
+      ["page", "sidebar", "seam", "line", "rail"].forEach(function (name) {
+        var c = colors && colors[name];
+        var property = "--boot-placeholder-reported-" + name;
+        if (c) {
+          var rgba = "rgba(" + [c.red, c.green, c.blue, c.alpha].join(",") + ")";
+          root.style.setProperty(property, rgba);
+          painted.push(name);
+        } else {
+          root.style.removeProperty(property);
+        }
+      });
+      if (colors && colors.sidebar && colors.sidebar.alpha < 1) {
+        root.style.setProperty("--boot-placeholder-sidebar-clip", "border-box");
+      } else {
+        root.style.removeProperty("--boot-placeholder-sidebar-clip");
+      }
+      if (painted.length) {
+        root.setAttribute("data-boot-placeholder-colors", painted.join(" "));
+      } else {
+        root.removeAttribute("data-boot-placeholder-colors");
+      }
+    };
+    var frame = placeholder && placeholder.frame;
+    if (phase === "body") {
+      var stamped = parseFloat(
+        root.style.getPropertyValue("--boot-placeholder-scale"),
+      );
+      if (root.getAttribute("data-boot-placeholder-frame") === "sidebar") {
+        var shows = root.hasAttribute("data-boot-placeholder-rail")
+          ? frame.rail
+          : frame;
+        paintShapes(shows && shows.shapes, stamped > 0 ? stamped : 1);
+      }
+      return;
+    }
+    var create = phase === "head";
+    if (create) {
+      if (!placeholder || placeholder.enabled !== true) {
+        return;
+      }
+      root.setAttribute("data-boot-placeholder", "");
+      root.setAttribute("data-boot-placeholder-drag", "");
+      if (placeholder.reportFirstPaint === true) {
+        root.setAttribute("data-boot-placeholder-ground", "");
+      }
+    } else if (!root.hasAttribute("data-boot-placeholder")) {
+      return;
+    }
+    var colors = placeholder.colors;
+    if (
+      create &&
+      colors &&
+      colors.dark !== matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      colors = null;
+    }
+    if (colors || !create) {
+      paintColors(colors);
+    }
+    var shown =
+      root.getAttribute("data-boot-placeholder-frame") === "sidebar";
+    root.removeAttribute("data-boot-placeholder-frame");
+    root.removeAttribute("data-boot-placeholder-rtl");
+    root.removeAttribute("data-boot-placeholder-rail");
+    root.style.removeProperty("--boot-placeholder-rail-row");
+    root.style.removeProperty("--boot-placeholder-sidebar-width");
+    root.style.removeProperty("--boot-placeholder-sidebar-top");
+    paintShapes(null, 1);
+    if (!frame || (!create && !shown)) {
+      return;
+    }
+    var shellZoom = placeholder.shellZoomFactor;
+    if (!(shellZoom > 0)) {
+      shellZoom = 1;
+    }
+    var scale = frame.zoomFactor / shellZoom;
+    if (!(scale > 0)) {
+      return;
+    }
+    var width = window.innerWidth;
+    var collapsed =
+      frame.collapsed ||
+      (width > 0 && width / scale <= frame.narrowViewportMaxWidth);
+    root.style.setProperty("--boot-placeholder-scale", String(scale));
+    var rail = collapsed && frame.rail;
+    if (rail) {
+      collapsed = false;
+      root.setAttribute("data-boot-placeholder-rail", "");
+      root.style.setProperty(
+        "--boot-placeholder-rail-row",
+        rail.titleRow * scale + "px",
+      );
+    }
+    if (!collapsed) {
+      root.style.setProperty(
+        "--boot-placeholder-sidebar-width",
+        (rail ? rail.width : frame.sidebarWidth) * scale + "px",
+      );
+      if (frame.top > 0) {
+        root.style.setProperty(
+          "--boot-placeholder-sidebar-top",
+          frame.top * scale + "px",
+        );
+      }
+      if (frame.rtl) {
+        root.setAttribute("data-boot-placeholder-rtl", "");
+      }
+      paintShapes((rail || frame).shapes, scale);
+    }
+    root.setAttribute(
+      "data-boot-placeholder-frame",
+      collapsed ? "collapsed" : "sidebar",
+    );
+  } catch (_e) {}
+})(globalThis.desktopBootPlaceholder, "body");</script>
+    <div id="boot-placeholder-drag-strip"></div>
+
+    <div id="root"></div>
+  </body>
+</html>

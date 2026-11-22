@@ -1,0 +1,1 @@
+import{yg as e}from"./shared-0-D23kmOCB.js";import{Os as t}from"./shared-37-BxNtUyNK.js";function n(n){return{from_model:t(n.from),to_model:t(n.to),...n.named&&e(n.conversationUuid)&&{conversation_uuid:n.conversationUuid}}}export{n as t};

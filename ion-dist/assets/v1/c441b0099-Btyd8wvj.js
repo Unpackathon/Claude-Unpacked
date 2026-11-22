@@ -1,0 +1,1 @@
+import{Gt as e,Xt as t,Yt as n,Zt as r,qt as i}from"./shared-38-BJgM_wzP.js";var a=r(()=>{let r=n({name:t(e),time:e,blurb:e}),a=n({day_label:t=>e(t)??"",stops:t(i(r,12))});return n({title:e,days:t(i(a,7)),summary:e})});export{a as t};

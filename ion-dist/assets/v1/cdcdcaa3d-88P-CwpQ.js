@@ -1,0 +1,1 @@
+function e(e){let{seat_tier:t}=e;return t==null?{...e,seat_tier:"unassigned"}:{...e,seat_tier:t}}export{e as t};

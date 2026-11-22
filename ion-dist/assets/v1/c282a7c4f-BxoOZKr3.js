@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{_i as e}from"./shared-25-DapkFWlH.js";import{eh as t}from"./shared-73-DfCPGdCT.js";function n(){let $=J9(2),{activeOrganization:n}=e(),r=n?.uuid,i=r!==void 0,a=J1($,0,i)?K1($,0,i,{when:i,mode:"latest"}):$[1];return t(r,a)}export{n as t};

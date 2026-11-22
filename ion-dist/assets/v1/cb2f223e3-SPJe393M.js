@@ -1,0 +1,1 @@
+import{zx as e}from"./shared-174-Uzjlgfhw.js";import{zc as t}from"./shared-29-GrkLL17E.js";function n(){let n=t()==="no";return e()&&n}export{n as t};

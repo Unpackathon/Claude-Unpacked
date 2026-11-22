@@ -1,0 +1,1 @@
+import"./shared-0-D23kmOCB.js";var e="tag-connector-";function t(t){return t.slug.startsWith(e)}var n="channel-silo-";function r(e){return e.slug.startsWith("tag-managed-")}function i(e){return r(e)||e.slug.startsWith(n)}function a(e){return`kindling-${e.toLowerCase()}`}export{n as _lX,e as _s6,i,t as a,a as d};

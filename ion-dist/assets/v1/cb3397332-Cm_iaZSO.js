@@ -1,0 +1,1 @@
+var e=Symbol("mcpAppViewPageHostRefusal");function t(t){let n=t.meta;if(!n||typeof n!="object"||!("anthropic.com/host_refusal"in n)||t[e]===!0)return t;let{"anthropic.com/host_refusal":r,...i}=n;return{...t,meta:i}}export{t as n,e as t};

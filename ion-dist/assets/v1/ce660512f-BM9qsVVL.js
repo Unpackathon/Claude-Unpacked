@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({compactSession:{defaultMessage:"Compact session",id:"JEeNJA/xKM"},afterThisTurn:{defaultMessage:"Available when Claude finishes this turn",id:"tZl2bQVjIE"}});export{t};

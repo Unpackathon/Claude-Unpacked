@@ -1,0 +1,1 @@
+import{Kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e()(e=>({requests:0,request:()=>e(e=>({requests:e.requests+1}))}));export{t};

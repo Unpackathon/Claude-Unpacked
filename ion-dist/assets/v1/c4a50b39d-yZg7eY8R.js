@@ -1,0 +1,1 @@
+function e(e,t){return e?.content?.some(e=>e.type==="tool_use"&&(t.has(e.id)||e.mcp_app_tool_use_id!==void 0&&t.has(e.mcp_app_tool_use_id)))===!0}export{e as t};

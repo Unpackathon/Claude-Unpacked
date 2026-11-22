@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Bg as e}from"./shared-0-D23kmOCB.js";import{_i as t}from"./shared-25-DapkFWlH.js";var n=typeof window<"u"&&window.location.hostname==="claude.ai";function r(){let $=J9(2),r=t()?.activeOrganization?.uuid;return J1($,0,r)?K1($,0,r,n&&r!==void 0&&e(r.toLowerCase())===73537118884795):$[1]}export{r as t};

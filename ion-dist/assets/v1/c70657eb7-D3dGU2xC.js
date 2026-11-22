@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{jt as t}from"./vendor-all-1-BocQA2O8.js";import{t as n}from"./c46b5f8c5-DFcBbkii.js";function r({done:r,total:i}){let a=t();return e(n.Root,{"aria-label":a.formatMessage({defaultMessage:"Import progress",id:"qiZgh5LUlE"}),value:r,max:Math.max(i,1),className:"mb-1.5 mt-3.5"})}export{r as t};

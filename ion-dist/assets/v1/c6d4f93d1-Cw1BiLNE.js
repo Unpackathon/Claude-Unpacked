@@ -1,0 +1,1 @@
+function e(e,t){let n=e.replaceAll("\\","/"),r=t.replaceAll("\\","/");return r===n||r.endsWith(`/${n}`)}export{e as t};

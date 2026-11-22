@@ -1,0 +1,1 @@
+import{yg as e}from"./shared-0-D23kmOCB.js";var t;function n(n,r){t=e(r.artifactUuid)?{projectId:n,request:r}:void 0}function r(e,n=Date.now()){return t?.projectId===e&&n-t.request.askedAtMs<=1e4}function i(e,n=Date.now()){let i=r(e,n),a=t?.projectId===e?t.request:void 0;return a!==void 0&&(t=void 0),i?a:void 0}export{n,i as r,r as t};

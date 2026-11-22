@@ -1,0 +1,1 @@
+function e(e){if(!e)return!1;try{return new URL(decodeURIComponent(e),"https://claude.ai").searchParams.get("client_id")==="9d1c250a-e61b-44d9-88ed-5944d1962f5e"}catch{return!1}}export{e as t};

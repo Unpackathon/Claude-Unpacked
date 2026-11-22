@@ -1,0 +1,1 @@
+import{s as e}from"./ce38f2fa6-C8CUDjY1.js";var t=/^[A-Za-z0-9_-]{1,32}$/;function n(e){return t.test(e)}function r(t,r,{onHost:i,atStart:a=!1}){return!i||n(r)?e(r):a?t.formatMessage({defaultMessage:"This server",id:"LmA/7qyRAc"}):t.formatMessage({defaultMessage:"this server",id:"xv8diByX5m"})}export{r as n,n as t};

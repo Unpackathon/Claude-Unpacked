@@ -1,0 +1,1 @@
+function e(e){return e}var t=e({thinking:{defaultMessage:"Thinking",id:"KvzRb7Eldt"}});export{t};

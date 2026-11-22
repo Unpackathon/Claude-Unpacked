@@ -1,0 +1,1 @@
+import{cc as e}from"./shared-25-DapkFWlH.js";function t(t){return e(`?${new URLSearchParams({text:t})}`).get("text")===t?t:JSON.stringify(t)}export{t};

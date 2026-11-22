@@ -1,0 +1,1 @@
+import{If as e}from"./shared-0-D23kmOCB.js";import{ph as t}from"./shared-73-DfCPGdCT.js";var n=-1/0;function r(){n=Date.now()}function i(r){return Math.abs(Date.now()-n)>=3e3||e("cai_abundant_pretzel")?r():new Promise(e=>{t(2,e,1e3)}).then(r)}export{r as n,i as t};

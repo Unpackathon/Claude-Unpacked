@@ -1,0 +1,1 @@
+var e={prefKey:"projects.harbor.seat",options:["header","sidebar"],title:"7uxun8",labels:{header:"14k98o",sidebar:"1k9ferl"}},t={prefKey:"projects.harbor.bubbles",options:["all","own"],title:"1tabq94",labels:{all:"o7e5xm",own:"o7egkv"}};export{e as n,t};

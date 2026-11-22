@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import{_ER as e}from"./shared-5-psTP1UDv.js";function t(t){return e(t)!==null}function n(e){return e.rawViewContextLead===!0&&t(e.text)}export{n};

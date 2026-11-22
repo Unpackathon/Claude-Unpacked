@@ -1,0 +1,1 @@
+import{Ba as e,Ha as t,Ma as n,Va as r}from"./vendor-frame-Dy-urf5a.js";function i(e){return e==="rtl"?"\u2190":"\u2192"}function a(i){let{children:a}=i;return n()==="rtl"?t(e,{children:["\u2190 ",r("bdi",{children:a})]}):t(e,{children:["\u2192 ",a]})}export{i as n,a as t};

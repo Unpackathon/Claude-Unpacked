@@ -1,0 +1,1 @@
+var e=[{name:"nginx",scopeName:"source.nginx",displayName:"Nginx",patterns:[],repository:{}}];export{e as default};

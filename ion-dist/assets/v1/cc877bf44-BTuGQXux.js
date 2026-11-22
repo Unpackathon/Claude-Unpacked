@@ -1,0 +1,1 @@
+var e=new Map;function t(e,t){return`${e}\n${t}`}function n(n,r,i){let a=t(n,r);if(!e.has(a)&&e.size>=200){let t=e.keys().next().value;t!==void 0&&e.delete(t)}e.set(a,i)}function r(n,r){return n===void 0?void 0:e.get(t(n,r))}export{n,r as t};

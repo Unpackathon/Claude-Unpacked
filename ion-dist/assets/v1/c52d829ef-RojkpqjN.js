@@ -1,0 +1,1 @@
+import{Di as e}from"./shared-25-DapkFWlH.js";import{qh as t}from"./shared-174-Uzjlgfhw.js";import{Rr as n}from"./shared-238-CGzDEQRA.js";function r(){let r=e("org:organization:delete"),i=t(),a=n();return r&&!i&&!a}export{r as t};

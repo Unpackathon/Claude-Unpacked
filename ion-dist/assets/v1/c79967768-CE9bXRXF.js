@@ -1,0 +1,1 @@
+function e(e,t){if(e.byteLength!==t.byteLength)return!1;let n=Math.floor(e.byteLength/4),r=new Uint32Array(e,0,n),i=new Uint32Array(t,0,n);for(let e=0;e<n;e++)if(r[e]!==i[e])return!1;let a=new Uint8Array(e,n*4),o=new Uint8Array(t,n*4);return a.every((e,t)=>e===o[t])}export{e as t};

@@ -1,0 +1,1 @@
+import"./shared-0-D23kmOCB.js";import{yn as e}from"./shared-9-BGHwpAny.js";function t(t){return e(t,120).replace(/[@[\]\n\r]/g,"").replace(/\s+/g," ").trim()}var n=String.raw`<session-mentions>(\[[^<]{0,4096}\])</session-mentions>`,r=String.raw`<system-reminder>\n${n}\n[^<]*</system-reminder>`,i=new RegExp(r,"g");new RegExp(String.raw`${r}\s*$`);export{i as _z5,t as o};

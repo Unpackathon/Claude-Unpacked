@@ -1,0 +1,1 @@
+import{hf as e}from"./shared-0-D23kmOCB.js";function t(t){return t instanceof e&&t.errorCode==="phone_verification_required"}export{t};

@@ -1,0 +1,1 @@
+function e(e){return e?.isShared===!0&&e.metaSource!=="seed"}export{e as t};

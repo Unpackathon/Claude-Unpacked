@@ -1,0 +1,1 @@
+function e(e){let t=e?.auth_sources??[],n=t.includes("cli_import");return n&&t.includes("oauth")?"both":n||e?.auth_source==="cli_import"?"token":"account"}function t(t){return e(t)!=="account"}export{t as n,e as t};

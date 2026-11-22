@@ -1,0 +1,20 @@
+{
+  "capabilities": [
+    "downloads",
+    "mcp",
+    "self"
+  ],
+  "changes": [
+    "downloads",
+    "mcp",
+    "mcp-selection-required",
+    "self"
+  ],
+  "inertChanges": [
+    "downloads-doc-trim",
+    "mcp-observed-call-rule",
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance"
+  ]
+}

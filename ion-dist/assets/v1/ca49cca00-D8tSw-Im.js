@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Ol as e,vl as t}from"./shared-25-DapkFWlH.js";function n(e){let $=J9(2),n=t("__gb__2528277217",e,"off");return J1($,0,n)?K1($,0,n,i(n)):$[1]}function r(t){return e("__gb__3134131908",t)}function i(e){return e==="generic"||e==="generated"?e:"off"}export{n,r as t};

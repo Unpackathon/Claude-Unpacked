@@ -1,0 +1,1 @@
+import{Fs as e,Us as t,Ws as n}from"./shared-0-D23kmOCB.js";import{_v as r}from"./shared-73-DfCPGdCT.js";var i=new Set;function a(){i.clear()}r(a),n(()=>{e(t()-1)&&a()});function o(e){return{wasClosed:()=>i.has(e),noteClosed:()=>void i.add(e)}}export{o as t};

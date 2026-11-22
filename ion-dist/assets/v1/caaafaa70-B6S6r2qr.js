@@ -1,0 +1,1 @@
+import{Qa as e,lo as t}from"./vendor-frame-Dy-urf5a.js";var n=e(!1);function r(){return t(n)}var i={disabled:!0,className:"invisible"};export{i as n,r,n as t};

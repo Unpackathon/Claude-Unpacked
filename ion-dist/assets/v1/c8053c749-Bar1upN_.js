@@ -1,0 +1,1 @@
+function e(e){return e==="cwd_not_found"||e==="cwd_not_found_unrecoverable"}export{e as t};

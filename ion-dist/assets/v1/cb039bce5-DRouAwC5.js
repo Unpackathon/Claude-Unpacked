@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({plugin:{defaultMessage:"I have the {pluginName} plugin. Please walk me through what it can do.",id:"kx25MHJp2b"},skill:{defaultMessage:"I have the {skillName} skill. Please walk me through what it can do.",id:"P0YYhxYGpg"}}),n=e({label:{defaultMessage:"Preparing a prompt\u2026",id:"cFt7diOAGw"}});export{n,t};

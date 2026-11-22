@@ -1,0 +1,1 @@
+var e=[{name:"ada",scopeName:"source.ada",displayName:"Ada",patterns:[],repository:{}}];export{e as default};

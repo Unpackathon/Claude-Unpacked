@@ -1,0 +1,1 @@
+import{Yl as e,dl as t}from"./shared-25-DapkFWlH.js";var n={payments:"payments_hcaptcha_dismiss_aborts_submit",phone_send:"phone_send_hcaptcha_dismiss_aborts_submit",default:"hcaptcha_dismiss_cancels_submit"};function r(r){return t(n[r],null,e)!==!1}export{n as _f5,r as n};

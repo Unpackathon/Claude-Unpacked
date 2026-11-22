@@ -1,0 +1,1 @@
+import{If as e}from"./shared-0-D23kmOCB.js";function t(){return e("cai_wondrous_puzzle")}export{t as n};

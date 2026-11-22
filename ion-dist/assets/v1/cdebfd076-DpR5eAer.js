@@ -1,0 +1,1 @@
+var e=Symbol("visualizeWidgetPageStoredCode");function t(t){let n=t.structured_content;if(!n||typeof n!="object"||!("anthropic.com/visualize_widget_code"in n)||t[e]===!0)return t;let{"anthropic.com/visualize_widget_code":r,...i}=n;return{...t,structured_content:i}}export{t as n,e as t};

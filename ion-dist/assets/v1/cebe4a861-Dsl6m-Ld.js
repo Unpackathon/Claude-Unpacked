@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{So as e,_i as t}from"./shared-25-DapkFWlH.js";import{tp as n}from"./shared-73-DfCPGdCT.js";function r(){let $=J9(3),{account:r}=t(),[i]=n("cxdir:pcs-sample",!1);return J2($,0,r,i)?K2($,0,r,i,i===!0&&e(r)):$[2]}export{r as t};

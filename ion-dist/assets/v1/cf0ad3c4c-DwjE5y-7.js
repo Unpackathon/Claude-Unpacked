@@ -1,0 +1,1 @@
+import{$d as J9,Kd as J0,ef as K0}from"./shared-frame-DeSSgTpM.js";import{Nw as e}from"./shared-141-K5japEQk.js";function t(){let $=J9(1),t=J0($,0)?K0($,0,{loadingFallback:!0}):$[0];return!e("operon",t)}export{t};

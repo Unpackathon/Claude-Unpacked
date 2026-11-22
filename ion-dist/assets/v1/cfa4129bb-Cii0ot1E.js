@@ -1,0 +1,1 @@
+import{Qa as e,lo as t}from"./vendor-frame-Dy-urf5a.js";import{Uc as n}from"./shared-140-Bovgbp0D.js";var r=e(!1);function i(){let e=n(),i=t(r);return e||i?"data-[starting-style]:opacity-100 data-[starting-style]:scale-100 starting:opacity-100 starting:scale-100":void 0}export{i as n,r as t};

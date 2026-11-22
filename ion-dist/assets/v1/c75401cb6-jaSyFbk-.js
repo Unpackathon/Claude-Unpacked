@@ -1,0 +1,1 @@
+function e(e,t){return{type:"image",file_name:`${t}.${e.mediaType.slice(6)}`,source:{type:"base64",media_type:e.mediaType,data:e.data}}}function t(e){let t=new TextEncoder;return e.reduce((e,n)=>e+t.encode(JSON.stringify(n)).length+1,512)}export{e as n,t};

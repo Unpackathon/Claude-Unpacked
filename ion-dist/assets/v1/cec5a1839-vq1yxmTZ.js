@@ -1,0 +1,1 @@
+var e=["keydown","pointerdown","mousedown","wheel","touchmove"];function t(t,n,r){let i=e=>{"repeat"in e&&e.repeat===!0||r(e)};for(let r of e)t.addEventListener(r,i,{capture:!0,passive:!0,signal:n})}export{t};

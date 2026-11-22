@@ -1,0 +1,1 @@
+import"./c98ab6e79-Db21FyB8.js";import{c as e,i as t}from"./c54bf5722-BceBoeXS.js";function n(n,r,i){return e(n,{orgUuid:i,rawFetch:r,maxImageSide:8e3,storeAsIs:t,pdfTextFallback:!0,resendAfterDroppedConnection:!0,onFileError:()=>void 0})}export{n as uploadAsProjectPage};import"./c139d9cdb-CObr6ZBe.js";

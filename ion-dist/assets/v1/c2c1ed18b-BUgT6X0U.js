@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{So as e,vi as t}from"./shared-25-DapkFWlH.js";function n(){let $=J9(2),n=t()?.account;return J1($,0,n)?K1($,0,n,e(n)):$[1]}export{n as t};

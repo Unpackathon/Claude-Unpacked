@@ -1,0 +1,1 @@
+var e="/analytics/insights/new";function t(e,t){return`/analytics/insights/${encodeURIComponent(e)}?org=${encodeURIComponent(t)}`}export{t as n,e as t};

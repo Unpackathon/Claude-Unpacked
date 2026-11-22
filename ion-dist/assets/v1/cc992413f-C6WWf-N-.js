@@ -1,0 +1,1 @@
+function e(e){let t=e?.includes("cowork")===!0,n=e?.includes("claude_code")===!0,r=e?.includes("claude_ai")===!0||e?.includes("claude_desktop")===!0;return t||n||r?{cowork:t,claudeCode:n,chat:r}:null}function t(e,t){return e===null?!0:t==="cowork"?e.cowork:e.chat}export{e as n,t};

@@ -1,0 +1,1 @@
+var e=["not_available","available","auto_install","required"];export{e as t};

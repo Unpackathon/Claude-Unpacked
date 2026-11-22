@@ -1,0 +1,1 @@
+function e(e,t,n){if(e.key==="Escape"){if(e.nativeEvent.isComposing||e.keyCode===229||e.repeat){e.preventDefault(),e.stopPropagation();return}t!==""&&(e.stopPropagation(),n(""))}}export{e as t};

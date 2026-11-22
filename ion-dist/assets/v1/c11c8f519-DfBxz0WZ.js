@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Kd as J0,ef as K0}from"./shared-frame-DeSSgTpM.js";import{n as t,t as n}from"./cc2b35d9f-BVK-Ne7P.js";import{t as r}from"./cc0a875c8-DDCwgnzc.js";function i(){let $=J9(1);return J0($,0)?K0($,0,e(r,{role:"status",title:e(t,{hold:"password"}),body:e(n,{})})):$[0]}export{i as t};

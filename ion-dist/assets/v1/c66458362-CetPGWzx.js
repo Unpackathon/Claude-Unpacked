@@ -1,0 +1,1 @@
+import{xo as e}from"./vendor-frame-Dy-urf5a.js";import{Vs as t}from"./shared-0-D23kmOCB.js";function n(n){let r=t(),[i,a]=e(r),[o,s]=e(n);return n!==o&&(s(n),n&&a(r)),i}export{n as t};

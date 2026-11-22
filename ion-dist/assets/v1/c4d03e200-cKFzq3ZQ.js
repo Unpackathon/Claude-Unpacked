@@ -1,0 +1,1 @@
+var e=["p","a","strong","em"];export{e as t};

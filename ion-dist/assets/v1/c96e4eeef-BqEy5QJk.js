@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import{s_ as e}from"./shared-0-D23kmOCB.js";var t=0,n=0,r=0,{subscribe:i,notify:a}=e();function o(){t+=1,n+=1,r=performance.now(),a();let e=!0;return()=>{e&&(e=!1,--t,r=performance.now(),a())}}export{o as t,t as _Kh,r as _hI,n as _WE,i as _JD};

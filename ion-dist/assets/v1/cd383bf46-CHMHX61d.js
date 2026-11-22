@@ -1,0 +1,4 @@
+import"./shared-0-D23kmOCB.js";import{Tm as e}from"./shared-73-DfCPGdCT.js";import"./shared-3-DXaNyrR2.js";import"./shared-4-Dbvi5M5d.js";import"./shared-29-GrkLL17E.js";var t=1e4,n=class{#e=new TextDecoder;#t="";read(e){let t=this.#e.decode(e,{stream:!0}).replaceAll("\r","");if(this.#t+=t,!t.includes(`
+`))return[];let n=this.#t.split(`
+
+`);return this.#t=n.pop()??"",n.map(e=>{let t=e.slice(0,200),n=/^event: ?(.*)$/m.exec(t)?.[1],r=/^id: ?(\d+)$/m.exec(t)?.[1];return{text:`${e}\n\n`,event:n,seq:n==="client_event"&&r?Number(r):void 0}})}},r=new TextEncoder,i=new Map,a=new Set,o=new Map,s=new Map,c=0;e(()=>{c+=1;let e=[...i.values()];i.clear(),o.clear(),a.clear();for(let t of e)t.end();[...s.keys()].forEach(l)});function l(e){s.get(e)?.forEach(e=>e())}export{n as _Sd,t as _HA,c as _NF,a as _hA,r as _Db,i as _pt,l as _JG,o as _4g,s as _0w};

@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({storageRefused:{defaultMessage:"Couldn\u2019t save that in this browser, so nothing changed. Check that it can store site data, then try again.",id:"59R77I+gyw"}});export{t};

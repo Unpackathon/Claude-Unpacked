@@ -1,0 +1,1 @@
+function e(e){if(e===null)return!1;if(e.scrollWidth>e.clientWidth)return!0;let t=e.ownerDocument.createRange();t.selectNodeContents(e);let n=t.getBoundingClientRect();if(n.width===0)return!1;let r=e.getBoundingClientRect();return n.right-r.right>.01||r.left-n.left>.01}export{e as t};

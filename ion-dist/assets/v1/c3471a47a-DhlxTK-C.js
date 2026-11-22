@@ -1,0 +1,1 @@
+function e(e){switch(e){case"control":case"line":return e;default:return null}}export{e as t};

@@ -1,0 +1,1 @@
+function e(e){return/^(ar|fa|ur)\b/.test(e)?"\u060C ":", "}export{e as t};

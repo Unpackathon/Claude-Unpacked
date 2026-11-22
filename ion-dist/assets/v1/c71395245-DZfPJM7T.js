@@ -1,0 +1,1 @@
+import{Ob as e}from"./shared-238-CGzDEQRA.js";function t(t){let n=typeof t=="string"?t.replace(/\s+/gu," ").trim():"",r=n.normalize("NFKC");return n.length<=60&&/^[\p{L}\p{M}\p{N} &'\u2019()+-]+\.?$/u.test(r)&&e(r," ")<4&&r.replace(/\P{N}/gu,"").length<=4&&!/[^\p{L}\p{N}_\s]s organization$/iu.test(r)?n:null}export{t};

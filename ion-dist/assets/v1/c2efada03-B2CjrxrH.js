@@ -1,0 +1,1 @@
+import{Di as e}from"./shared-25-DapkFWlH.js";import{g as t}from"./shared-26-HtKWSjuR.js";import{Mb as n,jb as r,zb as i}from"./shared-238-CGzDEQRA.js";function a(){let a=i(),o=r(),s=a&&o,c=t(),l=n("org_surveys_enabled"),u=e("claude-ai:activity:get");return{ready:s,allowed:c&&l&&u}}export{a as t};

@@ -1,0 +1,1 @@
+import{Nf as e}from"./shared-0-D23kmOCB.js";import{il as t}from"./shared-25-DapkFWlH.js";var n="claudified_hazel_turnstile";function r(e){let r=t(n,e)??!1;return e&&r===!0}function i(){e(n,!1)}export{r as n,i as t};

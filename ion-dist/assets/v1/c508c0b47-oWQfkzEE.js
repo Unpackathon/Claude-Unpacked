@@ -1,0 +1,1 @@
+var e=new Map;function t(t,n){let r=`${t} ${n??""}`,i=(e.get(r)??0)+1;return e.set(r,i),i}export{t};

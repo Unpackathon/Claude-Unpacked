@@ -1,0 +1,1 @@
+import{Xd as e}from"./shared-29-GrkLL17E.js";var t=new Map;function n(e){let n=t.get(e);return n!==void 0&&Date.now()-n<6e5}function r(e){t.set(e,Date.now())}var i=/\/snap_\d{10}-[^/]*\/[^/]+$/;function a(t,n){let r=t.srcs.get(n),a=t.looks.get(n)?.typeSlug;return r!==void 0&&typeof a=="string"&&e(a,"pages")&&!i.test(new URL(r).pathname)?void 0:r}export{n,r,a as t};

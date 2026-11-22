@@ -1,0 +1,1 @@
+function e(e){let t=e.ownerDocument.getSelection();if(t===null||t.isCollapsed)return!1;for(let n=0;n<t.rangeCount;n+=1)if(t.getRangeAt(n).intersectsNode(e))return!0;return!1}export{e as t};

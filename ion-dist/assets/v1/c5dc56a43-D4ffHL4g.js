@@ -1,0 +1,1 @@
+import{t as e}from"./c98e5c141-CtSPqzbg.js";var t={prefKey:"projects.luckyMeadow.plainWren",options:["slides","list","steps"],added:"2026-11-10",title:"1tbd9g4",labels:{slides:"l4fg4t",list:"j0ihnt",steps:"lb22bg"}};function n(){return e(t).value}export{n,t};

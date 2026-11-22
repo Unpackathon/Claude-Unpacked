@@ -1,0 +1,1 @@
+var e=[{name:"racket",scopeName:"source.racket",displayName:"Racket",patterns:[],repository:{}}];export{e as default};

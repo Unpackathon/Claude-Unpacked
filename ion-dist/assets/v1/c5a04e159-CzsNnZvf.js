@@ -1,0 +1,1 @@
+function e(e,t){let n=e.trim();return n!==""&&n!==t.trim()?n:void 0}export{e as t};

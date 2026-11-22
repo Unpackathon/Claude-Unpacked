@@ -1,0 +1,1 @@
+import{Fg as e,Vg as t}from"./shared-107-D8fgcL1q.js";function n(n){if(n===void 0)return;let r=t(e(n),120).trim();return r===""?void 0:r}export{n as t};

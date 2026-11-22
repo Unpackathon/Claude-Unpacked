@@ -1,0 +1,2 @@
+import"./shared-107-D8fgcL1q.js";import{Nv as e,jv as t}from"./shared-238-CGzDEQRA.js";import{n}from"./c8f38bf1f-Kb9NUXn4.js";import{_cK as r,r as i}from"./c5b9e310e-CJjaAK-u.js";function a(e){return i(r(e.flatMap(e=>e.type==="text"?[e.text]:[]).join(`
+`)))}function o(t){return e(a(t))}function s(r,i,o){let s=o(a(r));if(n(s))return null;let c=i?e(s):t(s);return c.trim()===""?null:c}export{o as t,s as n};

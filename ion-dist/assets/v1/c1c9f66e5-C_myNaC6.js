@@ -1,0 +1,1 @@
+import{Pw as e}from"./shared-141-K5japEQk.js";function t(){let{policyValue:t,isLoading:n}=e("marble_heron");return n?null:t===!0}export{t};

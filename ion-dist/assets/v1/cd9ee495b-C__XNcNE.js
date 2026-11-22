@@ -1,0 +1,1 @@
+import{kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e({defaultMessage:"SCIM synced",id:"/QvsXl23+v"}),n=e({defaultMessage:"Manually created",id:"4GtTA3LpA5"});export{t as n,n as t};

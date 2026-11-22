@@ -1,0 +1,1 @@
+import{Di as e,Ri as t}from"./shared-25-DapkFWlH.js";import{qh as n}from"./shared-174-Uzjlgfhw.js";import{Mb as r}from"./shared-238-CGzDEQRA.js";function i(){let i=e("claude-ai:project-tag:get"),a=t(),o=n();return!r("__gb__3936015787")||!a||o?"flag_off":i?"ok":"missing_permission"}function a(){return i()==="ok"}export{a as n,i as t};

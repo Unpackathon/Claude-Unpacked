@@ -1,0 +1,1 @@
+import{Di as e}from"./shared-25-DapkFWlH.js";import{qh as t}from"./shared-174-Uzjlgfhw.js";import{Mb as n}from"./shared-238-CGzDEQRA.js";function r(){let r=n("basalt_kite"),i=e("org:organization:delete"),a=t();return r&&i&&!a}export{r as t};

@@ -1,0 +1,1 @@
+import{Dc as e}from"./shared-141-K5japEQk.js";function t(t){return t.unconfigured.some(n=>{let r=e(t.schema,n);return r?.required===!0&&r.default!==!0})}export{t};

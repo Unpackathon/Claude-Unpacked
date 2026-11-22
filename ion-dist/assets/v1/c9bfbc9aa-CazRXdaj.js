@@ -1,0 +1,1 @@
+import{xo as e}from"./vendor-frame-Dy-urf5a.js";import{Vm as t}from"./shared-238-CGzDEQRA.js";function n(e,t){return r(e==="loading"&&t==="permissions")}function r(n){let[r,i]=e(n===!1),{isLoading:a}=t(r===!1&&n===!0,1e4);return r===!1&&a===!1&&i(!0),a}export{n,r as t};

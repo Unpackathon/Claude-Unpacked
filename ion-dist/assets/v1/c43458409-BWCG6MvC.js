@@ -1,0 +1,1 @@
+import{Cm as e}from"./shared-73-DfCPGdCT.js";var t=e(new Map);function n(e,n){n.working&&typeof n.answering_message_id=="string"&&t.get(e)?.names.add(n.answering_message_id)}function r(e,n){n===void 0?t.delete(e):t.set(e,{armedAt:n,names:new Set})}export{n,r as t};

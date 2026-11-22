@@ -1,0 +1,1 @@
+function e(e){return e.length<=16e3&&/\S/.test(e)}export{e as t};

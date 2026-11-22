@@ -1,0 +1,1 @@
+function e(e){return e}var t=e({browserNotVerified:{defaultMessage:"We couldn\u2019t verify your browser. Try again, or <link>contact support</link> if it keeps happening.",id:"6RC25ivhFt"}});export{t};

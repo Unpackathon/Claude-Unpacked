@@ -1,0 +1,1 @@
+var e="Channel managers: ";function t(t,n){return`${e}${t} (${n})`}var n=/ \([A-Z0-9]+\)$/i;function r(t){return t.startsWith(e)&&n.test(t.slice(18))}export{r as n,t};

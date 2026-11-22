@@ -1,0 +1,1 @@
+import{N as e}from"./shared-0-D23kmOCB.js";import{sh as t}from"./shared-238-CGzDEQRA.js";function n(n){let r=t(n),i=r===n?"":"[1m]";return`${e(r)}${i}`}export{n as t};

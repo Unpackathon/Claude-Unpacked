@@ -1,0 +1,1 @@
+function e(e,t){return Math.max(0,Math.min(560,Math.round(e)-32,t??1/0))}export{e as n};

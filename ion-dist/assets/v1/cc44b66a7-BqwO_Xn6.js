@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import"./shared-frame-DeSSgTpM.js";import"./vendor-all-1-BocQA2O8.js";var e={preview:"Globe",artifact:"Artifacts",diff:"ChangesPlusMinus",terminal:"CommandLinePrompt",file:"Folder",simulator:"MobilePhone",tasks:"AgentsSimple",plan:"Checklist",runs:"Clock",pr:"GitPullRequest"};export{e as r};

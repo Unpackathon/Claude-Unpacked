@@ -1,0 +1,1 @@
+var e=new Map,t=6e5;function n(n){let r=Date.now();for(let[n,{at:i}]of e)r-i>t&&e.delete(n);e.set(n,{at:r,retired:!1})}function r(e){return a(e)}function i(t){let n=e.get(t);n!==void 0&&(n.retired=!0)}function a(t){return o(t)&&e.get(t)?.retired===!1}function o(n){let r=e.get(n);return r===void 0?!1:Date.now()-r.at>t?(e.delete(n),!1):!0}export{o as a,r as i,a as n,i as r,n as t};

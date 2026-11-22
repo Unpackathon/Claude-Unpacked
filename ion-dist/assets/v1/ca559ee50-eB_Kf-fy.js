@@ -1,0 +1,1 @@
+import{r as e,t}from"./c627155b9-DzEDGdZz.js";function n(n){let r=URL.parse(n)?.hostname===new URL("https://url-redacted.invalid").hostname,i=e(n)?.segments??[];return r===!0||i.some(t)}export{n as t};

@@ -1,0 +1,1 @@
+import{$_ as e}from"./shared-141-K5japEQk.js";import{xi as t}from"./shared-238-CGzDEQRA.js";function n(){return e(),!1}function r(){return t()?.userContentFrameAllowed!==!1}export{n,r as t};

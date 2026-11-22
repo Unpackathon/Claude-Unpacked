@@ -1,0 +1,2 @@
+import{Ab as e}from"./shared-238-CGzDEQRA.js";function t(t){let n=e((t.description?.trim()||t.title||"").trim(),`
+`);return n.length>200?`${n.slice(0,200)}\u2026`:n}function n(e,n,r=!1){let i=t(e);return{name:e.name,summary:i,...n&&{input_schema:e.inputSchema},...r&&e.description!==void 0&&e.description!==i&&{description:e.description},...e.readOnlyHint===!0&&{read_only:!0}}}export{n as t};

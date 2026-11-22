@@ -1,0 +1,1 @@
+var e={"--chat-turn-gap":"34px","--chat-item-gap":"13px"};export{e as t};

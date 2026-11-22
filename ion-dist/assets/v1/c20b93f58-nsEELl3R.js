@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DwsqjPeD.js";var t=e({SEAT_PLACES_PANES:()=>!0}),n=!0;export{t as n,n as t};

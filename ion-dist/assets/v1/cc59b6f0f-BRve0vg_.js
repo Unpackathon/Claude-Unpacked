@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{lT as e}from"./shared-107-D8fgcL1q.js";import{jt as t}from"./vendor-all-1-BocQA2O8.js";function n(){let $=J9(2),n=t(),r;if(J1($,0,n)){let t=e({id:"15iial7",intl:n});r=t.startsWith("https://github.com/")?t:void 0,K1($,0,n,r)}else r=$[1];return r}export{n as t};

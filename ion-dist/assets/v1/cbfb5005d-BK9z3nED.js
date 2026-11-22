@@ -1,0 +1,1 @@
+import{No as e}from"./shared-0-D23kmOCB.js";var t=new Set,n=new Set;function r(t){return e(t)??t}function i(e){let i=r(e);if(!t.has(i)){t.add(i);for(let e of n)e()}}function a(e){return t.has(r(e))}function o(e){return n.add(e),()=>{n.delete(e)}}export{i as n,o as r,a as t};

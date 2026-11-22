@@ -1,0 +1,1 @@
+import{kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e({defaultMessage:"{count, plural, one {{turnedOff} will be unavailable while {feature} is on.} other {{turnedOff} will be unavailable while {feature} is on.}}",id:"BbQ4KokzVP"}),n=e({defaultMessage:"Disabling {feature} will also make {dependents} unavailable.",id:"+uN/au/BWZ"});export{t as n,n as t};

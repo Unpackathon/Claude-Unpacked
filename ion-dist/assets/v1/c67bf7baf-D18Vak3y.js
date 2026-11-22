@@ -1,0 +1,1 @@
+var e={tileSize:80,iconSize:48,glyphSize:40};export{e as t};

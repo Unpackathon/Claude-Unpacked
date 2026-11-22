@@ -1,0 +1,1 @@
+import{lg as e,mg as t,rg as n,tg as r}from"./shared-0-D23kmOCB.js";function i(i,a){if(!i)return a;let o=r(i);if(n(o)||e(o))return a;if(!o.startsWith("/"))return o;let s=o.indexOf("?"),c=s===-1?o:o.slice(0,s);return t(c)===null?a:o.replace(/\\/g,"%5C")}export{i as t};

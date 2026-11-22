@@ -1,0 +1,1 @@
+import{Fs as e}from"./shared-0-D23kmOCB.js";import{Dh as t}from"./shared-206-DmJmFrn0.js";function n(n,r){e(r)||t(n.formatMessage({defaultMessage:"Added to project",id:"BPOouLA2Ms"}),"project-upload")}export{n as t};

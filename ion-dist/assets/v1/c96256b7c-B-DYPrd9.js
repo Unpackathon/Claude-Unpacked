@@ -1,0 +1,1 @@
+import{Di as e,ui as t}from"./shared-25-DapkFWlH.js";function n(){let n=t(),r=e("billing:org-spend-limit:update");return n&&r}export{n as t};

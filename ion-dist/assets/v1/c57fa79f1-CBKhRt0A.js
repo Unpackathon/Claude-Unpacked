@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import{Of as e,hp as t}from"./shared-26-HtKWSjuR.js";import{Er as n}from"./shared-18-D9aEQHpt.js";import{Mt as r}from"./shared-6-Bi6NjF-Q.js";function i(e){let t=e===void 0||e,r=n(t);return t&&!r}function a(){try{return!r()&&!e.heldThisLoad()&&!t()}catch{return!1}}export{i as n,a as t};

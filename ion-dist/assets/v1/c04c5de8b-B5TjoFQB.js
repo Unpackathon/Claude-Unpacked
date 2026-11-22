@@ -1,0 +1,1 @@
+function e(e){return e?{"data-stale":!0,className:"opacity-50 starting:opacity-100 transition-opacity delay-[var(--placeholder-reveal-delay,500ms)]"}:{}}export{e as t};

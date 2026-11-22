@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({count:{defaultMessage:"{count, plural, one {# result} other {# results}}",id:"rEhKa4Q0z/"},noMatch:{defaultMessage:"No results match \u201C{query}\u201D",id:"b/FdbjZDpG"},matching:{defaultMessage:"{count, plural, one {# result} other {# results}} matching \u201C{query}\u201D",id:"wYNwRcENpY"}});export{t};

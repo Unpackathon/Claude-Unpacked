@@ -1,0 +1,1 @@
+var e=/^\/chat\/([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\/?$/;function t(t){return e.exec(t)?.[1]}export{t};

@@ -1,0 +1,1 @@
+import{Qa as e,lo as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";var n=e(void 0);n.Provider;function r(e){let $=J9(2);return t(n)===(J1($,0,e)?K1($,0,e,e.toLowerCase()):$[1])}var i=new Set;function a(e,t){for(let n of i)n(e,t)}export{a as n,r,n as t};

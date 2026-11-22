@@ -1,0 +1,1 @@
+import{t as e}from"./c593616de-juLBlLSK.js";var t=new class extends e{tokenize(e){return e.slice()}join(e){return e}removeEmpty(e){return e}};function n(e,n,r){return t.diff(e,n,r)}export{n as t};

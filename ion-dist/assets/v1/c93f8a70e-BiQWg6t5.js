@@ -1,0 +1,1 @@
+import{$i as e,Di as t}from"./shared-25-DapkFWlH.js";function n(){let n=e(),r=t("iam:member:manage-cai-owner"),i=t("iam:member:update");return n&&(r||i)}function r(){let e=n(),r=t("iam:sso:update");return e&&r}export{n,r as t};

@@ -1,0 +1,1 @@
+function e(e){return e.replace(/[\t\r\n\u2028\u2029]+/g," ").trim()}export{e as t};

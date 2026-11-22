@@ -1,0 +1,1 @@
+function e(e){return`/admin-settings/roles/${encodeURIComponent(e)}`}function t(e){let t=new URLSearchParams;e.tab&&t.set("tab",e.tab);let n=t.toString();return n?`?${n}`:""}export{t as n,e as t};

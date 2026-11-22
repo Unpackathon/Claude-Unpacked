@@ -1,0 +1,1 @@
+var e="Dismissing a seat_upgrade request that the member made stops them from asking again for 30 days; a dismissed limit_increase request can be made again right away.",t=new Set(["limit_increase","seat_upgrade","join_org"]);export{t as n,e as t};

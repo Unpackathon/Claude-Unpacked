@@ -1,0 +1,1 @@
+import{Va as e,bo as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{oa as n}from"./shared-33-BnmCH4hK.js";function r(r){let $=J9(2),{children:i}=r,a=t(null);return n(a),J1($,0,i)?K1($,0,i,e("div",{ref:a,children:i})):$[1]}export{r as t};

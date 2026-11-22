@@ -1,0 +1,37 @@
+{
+  "capabilities": [
+    "comments",
+    "db",
+    "downloads",
+    "mcp",
+    "permissions",
+    "self",
+    "user"
+  ],
+  "changes": [
+    "comments",
+    "db",
+    "downloads",
+    "downloads-extended-types",
+    "mcp",
+    "mcp-call-cache",
+    "mcp-selection-required",
+    "mcp-v2",
+    "permissions",
+    "scroll-keep",
+    "self",
+    "user"
+  ],
+  "core": [
+    "permissions"
+  ],
+  "inertChanges": [
+    "downloads-doc-trim",
+    "mcp-no-public-guidance",
+    "mcp-observed-call-rule",
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance",
+    "user-private-subtree-docs"
+  ]
+}

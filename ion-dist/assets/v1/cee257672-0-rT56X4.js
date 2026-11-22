@@ -1,0 +1,1 @@
+import{d as e}from"./shared-49-Ucjo_u1E.js";function t(t){let n=e({authStatus:t.authStatus,authErrorSubtype:t.authErrorSubtype,authRemediation:t.authRemediation,connectionError:t.connectionError,connectionState:t.connectionState,lastConnectedAt:t.lastConnectedAt});return n?.kind==="fixable"&&n.via==="reconnect"}export{t};

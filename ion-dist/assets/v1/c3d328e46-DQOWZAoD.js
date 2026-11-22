@@ -1,0 +1,1 @@
+import{_KM as e}from"./shared-238-CGzDEQRA.js";function t(t){return e(t)?.personalListingId}function n(e){if(e===void 0)return null;let n=t(e);return n===void 0?null:{uuid:n,name:"Microsoft 365",url:e}}export{n as t};

@@ -1,0 +1,1 @@
+function e(e,t){let n=e.getQueryState(t);return n!==void 0&&(n.fetchStatus!=="idle"||n.isInvalidated)}function t(e){return e.sentOnModel!==void 0&&e.repliedOnModel!==void 0&&e.repliedOnModel!==e.sentOnModel}export{e as n,t};

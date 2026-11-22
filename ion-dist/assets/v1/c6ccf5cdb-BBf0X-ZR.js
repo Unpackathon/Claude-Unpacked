@@ -1,0 +1,1 @@
+import{Qa as e,so as t}from"./vendor-frame-Dy-urf5a.js";var n=e=>e,r=e(null),i=r.Provider;function a(){return t(r)??n}function o(){return t(r)}export{o as n,a as r,i as t};

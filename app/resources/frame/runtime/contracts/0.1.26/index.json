@@ -1,0 +1,48 @@
+{
+  "capabilities": [
+    "assets",
+    "comments",
+    "db",
+    "downloads",
+    "mcp",
+    "permissions",
+    "sample",
+    "self",
+    "user"
+  ],
+  "changes": [
+    "assets",
+    "assets-fonts",
+    "comments",
+    "comments-open-composer",
+    "db",
+    "db-realtime",
+    "db-snake-codes",
+    "downloads",
+    "downloads-extended-types",
+    "mcp",
+    "mcp-call-cache",
+    "mcp-selection-required",
+    "mcp-v2",
+    "permissions",
+    "sample",
+    "scroll-keep",
+    "self",
+    "self-edit-live-docs",
+    "user"
+  ],
+  "core": [
+    "permissions"
+  ],
+  "inertChanges": [
+    "db-self-steer",
+    "downloads-doc-trim",
+    "mcp-no-public-guidance",
+    "mcp-observed-call-rule",
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance",
+    "self-consent-retired",
+    "user-private-subtree-docs"
+  ]
+}

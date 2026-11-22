@@ -1,0 +1,1 @@
+import{$_ as e}from"./shared-141-K5japEQk.js";import{t}from"./c52503569-74oLsxOq.js";function n(){let n=e();return{...t("claude_ai_omelette_enabled"),when:n}}export{n as t};

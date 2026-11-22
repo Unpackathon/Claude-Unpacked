@@ -1,0 +1,1 @@
+import{t as e}from"./cc9e170fd-CBuDEjUi.js";function t(t){return!t.is_silo&&t.created_by_account_uuid!=="00000000-0000-0000-0000-000000000000"&&!e(t.surface)}function n(e){return e.filter(t).sort((e,t)=>(e.created_at??"9999").localeCompare(t.created_at??"9999"))[0]}var r={slug:"claude",display_name:"Claude",is_silo:!1};export{n,r as t};

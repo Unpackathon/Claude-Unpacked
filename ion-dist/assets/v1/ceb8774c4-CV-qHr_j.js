@@ -1,0 +1,1 @@
+function e(e,t){return e.length>=t.length&&e.slice(0,t.length)===t}export{e as t};

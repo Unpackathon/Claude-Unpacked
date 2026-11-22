@@ -1,0 +1,1 @@
+function e(e){return e.replace(/&(?=#[0-9]{1,7};|#[xX][0-9a-fA-F]{1,6};|[A-Za-z][A-Za-z0-9]{1,31};)/g,"&amp;")}export{e as t};

@@ -1,0 +1,1 @@
+import{co as e}from"./vendor-frame-Dy-urf5a.js";import{t}from"./c65d0a55c-BSwig5Ws.js";function n(n,{mutate:r,mutateAsync:i,...a}){let{send:o,isMinting:s,abandonMint:c}=t(n),l=e((e,t)=>o(n=>i({...e,client_attestation:n},t)),[o,i]);return{...a,create:l,isMinting:s,abandonMint:c}}export{n as t};

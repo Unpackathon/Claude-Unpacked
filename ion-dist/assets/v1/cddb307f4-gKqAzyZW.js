@@ -1,0 +1,1 @@
+var e=[1,16,400];export{e as t};

@@ -1,0 +1,1 @@
+import"./shared-frame-DeSSgTpM.js";import{Kt as e}from"./vendor-all-1-BocQA2O8.js";function t(e,t){let n=e.split(".").map(e=>parseInt(e,10)||0),r=t.split(".").map(e=>parseInt(e,10)||0),i=Math.max(n.length,r.length);for(let e=0;e<i;e++){let t=(n[e]??0)-(r[e]??0);if(t!==0)return t}return 0}var n=e(()=>({bySession:{},byAttachReply:{}}));export{t as r,n as l};

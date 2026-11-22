@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{NC as e}from"./shared-107-D8fgcL1q.js";import{cr as t}from"./shared-33-BnmCH4hK.js";function n(){let $=J9(2),n=t();return J1($,0,n)?K1($,0,n,t=>{n(e({connector:t}))}):$[1]}export{n as t};

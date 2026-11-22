@@ -1,0 +1,1 @@
+import{ai as e}from"./shared-107-D8fgcL1q.js";var t=/^9999(\d{7})$/;function n(e){return Number.parseInt(t.exec(e)?.[1]??e,10)}function r(t){let r=n(t);return Number.isNaN(r)?e(t):`v${r}`}export{n,r as t};

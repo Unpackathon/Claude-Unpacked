@@ -1,0 +1,1 @@
+import{fo as e,xo as t}from"./vendor-frame-Dy-urf5a.js";function n(){let[n,r]=t(!1);return e(()=>r(!0),[]),n}export{n as t};

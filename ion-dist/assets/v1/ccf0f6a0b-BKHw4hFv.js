@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{t}from"./c25e47851-BqByMSSs.js";import{n}from"./cd9e4c7f2--3PFEwU8.js";function r(r){let $=J9(3),i=n()==="md"?20:12;return J2($,0,r,i)?K2($,0,r,i,e(t,{...r,size:i})):$[2]}export{r as t};

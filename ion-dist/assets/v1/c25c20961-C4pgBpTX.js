@@ -1,0 +1,1 @@
+var e={mac:"claude_science_promo_os_mac",windows:"claude_science_promo_os_windows"};export{e as t};

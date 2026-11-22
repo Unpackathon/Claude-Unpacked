@@ -1,0 +1,1 @@
+import{fo as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,nf as K2,qd as J1}from"./shared-frame-DeSSgTpM.js";function t(t){let $=J9(3),n,r;J1($,0,t)?(n=()=>{!t||!window.location.hash||window.history.replaceState(null,"",window.location.pathname+window.location.search)},r=[t],K2($,0,t,n,r)):(n=$[1],r=$[2]),e(n,r)}export{t};

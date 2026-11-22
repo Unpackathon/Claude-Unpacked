@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";function t(t,n){let r=t.keepsEnd&&n?e("bdi",{dir:"ltr",children:n}):n;return t.masked===!0&&n?e("span",{className:"rr-mask","data-dd-privacy":"mask",children:r}):r}export{t};

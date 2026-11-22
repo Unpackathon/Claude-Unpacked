@@ -1,0 +1,1 @@
+var e={efCornerCard:"ef_corner_card",efHomeNudge:"ef_home_nudge",efCowork:"ef_cowork",efClintInterview:"ef_clint_interview",desktopNotificationPermission:"desktop_notification_permission_banner",spaceMigrationSignIn:"wild_snowflake_sign_in_notice",epitaxySplitSuggestion:"epitaxy_split_suggestion",rubberDuckGrant:"rubber_duck_grant_banner",cozyFiddle:"cozy_fiddle"};export{e as t};

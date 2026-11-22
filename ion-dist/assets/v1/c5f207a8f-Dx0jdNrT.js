@@ -1,0 +1,1 @@
+function e(e){return e!==void 0&&e.is_setting_hidden===!1&&(e.reason==="default_value"||e.reason==="admin_set")&&e.restricting_taints.length===0&&e.restricting_dependencies?.length===0}export{e as t};

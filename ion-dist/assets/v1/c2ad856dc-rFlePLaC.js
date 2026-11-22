@@ -1,0 +1,1 @@
+import{a as e}from"./ce5d84642-Dp5IbFa1.js";import{t}from"./c298f6a9f-7z63emMf.js";function n(n,r=e()){return t(r).resolveTheme(n)}export{n as t};

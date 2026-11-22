@@ -1,0 +1,1 @@
+import{Pa as e,co as t,vo as n,xo as r}from"./vendor-frame-Dy-urf5a.js";function i(){let[i,a]=r(!1),o=t(()=>a(!0),[]),s=t(()=>a(!1),[]),c=n(()=>({onPointerOverCapture:o,onFocusCapture:o,onTouchStartCapture:o,onClickCapture:()=>e(o)}),[o]);return n(()=>({armed:i,arm:o,disarm:s,armProps:c}),[i,o,s,c])}export{i as t};

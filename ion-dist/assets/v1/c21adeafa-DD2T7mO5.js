@@ -1,0 +1,1 @@
+import{xi as e}from"./shared-31-BVA5hc9B.js";import{Uc as t}from"./shared-6-Bi6NjF-Q.js";function n(){}var r=n;function i(){let n=e()!==null,r=t()!==null;return n||r}function a(){let t=e()?.title,n=r();return t??n}export{r as _uR,i as t,a as n};

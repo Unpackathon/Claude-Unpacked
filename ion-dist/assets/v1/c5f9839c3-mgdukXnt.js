@@ -1,0 +1,1 @@
+import{Kh as e}from"./shared-73-DfCPGdCT.js";var t="mcp__claude-device__get_clicked_app",n=e(null);export{n,t};

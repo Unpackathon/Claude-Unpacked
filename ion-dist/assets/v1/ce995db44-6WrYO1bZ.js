@@ -1,0 +1,1 @@
+function e(e){return`ssh:${e.sshHost}:${e.sshPort??22}`}export{e as n};

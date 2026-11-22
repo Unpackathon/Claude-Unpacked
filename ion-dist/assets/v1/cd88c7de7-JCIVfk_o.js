@@ -1,0 +1,1 @@
+import{J as e}from"./shared-25-DapkFWlH.js";function t(t,n,r){let i=()=>n((r?.offsetHeight??t.scrollHeight)>t.clientHeight+1);i();let a=e(t)?.ResizeObserver;if(a===void 0)return;let o=new a(i);return o.observe(t),r&&o.observe(r),()=>o.disconnect()}export{t};

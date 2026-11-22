@@ -1,0 +1,1 @@
+var e=[],t={status:"off",entries:e},n={status:"pending",entries:e};function r(e,r,i){return i?e!==null&&e.shareId===r?e.thread:n:t}export{n,r,e as t};

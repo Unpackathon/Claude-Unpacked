@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Kd as J0,ef as K0}from"./shared-frame-DeSSgTpM.js";import{r as t}from"./shared-26-HtKWSjuR.js";function n(){let $=J9(1);return J0($,0)?K0($,0,e(t,{})):$[0]}var r=n;export{r as McpPlaygroundRoute};

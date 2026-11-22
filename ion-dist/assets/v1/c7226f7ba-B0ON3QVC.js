@@ -1,0 +1,1 @@
+import{kS as e}from"./shared-107-D8fgcL1q.js";var t=/\bmeta\s*=\s*\{[^}]*?\bname\s*:\s*['"]([^'"]+)['"]/;function n(n){if(typeof n.name=="string"&&n.name)return n.name;if(typeof n.script=="string"){let e=n.script.slice(0,4096).match(t);if(e)return e[1]}if(typeof n.scriptPath=="string"&&n.scriptPath)return e(n.scriptPath)}export{n as t};

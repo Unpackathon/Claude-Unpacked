@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";function t(){return e("enterprise_role_effort_default")}export{t};

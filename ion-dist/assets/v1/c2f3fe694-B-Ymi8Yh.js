@@ -1,0 +1,1 @@
+import{$ as e}from"./shared-12-DKR53H0E.js";function t(t,n){return e(t,700,n)}export{t};

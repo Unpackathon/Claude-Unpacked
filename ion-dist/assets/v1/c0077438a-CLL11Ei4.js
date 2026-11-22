@@ -1,0 +1,1 @@
+import{_r as e}from"./shared-0-D23kmOCB.js";function t(t){let n=Array.from(e(t));return n.length<=80?n.join(""):`${n.slice(0,47).join("")}\u2026${n.slice(-32).join("")}`}export{t};

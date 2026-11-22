@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{r as e}from"./vendor-query-DjWagZkY.js";function t(e){return["mcp-logout",e]}function n(n){let $=J9(4),r=n??"",i=J1($,0,r)?K1($,0,r,t(r)):$[1],a=J1($,2,i)?K1($,2,i,{mutationKey:i}):$[3];return e(a)>0}export{n,t};

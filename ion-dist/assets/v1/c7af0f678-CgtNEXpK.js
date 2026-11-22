@@ -1,0 +1,1 @@
+import{Nf as e}from"./shared-0-D23kmOCB.js";function t(){return e("amber_tributary_client_quality_telemetry_killswitch",!1)!==!0}export{t};

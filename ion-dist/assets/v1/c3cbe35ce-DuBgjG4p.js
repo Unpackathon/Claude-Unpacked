@@ -1,0 +1,1 @@
+import{Xt as e}from"./shared-5-psTP1UDv.js";import{Gr as t}from"./shared-3-DXaNyrR2.js";function n(e){return t(e)!==null}function r(t){return typeof t.queryKey[0]=="string"&&t.queryKey[0].startsWith("/api/frame/frames")||e(t.queryKey)}export{n as _P2,r as t};

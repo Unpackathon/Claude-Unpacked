@@ -1,0 +1,1 @@
+function e(e){switch(e){case"overloaded":case"high_demand":return"overloaded";case"model_not_found":case"permission_denied":case"model_blocked":return"unavailable";default:return"unknown"}}export{e as t};

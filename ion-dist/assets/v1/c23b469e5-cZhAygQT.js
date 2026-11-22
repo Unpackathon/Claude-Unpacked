@@ -1,0 +1,1 @@
+var e="Widget",t="Listing the widget's tools was stopped.",n="No app widget that Claude can use is loaded in this chat right now.";export{n,e as r,t};

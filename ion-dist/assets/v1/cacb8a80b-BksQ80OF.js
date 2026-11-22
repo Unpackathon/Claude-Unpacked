@@ -1,0 +1,1 @@
+import{Tt as e}from"./shared-1-uKWXuHc9.js";import{t}from"./cd7510185-3Ohg4M1d.js";function n(){let n=e("claude-code")!==void 0,r=t();return n&&!r}export{n as t};

@@ -1,0 +1,1 @@
+var e=new Map;function t(t){return e.get(t)?.mounts.values().next().value}function n(e,n){t(e)?.submit(n)}var r=new Map;function i(e,t){let n=r.get(e)??new Set;r.delete(e);let i=r.keys().next().value;r.size>=32&&i!==void 0&&r.delete(i),r.set(e,n.add(t))}function a(e){t(e)?.submitFailed()}export{r as n,t as r,i as a,n as s,a as c,e as p};

@@ -1,0 +1,1 @@
+import{Co as e,hu as t}from"./shared-frame-DeSSgTpM.js";import{q as n}from"./shared-25-DapkFWlH.js";import{Km as r,qm as i}from"./shared-1-uKWXuHc9.js";function a(a,o){o&&r(a)&&t(n(o))&&(o.focus({preventScroll:!i(a)}),e(o.ownerDocument))}export{a as t};

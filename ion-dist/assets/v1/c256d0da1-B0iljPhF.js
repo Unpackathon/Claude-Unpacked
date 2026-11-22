@@ -1,0 +1,1 @@
+function e(){let e=new Map,t=new Set;function n(n,r){if((e.get(n)??null)!==r){r===null?e.delete(n):e.set(n,r);for(let e of Array.from(t))e()}}function r(e){return t.add(e),()=>{t.delete(e)}}return{suggest:n,suggestionOf:t=>t===void 0?void 0:e.get(t),subscribe:r}}var t=e();export{t};

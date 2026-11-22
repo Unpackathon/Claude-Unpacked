@@ -1,0 +1,1 @@
+import{Kg as e}from"./shared-25-DapkFWlH.js";var t={race:"miss",miss:"not_stored"},n;function r(e,r=!0){n=e===void 0?void 0:{id:e,read:r?{race:"pending"}:t}}function i(e,t){n?.id===e&&n.read.race==="pending"&&(n.read=t)}function a(r){return e("chat_project")?n!==void 0&&n.id===r?n.read:{race:"none"}:t}export{i as n,r,a as t};

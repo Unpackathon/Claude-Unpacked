@@ -1,0 +1,1 @@
+import{t as e}from"./cad5f82e8-kjem_pV6.js";import{n as t}from"./c7e39e0bf-BwWMfaHF.js";function n(n){return t(n)===null?n.startsWith("*.")?e(n.slice(2)):e(n):!0}function r(e){return t(e)??e}export{r as n,n as t};

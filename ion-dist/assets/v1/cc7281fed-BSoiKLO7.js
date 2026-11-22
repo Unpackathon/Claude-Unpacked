@@ -1,0 +1,1 @@
+import{Rf as e}from"./shared-0-D23kmOCB.js";import{kl as t}from"./shared-25-DapkFWlH.js";var n="__gb__1892238979";function r(){let e=t(n);return!e.inPayload||e.on}function i(){return e(n)??!0}export{r as n,i as t};

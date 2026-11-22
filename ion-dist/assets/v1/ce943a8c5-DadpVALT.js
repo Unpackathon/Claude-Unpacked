@@ -1,0 +1,1 @@
+function e(e){return!1}function t(e,t){return!1}function n(e){return!1}function r(e){return!1}export{e as i,t as n,n as r,r as t};

@@ -1,0 +1,1 @@
+import{Ym as e}from"./shared-1-uKWXuHc9.js";function t(t){return t&&!e()&&queueMicrotask(()=>{t.matches(":focus-visible")&&t.scrollIntoView({block:"nearest"})}),t}export{t};

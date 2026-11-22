@@ -1,0 +1,1 @@
+var e="device-binding.account-deleted";function t(t){try{window.sessionStorage.setItem(e,t)}catch{}}function n(){try{return window.sessionStorage.getItem(e)}catch{return null}}export{t as n,n as t};

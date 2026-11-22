@@ -1,0 +1,1 @@
+var e=Symbol("mcpAppPageOpenedApp");function t(t){let n=t.structured_content;if(!n||typeof n!="object"||!("anthropic.com/opened_connector_app"in n)||t[e]===!0)return t;let{"anthropic.com/opened_connector_app":r,...i}=n;return{...t,structured_content:i}}export{t as n,e as t};

@@ -1,0 +1,1 @@
+var e=new Set;function t(e,t){let n=(Array.isArray(t)?t:[]).filter(e=>e?.name==="claude-artifacts");if(n.length===0||e===!1)return e;let r=n.length===1?n[0].source:void 0;return typeof r=="string"&&(e===null||e===r)&&r}function n(e,t){return e===(t?"sdk":"dynamic")}export{t as n,n as r,e as t};

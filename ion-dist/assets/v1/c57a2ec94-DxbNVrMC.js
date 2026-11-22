@@ -1,0 +1,1 @@
+var e={haiku:1,sonnet:2,opus:3,fable:4,mythos:5};function t(t){for(let n of t.split("-")){let t=e[n];if(t!==void 0)return t}return 0}export{t};

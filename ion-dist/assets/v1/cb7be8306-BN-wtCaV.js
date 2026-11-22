@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import"./shared-174-Uzjlgfhw.js";import{_au as e,l as t}from"./c3ccffe1f-DfPp43AJ.js";function n(e,t){return e==="chat"&&!t?"other":e}function r(){let $=J9(3),r=t(),i=e();return J2($,0,i,r)?K2($,0,i,r,n(r,i)):$[2]}function i(e){return`skill:${e.skillId}`}export{i as t,n,r};

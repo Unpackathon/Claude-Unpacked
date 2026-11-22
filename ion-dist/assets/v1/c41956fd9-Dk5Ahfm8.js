@@ -1,0 +1,1 @@
+import{Qa as e}from"./vendor-frame-Dy-urf5a.js";import"./shared-frame-DeSSgTpM.js";import{At as t}from"./vendor-all-1-BocQA2O8.js";import"./shared-18-D9aEQHpt.js";var n=t({ios:{defaultMessage:"iOS Simulator",id:"fc+oEygAS4"},android:{defaultMessage:"Android Emulator",id:"yUsyxi1gKs"}}),r=e(null);export{n as r,r as n};

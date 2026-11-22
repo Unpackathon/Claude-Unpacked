@@ -1,0 +1,1 @@
+import{bo as e,fo as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Qd as J8}from"./shared-frame-DeSSgTpM.js";var n=!1;function r(){n=!0}function i(){let $=J9(2),r=e(null),i,a;return $[0]===J8?(i=()=>{if(!n)return;n=!1;let e=r.current;e&&(e.setAttribute("tabindex","-1"),e.focus({preventScroll:!0}))},a=[],$[0]=i,$[1]=a):(i=$[0],a=$[1]),t(i,a),r}export{i as n,r as t};

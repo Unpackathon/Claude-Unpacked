@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";import{qh as t}from"./shared-174-Uzjlgfhw.js";import{Lm as n}from"./shared-238-CGzDEQRA.js";function r(){let r=e("claudeai_majordomo_enabled"),i=n(),a=t();return r&&i&&!a}export{r as t};

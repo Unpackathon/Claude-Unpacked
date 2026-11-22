@@ -1,0 +1,1 @@
+var e=new Set,t={subscribe(t){return e.add(t),()=>{e.delete(t)}},notify(t){for(let n of e)n(t)}};export{t};

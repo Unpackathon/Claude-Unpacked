@@ -1,0 +1,1 @@
+var e=["anthropic-skills:","claude-ai:"];function t(t){let n=e.find(e=>t.startsWith(e));return n?t.slice(n.length):t}export{e as _Sl,t as n};

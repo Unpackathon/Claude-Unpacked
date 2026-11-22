@@ -1,0 +1,1 @@
+import{a as e,l as t,t as n}from"./c0ff9653e-BTrmF_8G.js";var r=/^redacted-[0-9a-f]{16}$/,i=/^([A-Za-z][A-Za-z0-9+.-]*:\/\/[^/?#]*)([^?#]*)([\s\S]*)$/;function a(r){return"redacted-"+e(n(t(r))).slice(0,16)}function o(e){return r.test(e)}function s(e){let t=i.exec(e);return t===null?null:{beforePath:t[1],segments:t[2].split("/"),afterPath:t[3]}}export{a as n,s as r,o as t};

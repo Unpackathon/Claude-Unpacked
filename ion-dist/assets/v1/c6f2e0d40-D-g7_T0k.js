@@ -1,0 +1,1 @@
+var e=["drive","docs","sheets","slides"];export{e as t};

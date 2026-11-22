@@ -1,0 +1,1 @@
+var e=/[\u0000-\u001f\u007f-\u009f\u2028\u2029\u200e\u200f\u061c\u202a-\u202e\u2066-\u2069]/g;function t(t){return t.replace(e,"")}export{t};

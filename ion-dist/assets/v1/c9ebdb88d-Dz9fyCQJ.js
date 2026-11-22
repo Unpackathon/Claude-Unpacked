@@ -1,0 +1,1 @@
+function e(e){let t=e.components[0];return t?.type==="skill"&&t.skill_id!==void 0?t.skill_id:e.id}export{e as t};

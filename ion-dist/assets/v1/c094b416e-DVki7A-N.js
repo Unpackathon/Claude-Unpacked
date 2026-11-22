@@ -1,0 +1,1 @@
+function e(e){return e.kind===void 0?e.name==="Free space":e.kind==="free"}function t(e){return e.kind===void 0?e.name==="Autocompact buffer"||e.name==="Compact buffer":e.kind==="buffer"}export{t as a,e as c};

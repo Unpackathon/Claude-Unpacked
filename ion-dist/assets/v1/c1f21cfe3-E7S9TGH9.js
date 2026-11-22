@@ -1,0 +1,1 @@
+var e='[role="feed"] [role="article"][aria-posinset]';function t(t){let n=null,r=-1;for(let i of t?.querySelectorAll(e)??[]){let e=Number(i.getAttribute("aria-posinset"));e>r&&(n=i,r=e)}return n}export{t as n,e as t};

@@ -1,0 +1,1 @@
+import{_ck as e,_jV as t}from"./shared-206-DmJmFrn0.js";import{So as n}from"./vendor-frame-Dy-urf5a.js";import{Uo as r}from"./shared-174-Uzjlgfhw.js";function i(){return r(n(t.subscribe,e,e))}function a(){return i()>="2026-10-12"}export{a as t};

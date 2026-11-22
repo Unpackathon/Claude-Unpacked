@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{bu as e}from"./shared-4-Dbvi5M5d.js";function t(){let $=J9(2),t=e();if(t!==void 0)return J1($,0,t)?K1($,0,t,t.has("auto")):$[1]}export{t};

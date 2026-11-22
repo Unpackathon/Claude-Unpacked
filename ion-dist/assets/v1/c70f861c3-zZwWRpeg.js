@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/v1/shared-frame-kvmio2lb.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-sR4dxpO6.js";import{tv as t}from"./shared-206-DmJmFrn0.js";var n=t({entry:{id:"office_host_conversion",tier:"T3",load:()=>e(()=>import("./c2bdd5e66-BcPIR2me.js"),__vite__mapDeps([0]))}});function r(e){n.peek()?.dropHostConversions(e)}export{n,r as t};

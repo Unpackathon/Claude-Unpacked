@@ -1,0 +1,1 @@
+function e(e){let t=e.clipboardData?.getData("text/plain")??"";if(!/[\r\n]/.test(t.trim()))return null;let{value:n,selectionStart:r,selectionEnd:i}=e.currentTarget;return[n.slice(0,r??n.length),...t.split(/[\r\n]/),n.slice(i??n.length)].map(e=>e.trim()).filter(e=>e!=="")}export{e as t};

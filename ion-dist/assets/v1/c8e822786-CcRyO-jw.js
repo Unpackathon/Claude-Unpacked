@@ -1,0 +1,1 @@
+function e(e){return e==="claude_in_slack"}function t(t){return t?.forced_settings?.some(t=>e(t.feature))??!1}function n(n,r,i){let a=i||t(r);return n?.settings?.claude_in_slack_settings?.install_enabled??(a||!r?.disabled_features?.some(e))}export{n,t};

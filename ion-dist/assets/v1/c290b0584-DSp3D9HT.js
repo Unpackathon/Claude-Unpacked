@@ -1,0 +1,1 @@
+import{cC as e}from"./shared-107-D8fgcL1q.js";function t(){return e().onThisDevice}export{t};

@@ -1,0 +1,1 @@
+import{Ff as e}from"./shared-0-D23kmOCB.js";import{Dy as t}from"./shared-206-DmJmFrn0.js";function n(){return e("__gb__2902602297")}function r(){let e=n();return e===1||e===2}function i(){n()===1&&t("frame_artifact_drawer")?.preload("direct")}export{i as n,r as t};

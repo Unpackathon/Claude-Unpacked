@@ -1,0 +1,1 @@
+import{fo as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,nf as K2,qd as J1}from"./shared-frame-DeSSgTpM.js";import{uE as t}from"./shared-107-D8fgcL1q.js";function n(n){let $=J9(3),r,i;J1($,0,n)?(r=()=>n?t("editor-draft",{holdsDeferredReload:!0,holdsSignOutLeave:!1}):void 0,i=[n],K2($,0,n,r,i)):(r=$[1],i=$[2]),e(r,i)}export{n as t};

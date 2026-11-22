@@ -1,0 +1,1 @@
+import{fm as e,om as t}from"./shared-174-Uzjlgfhw.js";function n(n,r){let i;return t((t,a)=>{let o=e();return o?(i??=r(o))(t,a):n(t.present)})}function r(e){return n(t=>t.flatMap(e),t=>t.scanEachMessage(e))}function i(...e){return n(t=>e[1](t,t[0]?.uuid),t=>t.scanCalls(...e))}export{i as t,r as n,n as _io};

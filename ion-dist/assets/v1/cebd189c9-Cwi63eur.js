@@ -1,0 +1,1 @@
+import{Wi as e}from"./shared-0-D23kmOCB.js";import{Hc as t}from"./shared-1-uKWXuHc9.js";function n(n,r){let i=["memory_settings",{orgUuid:r}];return n.getQueryData(i)?.memory_mode!=="off"&&t()&&e.isStoredChoiceSettled()}export{n as cardinalUnfocusedAllowed};

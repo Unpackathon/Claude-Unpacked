@@ -1,0 +1,1 @@
+import{bf as e}from"./shared-0-D23kmOCB.js";function t(t){return e(t)&&!!t.errorCode?.includes("attest")}export{t as n};

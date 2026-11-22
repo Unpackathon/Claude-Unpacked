@@ -1,0 +1,1 @@
+var e=new Set(["text","angular-html asciidoc html markdown mdc mdx rst wikitext","blade php vue","awk bash coffeescript diff genie log mermaid raku riscv tcl vimscript xsl","jsonl vue-vine"].flatMap(e=>e.split(" ")));function t(t){return!e.has(t)}export{t};

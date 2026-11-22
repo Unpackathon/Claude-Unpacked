@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/v1/shared-frame-kvmio2lb.css","assets/v1/shared-styles-DyIGYKNa.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-sR4dxpO6.js";import{my as t,py as n}from"./shared-206-DmJmFrn0.js";var r=n({entry:{id:"in_chat_gdrive_upsell",tier:"T3",load:()=>e(()=>import("./c8c467b98-CzCISH6d.js"),__vite__mapDeps([0,1]))},pick:e=>e.ConnectGDriveUpsell,options:{ssr:!1,loading:t("placeholder-would-mislead"),onChunkError:"fail-open"}});export{r as t};

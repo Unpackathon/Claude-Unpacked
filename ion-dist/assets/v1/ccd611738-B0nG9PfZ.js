@@ -1,0 +1,1 @@
+import{ma as e}from"./shared-5-psTP1UDv.js";import{t}from"./c167cfa22-BVGDFUtY.js";var n=/[^\p{ASCII}]/u,r=r=>{let i=r.toLowerCase();return n.test(i)?e(t(i)):i},i=(e,...t)=>{let n=r(e.trim());return n===""||t.some(e=>typeof e=="string"&&r(e).includes(n))};export{i as n,r as t};

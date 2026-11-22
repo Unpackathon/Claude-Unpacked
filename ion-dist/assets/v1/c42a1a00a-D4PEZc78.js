@@ -1,0 +1,1 @@
+import{ou as e,uc as t}from"./shared-141-K5japEQk.js";function n(n){let r=n.directoryMetadata;return r!==void 0&&e(n)&&t(r,n)?r:void 0}export{n as t};

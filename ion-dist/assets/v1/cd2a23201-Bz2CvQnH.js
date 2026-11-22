@@ -1,0 +1,1 @@
+function e(e){return`/admin-settings/cloud-environments?environment=${encodeURIComponent(e)}`}export{e as t};

@@ -1,0 +1,1 @@
+function e(e){return e.formatMessage({defaultMessage:"Unable to connect to extension server. Please try disabling and re-enabling the extension.",id:"or7Ga1MSSP"})}export{e as t};

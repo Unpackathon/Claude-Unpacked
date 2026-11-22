@@ -1,0 +1,1 @@
+import{bm as e}from"./shared-73-DfCPGdCT.js";function t(){return e("cai_noble_quilt")===!0}export{t};

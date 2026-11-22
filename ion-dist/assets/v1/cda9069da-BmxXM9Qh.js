@@ -1,0 +1,1 @@
+function e(e){return e!==void 0&&e!=="github.com"}export{e as t};

@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{t}from"./c881cc415-Clq5BxJ3.js";import{c as n,i as r}from"./c2e83f327-ByUQ-zlX.js";import{n as i}from"./c547f5e4c-B0-uVdzB.js";function a({active:a=!0,children:o}){let s=i(),[c,l]=n();return e(t,{id:"claude_ai_extra_usage",channel:"default",armed:a&&(s||c>0),children:e(r.Provider,{value:l,children:o})})}export{a as t};

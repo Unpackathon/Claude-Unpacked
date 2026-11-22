@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Xd as J4,if as K4}from"./shared-frame-DeSSgTpM.js";import{t}from"./frame-shell-comments-CtWjQeB2.js";function n(n){let $=J9(5),{note:r,field:i,keep:a,onKeep:o}=n;return J4($,0,i,a,r,o)?K4($,0,i,a,r,o,e(t,{value:r,canSubmit:!0,onSubmit:o,editor:i,sendAction:a})):$[4]}export{n as ElementNoteBox};

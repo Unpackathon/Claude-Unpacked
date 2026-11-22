@@ -1,0 +1,1 @@
+function e(e){if(typeof e!="object"||!e)return;let t=e.attention;return t==="background"||t==="highlight"?t:void 0}export{e as t};

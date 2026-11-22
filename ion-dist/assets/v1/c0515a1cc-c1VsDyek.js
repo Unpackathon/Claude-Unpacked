@@ -1,0 +1,1 @@
+function e(e,t){let n=(t%100+e+.5)%33.333333333333336;return(n<0?n+33.333333333333336:n)-.5}var t=()=>!1;function n(e){t=e}function r(){return t()}export{e as n,n as r,r as t};

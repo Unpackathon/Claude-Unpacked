@@ -1,0 +1,1 @@
+import{$ as e}from"./shared-174-Uzjlgfhw.js";function t(t,n){return!t||n.some(n=>{let r=e(n);return!!(r==="*"||r===t||r.startsWith("*.")&&t.endsWith(r.slice(1)))})}export{t as r};

@@ -1,0 +1,1 @@
+import{a as e}from"./cbf215181-DdDMgKXK.js";function t(t){let n=`${t.owner.login}/${t.name}`,r=e(t);return r?`${n} \u00B7 ${r}`:n}export{t as r};

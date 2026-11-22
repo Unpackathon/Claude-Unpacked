@@ -1,0 +1,3 @@
+import{sf as e}from"./shared-26-HtKWSjuR.js";function t(e){return e.channel?.channelId!==void 0}function n(e){return t(e)||e.channel?.pending===!0}function r(t,n,r=!1){let i=t.sentByAccountId,a=i===void 0?void 0:n!==void 0&&(i===n||e("user",i)===n),o=t.slackAuthor?.isViewer===!0;return a===!1||r&&a!==!0&&!o||a!==!0&&(t.threadStyled===!0||t.slackAuthor!==void 0)&&!o||t.inboundOrigin!==void 0&&t.inboundOrigin!=="web_human"}function i(e){return e.flatMap(e=>e.kind==="text"&&e.text!==void 0?[e.text]:[]).join(`
+
+`)}export{r as i,t as n,i as r,n as t};

@@ -1,0 +1,1 @@
+import{Bg as e}from"./shared-0-D23kmOCB.js";function t(t){return e(t)===0x8f272cd8cb7c}var n="channel-soft-nebula";function r(e,t,r,i){return[n,e,t,r??null,i??null]}function i(e,t,r){e.invalidateQueries({queryKey:[n,t,r]})}export{i as n,r,t};

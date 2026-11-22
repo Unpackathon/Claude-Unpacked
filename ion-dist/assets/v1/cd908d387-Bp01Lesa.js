@@ -1,0 +1,1 @@
+var e=["mcp_read_resource_v1","mcp_tool_ui_meta_v1"],t={client_capabilities:{mcp_apps:!0}};export{e as n,t};

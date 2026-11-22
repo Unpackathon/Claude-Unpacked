@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{Di as e}from"./shared-25-DapkFWlH.js";import{Nn as t}from"./shared-19-CxubpVir.js";function n(){let $=J9(3),n=t(),r=e("claude-ai:activity:get"),i=n.ready&&n.offByAdmin&&r,a=!n.ready;return J2($,0,i,a)?K2($,0,i,a,{isTargeted:i,isLoading:a}):$[2]}export{n as useSmartReportsAdminSpotlightTargeting};

@@ -1,0 +1,1 @@
+import{OS as e}from"./shared-107-D8fgcL1q.js";function t(t){let n=e(t??"");return n==="powershell.exe"||n==="pwsh.exe"}export{t};

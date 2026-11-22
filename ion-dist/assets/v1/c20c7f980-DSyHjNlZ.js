@@ -1,0 +1,1 @@
+import{bu as e}from"./shared-141-K5japEQk.js";import{i as t}from"./c9d6d9802-DkJF7p1I.js";var n=new URL("https://url-redacted.invalid").host;function r(t,r){let i=r&&t!==void 0?e(t)?.host:void 0;return i&&i!==n?i:void 0}function i(e,n){return r(e.remoteServers?.[n]?.url,t(e,n))}export{r as n,i as t};

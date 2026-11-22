@@ -1,0 +1,1 @@
+import{qo as e}from"./shared-frame-DeSSgTpM.js";function t(t){return`\u2068${e(t)}\u2069`}export{t};

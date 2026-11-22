@@ -1,0 +1,1 @@
+var e=globalThis["claude.engineSurface"]?.EngineSurface;function t(){let e=new Map,t=new Set;function n(){for(let e of Array.from(t))e()}function r(t){let r=(e.get(t)??1)-1;r>0?e.set(t,r):e.delete(t),n()}function i(t){let i=!0;return e.set(t,(e.get(t)??0)+1),n(),()=>{i&&(i=!1,r(t))}}return{hold:i,isHeld:t=>e.has(t),subscribe:e=>(t.add(e),()=>{t.delete(e)})}}export{e as n,t};

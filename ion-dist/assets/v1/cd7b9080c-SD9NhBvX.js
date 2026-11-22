@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({adminSet:{defaultMessage:"Set by admin",id:"8Kf+dGDk4Z"},defaultValue:{defaultMessage:"Default",id:"7Aqe2/LqFL"}});export{t};

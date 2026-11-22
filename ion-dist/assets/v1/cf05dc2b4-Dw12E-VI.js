@@ -1,0 +1,1 @@
+function e(e){return e.closest('[role="dialog"], [tabindex="-1"]')}export{e as t};

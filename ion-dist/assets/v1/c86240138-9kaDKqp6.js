@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";var e={fontWeight:700};function t(t){return t?{size:"sm"}:{size:"xs",style:e}}export{t as i};

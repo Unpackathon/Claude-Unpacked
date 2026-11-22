@@ -1,0 +1,1 @@
+import{Cm as e}from"./shared-73-DfCPGdCT.js";var t=e(new Map),n=e(new Set);function r(e){return n.has(e.toLowerCase())}function i(e){let n=t.get(e);return n!==void 0&&Date.now()-n.at<6e5}export{n as i,r as n,i as r,t};

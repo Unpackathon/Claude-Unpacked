@@ -1,0 +1,1 @@
+import{Y as e,yl as t}from"./shared-25-DapkFWlH.js";import{li as n}from"./shared-174-Uzjlgfhw.js";function r(){let r=e(),i=t("cowork_argonaut_main"),a=n();return r&&i&&!a}export{r as t};

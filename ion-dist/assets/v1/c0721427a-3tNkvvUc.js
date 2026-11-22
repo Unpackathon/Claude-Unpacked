@@ -1,0 +1,1 @@
+import{do as e,to as t}from"./shared-206-DmJmFrn0.js";import{t as n}from"./cb2e6bac0-D61kcdQr.js";function r(r){return t(e(r.replace(n,"$1"))).trim()}export{r as t};

@@ -1,0 +1,1 @@
+import{n as e,t}from"./c1bda80f2-OQuhHcp3.js";var n=e().catch(()=>null);export{t as handleImagineReadResource,n as version};

@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Xd as J4,if as K4,xs as t}from"./shared-frame-DeSSgTpM.js";import{Il as n}from"./shared-6-Bi6NjF-Q.js";function r(r){let $=J9(5),{page:i,external:a,inheritColor:o,children:s}=r,c=a===void 0||a,l=n(i);return J4($,0,s,c,o,l)?K4($,0,s,c,o,l,e(t,{href:l,external:c,inheritColor:o,children:s})):$[4]}export{r as t};

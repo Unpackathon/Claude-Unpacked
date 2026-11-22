@@ -1,0 +1,1 @@
+function e(e,t){return e.formatMessage({defaultMessage:"{count, plural, one {Answer sent} other {Answers sent}}",id:"BvczODxBox"},{count:t})}export{e as t};

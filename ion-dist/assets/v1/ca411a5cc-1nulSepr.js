@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{_i as e}from"./shared-25-DapkFWlH.js";function t(){let $=J9(2),{activeOrganization:t}=e(),n=t?.capabilities;return J1($,0,n)?K1($,0,n,!!n&&n.includes("chat")&&!n.includes("raven")):$[1]}export{t};

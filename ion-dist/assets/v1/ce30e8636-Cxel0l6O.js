@@ -1,0 +1,1 @@
+import{hp as e}from"./shared-25-DapkFWlH.js";function t(t){return t.current.pathname===t.next.pathname&&e(t.current.search,t.next.search)}export{t};

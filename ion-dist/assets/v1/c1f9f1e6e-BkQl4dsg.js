@@ -1,0 +1,1 @@
+import{So as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{t}from"./cddfd8917-CpD64AAX.js";var n=t();function r(){return!1}function i(t){let $=J9(2),i=J1($,0,t)?K1($,0,t,()=>t!==void 0&&n.isHeld(t)):$[1];return e(n.subscribe,i,r)}export{n,i as t};

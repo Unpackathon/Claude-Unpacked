@@ -1,0 +1,17 @@
+{
+  "capabilities": [
+    "mcp",
+    "self"
+  ],
+  "changes": [
+    "mcp",
+    "mcp-selection-required",
+    "self"
+  ],
+  "inertChanges": [
+    "mcp-observed-call-rule",
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance"
+  ]
+}

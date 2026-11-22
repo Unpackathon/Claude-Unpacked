@@ -1,0 +1,1 @@
+import{wm as e}from"./shared-73-DfCPGdCT.js";var t=e(()=>null);function n(e,n,r){t.set({touch:e,viewer:n,at:r})}function r(e,n){let r=t.read();return r!==null&&r.viewer.accountUuid===e.accountUuid&&r.viewer.organizationUuid===e.organizationUuid&&n-r.at<=6e4?r.touch:null}function i(e){t.read()?.touch===e&&t.set(null)}export{n,r,i as t};

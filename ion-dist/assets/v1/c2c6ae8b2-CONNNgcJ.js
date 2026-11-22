@@ -1,0 +1,1 @@
+import{on as e}from"./shared-206-DmJmFrn0.js";function t(e){let t=/^(\d{4})-(\d{2})-(\d{2})$/.exec(e);if(!t)return null;let n=new Date(Number(t[1]),Number(t[2])-1,Number(t[3]));return Number.isNaN(n.getTime())||n.getMonth()!==Number(t[2])-1?null:n}function n(){return e()}function r(e,t){return t&&e?.["web.plan_name."+t]||void 0}export{t as _vk,r as n,n as r};

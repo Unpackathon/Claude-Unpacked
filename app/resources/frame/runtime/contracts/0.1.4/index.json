@@ -1,0 +1,14 @@
+{
+  "capabilities": [
+    "mcp"
+  ],
+  "changes": [
+    "mcp",
+    "mcp-selection-required"
+  ],
+  "inertChanges": [
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance"
+  ]
+}

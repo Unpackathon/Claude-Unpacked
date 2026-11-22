@@ -1,0 +1,1 @@
+import{Lm as e}from"./shared-238-CGzDEQRA.js";import{t}from"./c518b5066-xVzi7YGA.js";function n(){let n=t(),r=e();return n==="flag_off"?"flag_off":r?"ok":"missing_permission"}function r(){return n()==="ok"}export{r as n,n as t};

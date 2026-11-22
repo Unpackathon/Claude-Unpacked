@@ -1,0 +1,1 @@
+import{Qa as e,lo as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Yd as J3,rf as K3}from"./shared-frame-DeSSgTpM.js";var n=e(null),r=e({inDialog:!1,onRows:!1});function i(){let e=t(n)!==null,{onRows:i}=t(r);return e&&i}function a(e,r){let $=J9(4),i=t(n);return J3($,0,i,r,e)?K3($,0,i,r,e,i?{title:r,Content:i,turnOn:e}:void 0):$[3]}export{i,r as n,a as r,n as t};

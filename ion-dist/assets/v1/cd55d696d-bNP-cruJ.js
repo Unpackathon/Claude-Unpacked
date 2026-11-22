@@ -1,0 +1,1 @@
+import{Ai as e,_i as t}from"./shared-25-DapkFWlH.js";function n(){let{activeOrganization:n}=t();return e(),!1}export{n as t};

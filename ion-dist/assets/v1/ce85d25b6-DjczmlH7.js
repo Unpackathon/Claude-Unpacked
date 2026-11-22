@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{vi as e}from"./shared-25-DapkFWlH.js";function t(){let $=J9(3),t=e(),n=t?.account?.uuid,r=t?.activeOrganization?.uuid;return J2($,0,n,r)?K2($,0,n,r,{accountUuid:n,orgUuid:r}):$[2]}export{t};

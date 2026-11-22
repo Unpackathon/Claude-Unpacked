@@ -1,0 +1,1 @@
+import{wl as e}from"./shared-25-DapkFWlH.js";function t(){return e("__gb__3132383516")}export{t};

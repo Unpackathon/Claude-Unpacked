@@ -1,0 +1,452 @@
+{
+  "appsSha": "1b20b90f2087f2bff19fb5d0137c61e38062a293",
+  "assetBase": "/_shell/",
+  "build": {
+    "defines": {
+      "FRAME_RUNTIME_HASH": "\"manifest.5b7cfc6bd2140d9e.json\"",
+      "FRAME_SHELL_DEV_SERVER": "false",
+      "import.meta.env.MODE": "\"emulator\"",
+      "process.env.NEXT_PUBLIC_ANT_ONLY": "\"\"",
+      "process.env.NEXT_PUBLIC_APP_ENV": "\"production\"",
+      "process.env.NODE_ENV": "\"production\""
+    },
+    "minified": true,
+    "sourcemaps": "none",
+    "tool": "vite build (apps/claude-ai/vite.frame-shell-bundle.config.ts)"
+  },
+  "builtAt": "2026-11-16T08:43:19Z",
+  "bundleId": "82a7760fb7c03900",
+  "entries": {
+    "broker": "frame-shell-broker.js",
+    "chrome": "frame-shell-chrome.js",
+    "chromeStub": "frame-shell-chrome-stub.js",
+    "deferred": "frame-shell-deferred.js",
+    "dictation": "frame-shell-dictate.js",
+    "html": "frame-shell.html",
+    "readaloud": "frame-shell-speak.js",
+    "shell": "frame-shell.js"
+  },
+  "files": {
+    "assets/captureWorklet-BamlKQVF.js": {
+      "bytes": 541,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "1e30ea7fe5897d8af2385bde0abdf6cdb84957066ba51bea958b28651cd499ad"
+    },
+    "chunk-0lymnIBS.js": {
+      "bytes": 6467,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "8c9009ae21ee3a16fe45a94c1a31b739c146b0edd50ccf902cc868903512812c"
+    },
+    "chunk-1bMwSqS5.js": {
+      "bytes": 1719,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "0b41401919326c872452a82c2eb5bf656f5115508ae2ec1cbdf54dd76209a43e"
+    },
+    "chunk-BpPJN_oU.js": {
+      "bytes": 20448,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "2c79685964eeec731492b19acbbe91880937a3064fecdbeb7636b6b7f5629b57"
+    },
+    "chunk-BrZ_AoH2.js": {
+      "bytes": 2432,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "f154a842abc3406ec801b79d3b30196573f7bca145016ffc4c252975b71289c8"
+    },
+    "chunk-BraE3cop.js": {
+      "bytes": 5215,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "6c9a97b44b915fb1bc6719d25887fef3a0369dc03214de822a9ce5abe7091980"
+    },
+    "chunk-Btwr9m9F.js": {
+      "bytes": 163154,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "8367b885f95b1a3b96b47ebec92e66ee1477a22fadf4edd71bf5575a2de7572a"
+    },
+    "chunk-C0Dek1Tj.js": {
+      "bytes": 716,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "d76110286c590722ab3347c79c713a385ba5041d5f0d6f0e505527c161e127fd"
+    },
+    "chunk-C11MtJQv.js": {
+      "bytes": 69799,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "e7a3f36234566e22172f99c1625ca8e751bb5883236c2d329600ca075b017317"
+    },
+    "chunk-C2AGkNSa.js": {
+      "bytes": 16239,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "678216353c1968cf1b851cdcd15d0b79ab6c6d384b7d209789a62a308b897d6c"
+    },
+    "chunk-C4ROfnf5.js": {
+      "bytes": 1071,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "6e65c7d4ad86d7c07f86f5e96dd34d4d62810d4e43b7dfe064235727dba0b03d"
+    },
+    "chunk-C97fOuyp.js": {
+      "bytes": 738,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "d095e3c6f01834eeeaf13990f93c633a144adf7602305729a32aa8997985dab3"
+    },
+    "chunk-CGd_tlvr.js": {
+      "bytes": 2888,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "63eab7de50edb23d9100376f6edee10a6eb2b274153f5de038bea9233eae2e22"
+    },
+    "chunk-CMHkjFa1.js": {
+      "bytes": 10386,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "946b6094c3f78a8fee0504c16303f4291e4ee94ff4f2164e7e286d07a62f0808"
+    },
+    "chunk-D71sSubd.js": {
+      "bytes": 113589,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "5b0dfb50992a53518ae7243d5ed3e0e8c5ce91fd442760ed85d291ad3cdbd9b2"
+    },
+    "chunk-DGYVVVR7.js": {
+      "bytes": 2547,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "94a926e8ada2b91d8d9f3a916a851d619de9ee1e866f4afd2698e56b13a1b1b9"
+    },
+    "chunk-D_dWbYGp.js": {
+      "bytes": 3565,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "d208207ee27d30d8fc796b34fe921069f24b6b1623b5d734b5917531e4e6ea44"
+    },
+    "chunk-TM7camWt.js": {
+      "bytes": 920,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "1f6a38cf61137b1c00d4b8ca801c736f39570f48dd09f347d24c6eb32d2620ab"
+    },
+    "chunk-UisD8C-J.js": {
+      "bytes": 26725,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "db8d42592b0a7d315fa045a31d98e6a26b3bde5485b402ff6fb650ba3a3c9041"
+    },
+    "chunk-WjdMM2Q2.js": {
+      "bytes": 14261,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "872d7dfe9b7e28779fb5eb2d99e04bf652986957894f8db48b66ec1468ec0c5b"
+    },
+    "chunk-YUWIGe6-.js": {
+      "bytes": 4431,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "4cb6f59e5e2396e2b4d68a6c3f882c21640739b48dfe6048bc0ad22e604bed92"
+    },
+    "chunk-dXCGbE4X.js": {
+      "bytes": 33128,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "6a8aa06b7c80d40adffe4036cf6b7d3c75c207f2b56e6853930b2736fe441b0e"
+    },
+    "chunk-mFkhJP0o.js": {
+      "bytes": 7887,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "fa64869277d8e042d27307a818f5a34b571759f0c89ec3dba2ea3d7f43c39b5c"
+    },
+    "fonts/AnthropicSans-Italic-Variable.woff2": {
+      "bytes": 129536,
+      "contentType": "font/woff2",
+      "sha256": "ad89863fd0eb36e001166ea2a51e5102d18ffbbe4a0b321291a94d3739a5696b"
+    },
+    "fonts/AnthropicSans-Roman-Variable.woff2": {
+      "bytes": 118172,
+      "contentType": "font/woff2",
+      "sha256": "542f0e8bf7a27f2300f4cfb4b8ad168bc4cf7dc1eeeb8471cac66802f58e137c"
+    },
+    "fonts/AnthropicSansMicro-Display-Variable.woff2": {
+      "bytes": 240736,
+      "contentType": "font/woff2",
+      "sha256": "bfa14fc43574cc1d1ea68a150111cd2d67738e6cc874896665c1cd9e9d64a479"
+    },
+    "fonts/AnthropicSansMicro-Text-Variable.woff2": {
+      "bytes": 267068,
+      "contentType": "font/woff2",
+      "sha256": "5161b683881e79149ff06ace3256e704b920839885032afba6b1a874895e1ced"
+    },
+    "fonts/AnthropicSerif-Italic-Variable.woff2": {
+      "bytes": 163440,
+      "contentType": "font/woff2",
+      "sha256": "d2fd488ae565a92da356c44e13cb3a5f7080f4ce1bfdd9ad11a30f0dcc3e6ba8"
+    },
+    "fonts/AnthropicSerif-Roman-Variable.woff2": {
+      "bytes": 165536,
+      "contentType": "font/woff2",
+      "sha256": "ac9c19c70558c5152b92119f83ca37dded627b524d75552a26fcda015d4106be"
+    },
+    "fonts/anthropicons-variable.woff2": {
+      "bytes": 166432,
+      "contentType": "font/woff2",
+      "sha256": "f5533381af11c7c7d9df3660be50287b6844473f84e385e83e0c6bb6d99b7986"
+    },
+    "frame-shell-broker.js": {
+      "bytes": 606230,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "19b493cf652f75d6b92fa7e5217540ba51a775d5da92ce7e3b3809733cdf0375"
+    },
+    "frame-shell-chrome-stub.js": {
+      "bytes": 6594,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "950b47125c8424161c554e75f2575e2474081e60610c064cbc9b124c659777a0"
+    },
+    "frame-shell-chrome.js": {
+      "bytes": 2981380,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "dfba6dcf28d38c81d4fa9fff5828bb7639858482716c4d5b5608df6899b2d2b6"
+    },
+    "frame-shell-deferred.js": {
+      "bytes": 293062,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "154230475512eb2a1b4ffcf27c7cd328a8b0e9e56dbbd31e8801f4dbb8bdb105"
+    },
+    "frame-shell-dictate.js": {
+      "bytes": 55797,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "e76dbfcfc9080f82d9ee0f01643c83ba164d6ebbcbf8732359d5aeab441b8487"
+    },
+    "frame-shell-speak.js": {
+      "bytes": 65501,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "4408b254254f55ddf2ff6bb5169dfcf85739b4199fd3106199694d57f9e6b42b"
+    },
+    "frame-shell.html": {
+      "bytes": 89766,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "7f7d75efce24c961d34e0bed19e858e81bd847a2b6efa545f6384aecbec4ae8b"
+    },
+    "frame-shell.js": {
+      "bytes": 180282,
+      "contentType": "text/javascript; charset=utf-8",
+      "sha256": "cb34bf29afa05b95a376ad8247ca1c4780ccd6cf40a6ede4006fbb3a06e8f347"
+    },
+    "i18n/frame-shell/de-DE.json": {
+      "bytes": 163323,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "5094afe66d7ef63f2ba0d7b90e723734bd6b27b0fdc16564e226b14c68949b68"
+    },
+    "i18n/frame-shell/es-419.json": {
+      "bytes": 160979,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "ea943cca234d783942538d654dc0010b9f49c73199fe3f403e9da601824a105d"
+    },
+    "i18n/frame-shell/es-ES.json": {
+      "bytes": 162207,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "27940510770bc5e1fddc48e0c267564150a219e1d022093ac394deee078be00e"
+    },
+    "i18n/frame-shell/fr-FR.json": {
+      "bytes": 175119,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "a86609a4989e9a01b7356f1a39313620848346ca4e81a830137de45cff9ae699"
+    },
+    "i18n/frame-shell/hi-IN.json": {
+      "bytes": 318194,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "8307b7574b3224730cc76bd5cfcab92d4da707819c15a9d6bedd33a392dccd82"
+    },
+    "i18n/frame-shell/id-ID.json": {
+      "bytes": 145099,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "26de9b6dfd7d7bbf96f0db00ff5247de9fb07450d255dde8a8d769a23fbbadbf"
+    },
+    "i18n/frame-shell/it-IT.json": {
+      "bytes": 164512,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "0aeaedae00274cba11c9cbcef8cda57bb014a5b7dfcdd9c32b756d23c019b757"
+    },
+    "i18n/frame-shell/ja-JP.json": {
+      "bytes": 191372,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "71924b15888dc359dcd84fc1961e20f87ca7b27233312f715fb329b03712f7bf"
+    },
+    "i18n/frame-shell/ko-KR.json": {
+      "bytes": 173328,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "dbaed4f26938cc8c007ea730d2f8d9ea66fc47fc1655699a9c29d668330aedcd"
+    },
+    "i18n/frame-shell/pt-BR.json": {
+      "bytes": 161682,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "4d20af65550c9e879042cd6ca201d2980b3711713e17ad98ed1d7159b196b58f"
+    }
+  },
+  "flavour": "emulator",
+  "runtime": {
+    "contracts": [
+      "0.1.0",
+      "0.1.1",
+      "0.1.2",
+      "0.1.3",
+      "0.1.4",
+      "0.1.5",
+      "0.1.6",
+      "0.1.7",
+      "0.1.8",
+      "0.1.9",
+      "0.1.10",
+      "0.1.11",
+      "0.1.12",
+      "0.1.13",
+      "0.1.14",
+      "0.1.15",
+      "0.1.16",
+      "0.1.17",
+      "0.1.18",
+      "0.1.19",
+      "0.1.20",
+      "0.1.21",
+      "0.1.22",
+      "0.1.23",
+      "0.1.24",
+      "0.1.25",
+      "0.1.26",
+      "0.1.27",
+      "0.1.28",
+      "0.1.29",
+      "0.1.30",
+      "0.1.31",
+      "0.2.0",
+      "0.2.1",
+      "0.2.2",
+      "0.2.3",
+      "0.2.4",
+      "0.2.5",
+      "0.2.6",
+      "0.2.7",
+      "0.2.8",
+      "0.2.9",
+      "0.2.10",
+      "0.2.11",
+      "0.2.12",
+      "0.2.13",
+      "0.2.14",
+      "0.2.15",
+      "0.2.16",
+      "0.2.17",
+      "0.2.18",
+      "0.2.19",
+      "0.2.20",
+      "0.2.21",
+      "0.2.22",
+      "0.2.23",
+      "0.2.24",
+      "0.2.25",
+      "0.2.26",
+      "0.2.27",
+      "0.2.28",
+      "0.2.29",
+      "0.2.30",
+      "0.2.31",
+      "0.2.32",
+      "0.2.33",
+      "0.2.34",
+      "0.2.35",
+      "0.2.36",
+      "0.2.37",
+      "0.2.38",
+      "0.2.39",
+      "0.2.40",
+      "0.2.41",
+      "0.2.42",
+      "0.2.43",
+      "0.2.44",
+      "0.2.45",
+      "0.2.46",
+      "0.2.47",
+      "0.2.48",
+      "0.2.49",
+      "0.2.50",
+      "0.2.51",
+      "0.2.52",
+      "0.2.53",
+      "0.2.54",
+      "0.2.55",
+      "0.2.56",
+      "0.2.57",
+      "0.2.58",
+      "0.2.59",
+      "0.2.60",
+      "0.2.61",
+      "0.2.62",
+      "0.2.63",
+      "0.2.64",
+      "0.2.65",
+      "0.2.66",
+      "0.2.67",
+      "0.2.68",
+      "0.2.69",
+      "0.2.70",
+      "0.2.71",
+      "0.2.72",
+      "0.2.73",
+      "0.2.74",
+      "0.2.75",
+      "0.2.76",
+      "0.2.77",
+      "0.2.78",
+      "0.2.79",
+      "0.2.80",
+      "0.2.81",
+      "0.2.82",
+      "0.2.83",
+      "0.2.84",
+      "0.2.85",
+      "0.2.86",
+      "0.2.87",
+      "0.2.88",
+      "0.2.89",
+      "0.2.90",
+      "0.2.91",
+      "0.2.92",
+      "0.2.93",
+      "0.2.94",
+      "0.2.95",
+      "0.2.96"
+    ],
+    "hash": "manifest.5b7cfc6bd2140d9e.json"
+  },
+  "template": {
+    "headers": {
+      "Cache-Control": "private, no-store",
+      "Content-Security-Policy": "frame-ancestors 'self'; frame-src https://{ucHost}; script-src 'nonce-{nonce}' 'self' 'wasm-unsafe-eval'; style-src 'nonce-{nonce}'; connect-src 'self' https://{ucHost}; base-uri 'none'; object-src 'none'; form-action 'none'",
+      "Link": "<https://{ucHost}>; rel=preconnect",
+      "X-Robots-Tag": "noindex, nofollow"
+    },
+    "html": "frame-shell.html",
+    "placeholders": [
+      "html",
+      "head",
+      "title",
+      "script",
+      "style",
+      "div#frame-slot"
+    ],
+    "stamper": "ion-edge handleFrameShell",
+    "stamps": {
+      "div#frame-slot": [
+        "attr:data-frame-uuid",
+        "attr:data-frame-uchost",
+        "attr?:data-frame-tophost"
+      ],
+      "head": [
+        "prepend:og-meta-block",
+        "append:<meta name=\"robots\" content=\"noindex, nofollow\">",
+        "append?:<link rel=\"preconnect\" href=\"https://{ucHost}\">",
+        "append?:<meta name=\"apple-itunes-app\" content=\"app-id={iosAppId}, app-argument={viewerOrigin}/code/artifact/[{titleSlug}-]{uuid}[?sk={shareKey}]\">"
+      ],
+      "html": [
+        "attr:data-frame-uuid",
+        "attr:data-frame-uchost",
+        "attr?:data-embedded"
+      ],
+      "script": [
+        "attr:nonce"
+      ],
+      "style": [
+        "attr:nonce"
+      ],
+      "title": [
+        "text:{meta.title}"
+      ]
+    }
+  },
+  "v": 1
+}

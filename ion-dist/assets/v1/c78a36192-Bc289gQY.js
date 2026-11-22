@@ -1,0 +1,1 @@
+import{_o as e,bo as t,co as n}from"./vendor-frame-Dy-urf5a.js";import{_i as r}from"./shared-25-DapkFWlH.js";function i(){let{account:i,activeOrganization:a}=r(),o=i&&a?`${i.uuid} ${a.uuid}`:void 0,s=t(o);return e(()=>(s.current=o,()=>{s.current=void 0}),[o]),n(()=>{let e=s.current;return()=>e!==void 0&&s.current===e},[])}export{i as t};

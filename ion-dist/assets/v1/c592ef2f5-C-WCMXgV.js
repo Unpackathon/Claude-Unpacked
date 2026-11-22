@@ -1,0 +1,1 @@
+function e(e){return e.isPending&&!e.isPaused?e.variables:void 0}export{e as t};

@@ -1,0 +1,43 @@
+{
+  "v": 1,
+  "source": "db",
+  "db": {
+    "meta": "deck/meta",
+    "collections": [
+      "deck",
+      "slides",
+      "fonts"
+    ],
+    "cover": {
+      "collection": "slides",
+      "orderField": "order"
+    }
+  },
+  "files": {
+    "index": "project/deck.json",
+    "order": "order",
+    "cover": "cover"
+  },
+  "captureOmits": [
+    "artifact-type/app.js",
+    "artifact-type/app.css",
+    "artifact-type/reference/craft.md",
+    "artifact-type/reference/deck-files.md",
+    "artifact-type/reference/diagram-recipes.md",
+    "artifact-type/reference/diagrams.md",
+    "artifact-type/reference/fonts.md",
+    "artifact-type/reference/format.md",
+    "artifact-type/reference/google-fonts-families.json",
+    "artifact-type/reference/google-fonts-notices.json",
+    "artifact-type/reference/google-fonts-reserved.json",
+    "artifact-type/reference/images.md",
+    "artifact-type/reference/layout.md",
+    "artifact-type/reference/photo-library.md",
+    "artifact-type/reference/questions.md",
+    "artifact-type/reference/styles.md",
+    "artifact-type/reference/view-state.md",
+    "artifact-type/reference/viewer.md",
+    "artifact-type/third-party-licenses.js",
+    "SKILL.md"
+  ]
+}

@@ -1,0 +1,1 @@
+function e(e,t){return e.formatNumber(t,{style:"currency",currency:"USD",minimumFractionDigits:0,maximumFractionDigits:0})}export{e as t};

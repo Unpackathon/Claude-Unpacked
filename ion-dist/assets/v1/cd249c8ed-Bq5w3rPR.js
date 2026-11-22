@@ -1,0 +1,1 @@
+function e(e){return new TextDecoder("latin1").decode(e.slice(0,1024)).includes("%PDF")}export{e as t};

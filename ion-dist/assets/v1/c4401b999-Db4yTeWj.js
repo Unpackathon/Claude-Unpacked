@@ -1,0 +1,1 @@
+import{Ha as e,Va as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Kd as J0,ef as K0}from"./shared-frame-DeSSgTpM.js";import{Dt as n}from"./vendor-all-1-BocQA2O8.js";function r(){let $=J9(1);return J0($,0)?K0($,0,e("span",{className:"sr-only",children:[" ",t(n,{defaultMessage:"(opens in new tab)",id:"yZs9WUVaoC"})]})):$[0]}export{r as t};

@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{oo as t}from"./shared-1-uKWXuHc9.js";import{Q as n}from"./shared-238-CGzDEQRA.js";function r(){let{path:r,settled:i}=n();return i?e(t,{to:r}):null}export{r as t};

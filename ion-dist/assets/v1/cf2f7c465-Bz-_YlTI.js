@@ -1,0 +1,1 @@
+function e(e){let t=e.options.mutationKey?.[2]?.uuid;if(typeof t=="string")return[t];let n=e.state.variables;return typeof n?.conversationUuid=="string"?[n.conversationUuid]:typeof n?.uuid=="string"?[n.uuid]:Array.isArray(n?.conversation_uuids)?n.conversation_uuids.filter(e=>typeof e=="string"):[]}export{e as t};

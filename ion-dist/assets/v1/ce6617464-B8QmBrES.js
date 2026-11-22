@@ -1,0 +1,1 @@
+import{Gt as e,Xt as t,Yt as n,Zt as r,qt as i}from"./shared-38-BJgM_wzP.js";var a=r(()=>{let r=n({label:t(e),value:t(t=>typeof t=="boolean"?t:e(t))}),a=n({name:t(e),price:e,attributes:i(r,8),url:e});return n({products:t(i(a,3)),summary:e})});export{a as t};

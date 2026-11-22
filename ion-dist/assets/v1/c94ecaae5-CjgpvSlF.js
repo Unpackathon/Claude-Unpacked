@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e()(()=>({inFlight:{}}));function n(e){let $=J9(2),n=J1($,0,e)?K1($,0,e,t=>e in t.inFlight):$[1];return t(n)}export{n as i,t as _pF};

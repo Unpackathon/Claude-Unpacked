@@ -1,0 +1,1 @@
+import{Ma as e,Va as t}from"./vendor-frame-Dy-urf5a.js";import{Xo as n}from"./shared-frame-DeSSgTpM.js";import{Pu as r}from"./shared-33-BnmCH4hK.js";function i({side:i,...a}){let o=e();return t(n,{side:i??r("inline-start",o),...a})}export{i as t};

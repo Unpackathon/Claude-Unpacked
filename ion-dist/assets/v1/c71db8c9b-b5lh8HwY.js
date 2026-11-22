@@ -1,0 +1,1 @@
+import{lT as e}from"./shared-107-D8fgcL1q.js";import{n as t}from"./c0e10c58d-BRHbeN0V.js";function n(n,r,i){let a=t(n,r);return a.says==="installed"?n.formatMessage(a.message,i):e({id:a.id,intl:n,dangerouslyVisiblePublicValues:i})}export{n as t};

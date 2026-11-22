@@ -1,0 +1,1 @@
+import"./shared-25-DapkFWlH.js";import"./shared-26-HtKWSjuR.js";var e={quietAfterDays:3,autoResolveDays:7,quietAfterDaysIsDefault:!0,autoResolveDaysIsDefault:!0};export{e as n};

@@ -1,0 +1,1 @@
+function e(e,t){let n=e=>{for(let r of Object.keys(e??{}))if(typeof e[r]=="object")n(e[r]);else if(r==="match"||r==="begin"||r==="end"||r==="while")for(let[n,i]of t)e[r].includes(n)&&(e[r]=e[r].split(n).join(i))};n(e.repository),n(e.patterns),n(e.injections)}export{e as t};

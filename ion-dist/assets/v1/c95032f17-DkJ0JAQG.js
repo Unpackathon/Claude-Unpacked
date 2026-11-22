@@ -1,0 +1,1 @@
+import{Gp as e}from"./shared-0-D23kmOCB.js";function t(t,n){e?.setAutoFixOwnPrsWanted?.(t,n)?.catch(()=>void 0)}export{t};

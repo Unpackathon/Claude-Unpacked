@@ -1,0 +1,1 @@
+function e(e,t,n=e=>e){let r={Row:n(e)},i=new WeakMap;return a=>{if(a===null)return r;let o=i.get(a)??{Row:n(t(a)(e))};return i.set(a,o),o}}export{e as t};

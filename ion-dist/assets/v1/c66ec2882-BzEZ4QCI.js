@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";var e=()=>!1;function t(t){e=t}function n(t,n){return e(t,n)}export{n,t as i};

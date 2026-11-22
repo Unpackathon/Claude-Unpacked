@@ -1,0 +1,1 @@
+import{hu as e}from"./shared-frame-DeSSgTpM.js";import{Ym as t}from"./shared-1-uKWXuHc9.js";function n(n){return!n||!e()?null:(t()||n.scrollIntoView({block:"center"}),n)}export{n as t};

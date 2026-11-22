@@ -1,0 +1,1 @@
+import{Kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e()(e=>({sessions:void 0,setSessions:t=>e({sessions:t})}));export{t};

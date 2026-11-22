@@ -1,0 +1,1 @@
+import{Xi as e}from"./shared-160-Cypm9y__.js";function t({defaultWorker:t,policyRead:n,pools:r,poolsTruncated:i,environmentIds:a,environmentsTruncated:o}){if(t?.type==="pool"){if(r===void 0)return"pending";let n=r.find(e=>e.pool_id===t.id);return n?e(n)?t:null:i?"pending":null}return n?!t||a.includes(t.id)?t:o?"pending":null:"pending"}export{t};

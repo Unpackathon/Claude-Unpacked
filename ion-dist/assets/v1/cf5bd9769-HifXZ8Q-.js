@@ -1,0 +1,1 @@
+function e(e,t=!1){return{...t?{is_error:!0}:{},content:[{type:"text",text:e}]}}function t(t){return e(t,!0)}export{e as n,t};

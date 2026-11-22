@@ -1,0 +1,1 @@
+import{Va as e,ba as t}from"./vendor-frame-Dy-urf5a.js";function n({className:n,...r}){return e("div",{...r,className:t("text-center text-muted-as-secondary text-body",n)})}function r({className:n,...r}){return e("div",{role:"alert",className:t("text-danger text-center text-body",n),...r})}export{r as n,n as t};

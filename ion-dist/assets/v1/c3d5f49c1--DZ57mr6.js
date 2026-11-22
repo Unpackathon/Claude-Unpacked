@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Cy as t}from"./shared-141-K5japEQk.js";function n(n){let $=J9(2),{children:r}=n;return J1($,0,r)?K1($,0,r,e(t,{value:"chat",children:r})):$[1]}export{n as t};

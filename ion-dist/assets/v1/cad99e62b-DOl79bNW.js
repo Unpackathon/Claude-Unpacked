@@ -1,0 +1,1 @@
+function e(e){return e!==void 0&&e.type==="remote"&&e.localConfig===void 0&&e.runsOnSessionHost!==!0}export{e as t};

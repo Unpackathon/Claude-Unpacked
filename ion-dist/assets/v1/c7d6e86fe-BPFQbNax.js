@@ -1,0 +1,1 @@
+import{b_ as e}from"./shared-206-DmJmFrn0.js";function t(t,n){if(!t.hasFocus())return!1;let r=t.activeElement;if(r?.tagName==="IFRAME"){if(n!==void 0&&n?.contains(e(r))!==!0)return!1;if(r=r.contentDocument?.activeElement??r,r.id==="frame-content")return!0}return r?.tagName==="BODY"}export{t};

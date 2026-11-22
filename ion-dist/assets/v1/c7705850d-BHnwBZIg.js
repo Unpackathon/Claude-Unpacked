@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import{$d as J9,Kd as J0,ef as K0}from"./shared-frame-DeSSgTpM.js";function e(){let $=J9(1);return J0($,0)?K0($,0,null):$[0]}export{e as default};

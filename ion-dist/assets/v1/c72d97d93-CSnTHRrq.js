@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";function t(t,n){let r=[],i=0;return t.split("").forEach((a,o)=>{n.includes(a)&&o+1<t.length&&(r.push(t.slice(i,o+1),e("wbr",{"aria-hidden":!0},o)),i=o+1)}),r.push(t.slice(i)),r}export{t};

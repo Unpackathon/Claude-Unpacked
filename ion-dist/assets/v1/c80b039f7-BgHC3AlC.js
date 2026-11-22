@@ -1,0 +1,1 @@
+import{Cd as e}from"./shared-0-D23kmOCB.js";var t=new WeakMap;function n(n){let r=t.get(n);if(r)return r;let i=!1,a=(...t)=>{try{n(...t)}catch(t){i||(i=!0,e(t,{feature:"epitaxy",component:"guardPostRender"}))}};return t.set(n,a),t.set(a,a),a}export{n as t};

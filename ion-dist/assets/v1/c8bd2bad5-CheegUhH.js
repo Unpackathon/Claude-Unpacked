@@ -1,0 +1,1 @@
+import{E as e,O as t,b as n,d as r,j as i}from"./vendor-zod-Ddu6wnrm.js";import{$d as J9,Vd as I1,qd as J1}from"./shared-frame-DeSSgTpM.js";import{dl as a}from"./shared-25-DapkFWlH.js";var o=n(()=>t(e=>e??{},e({ids:r(i()).default([])}))),s={ids:[]};function c(){let $=J9(2),e=a("dxt_hidden_extensions",s,o);return J1($,0,e.ids)?I1($,0,new Set(e.ids),e.ids):$[1]}export{c as t};

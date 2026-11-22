@@ -1,0 +1,1 @@
+var e={open_spotlight:"humming-blanket-spotlight",open_corner:"humming-blanket-corner-card"},t={open_spotlight:"hb_spotlight",open_corner:"hb_corner"};export{e as n,t};

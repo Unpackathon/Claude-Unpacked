@@ -1,0 +1,1 @@
+var e=new Set(["ready","not_connected","needs_reconnect","app_not_installed","app_not_linked","sso_required"]);function t(t){return typeof t=="string"&&e.has(t)?t:void 0}export{t as r};

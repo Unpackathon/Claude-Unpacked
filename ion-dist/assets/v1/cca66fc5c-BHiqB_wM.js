@@ -1,0 +1,1 @@
+function e(e,t){let n=new Map;for(let r of e)if(!(r.type!=="user"||!Array.isArray(r.message.content))){for(let e of r.message.content)if(e.type==="tool_result"&&e.tool_use_id&&e.is_error!==!0){let r=t(e);r!==void 0&&n.set(e.tool_use_id,r)}}return n}export{e as t};

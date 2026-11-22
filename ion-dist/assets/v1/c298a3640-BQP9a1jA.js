@@ -1,0 +1,1 @@
+import"./shared-174-Uzjlgfhw.js";import{_Yg as e,t}from"./c2a76796b-P_fBd2dL.js";function n(n){let r=t(n);return r===null?{kind:"categories"}:e(r)}export{n as t};

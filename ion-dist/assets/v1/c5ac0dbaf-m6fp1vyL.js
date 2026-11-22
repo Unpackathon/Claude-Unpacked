@@ -1,0 +1,1 @@
+import{cr as e}from"./shared-29-GrkLL17E.js";var t=[403,404];function n(n){return t.includes(e(n))&&!(typeof n=="object"&&n&&"serverReason"in n&&n.serverReason==="device_check_unavailable")}export{n as t};

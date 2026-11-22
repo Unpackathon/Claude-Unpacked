@@ -1,0 +1,3 @@
+import{Yd as e}from"./shared-0-D23kmOCB.js";import{Pw as t,jw as n}from"./shared-107-D8fgcL1q.js";var r=new Set([...n,...t]);function i(t,n){let i=e(n)?.hostname;return`${i===void 0||r.has(i)?"https://claude.ai":n}/code/artifact/${encodeURIComponent(t)}`}var a=/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/g;function o(e){let t=e.slice(0,14336).replace(a,"");return`/epitaxy?q=${encodeURIComponent(t)}`}function s(e,t){let n=t.trim();return[`Implement this design in this codebase:\n${e}`,"Read the design's files from that link. Match how it looks, using this codebase's own components and conventions.",...n===""?[]:[n]].join(`
+
+`)}export{i as n,s as r,o as t};

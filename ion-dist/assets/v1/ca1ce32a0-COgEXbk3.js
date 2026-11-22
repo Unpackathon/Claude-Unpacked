@@ -1,0 +1,1 @@
+import{Bx as e,_TA as t,_Yc as n}from"./shared-107-D8fgcL1q.js";function r(r){return e(),t(r,n,{listedOnly:!0})}function i(e,t){let n;try{n=new URL(e).hostname}catch{return""}let i=t?r(e):void 0;return i===void 0||i.startsWith("www.")?n:n.replace(/^www\./,"")}export{i as t};

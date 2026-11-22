@@ -1,0 +1,1 @@
+import{s as e,t}from"./c2b34377d-DHgoEUUm.js";var n=0,r=0;function i(e){return new Promise(i=>{if(performance.now()<r){i(void 0);return}let a=!1,o=setTimeout(()=>{a=!0,++n===2&&(n=0,r=performance.now()+6e4),i(void 0)},300);t(e).then(e=>{clearTimeout(o),a||(n=0),i(e)})})}function a(){return e(!0)?void 0:i}export{a as t};

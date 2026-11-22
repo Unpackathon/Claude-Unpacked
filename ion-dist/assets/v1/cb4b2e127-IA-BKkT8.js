@@ -1,0 +1,1 @@
+import{Ds as e,gs as t}from"./shared-25-DapkFWlH.js";var n=!1,r;function i(){n=t()==="/logout/all-sessions",r??=e(o)}function a(){return n}function o(){n=!1}export{a as n,i as r,o as t};

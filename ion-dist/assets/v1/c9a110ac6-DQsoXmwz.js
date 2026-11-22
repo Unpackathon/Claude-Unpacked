@@ -1,0 +1,1 @@
+import{cu as e}from"./shared-141-K5japEQk.js";import"./shared-107-D8fgcL1q.js";import{Wt as t}from"./shared-6-Bi6NjF-Q.js";function n(n){return e(n)==="gdrive"?"drive":t(n)}export{n as t};

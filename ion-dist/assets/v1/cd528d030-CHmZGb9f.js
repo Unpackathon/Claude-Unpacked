@@ -1,0 +1,1 @@
+import{_i as e}from"./shared-25-DapkFWlH.js";import{t}from"./c123f49e0-G4KJEHEm.js";function n(){let{activeOrganization:n}=e(),r=t();return n!==void 0&&r}export{n as t};

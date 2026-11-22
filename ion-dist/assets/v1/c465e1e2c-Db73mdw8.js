@@ -1,0 +1,3 @@
+import{D as e}from"./shared-12-DKR53H0E.js";function t(e){return"tagName"in e&&e.tagName==="TEXTAREA"}function n(e,n){if(e.key!=="ArrowUp"&&e.key!=="ArrowDown"||e.repeat||e.shiftKey||e.metaKey||e.ctrlKey||e.altKey||e.nativeEvent.isComposing||!n)return null;let r=e.target;if(!t(r))return null;let{selectionStart:i,selectionEnd:a,value:o}=r;return i===a?e.key==="ArrowUp"?i===0||o.lastIndexOf(`
+`,i-1)===-1?"previous":null:o.indexOf(`
+`,i)===-1?"next":null:null}function r(t){return t==="default"||t==="sans"?"sans":e}export{n as _LT,r as t};

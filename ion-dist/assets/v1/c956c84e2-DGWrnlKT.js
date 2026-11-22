@@ -1,0 +1,1 @@
+import{sT as e}from"./shared-107-D8fgcL1q.js";var t={daily:"1a4oekm",weekdays:"1mbzp8e",weekly:"igqv78",monthly:"4c1q4a"},n=[...Object.values(t),"1eoat0a","y55h2j"];function r(t){return n.every(n=>e(t,n))}export{r as n,t};

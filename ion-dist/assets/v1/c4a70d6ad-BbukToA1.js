@@ -1,0 +1,1 @@
+import"./shared-73-DfCPGdCT.js";import"./cd9b69eaf-DV0iNNoC.js";var e=["gitlab.com","bitbucket.org"],t=["github.com",...e];export{e as t,t as n};

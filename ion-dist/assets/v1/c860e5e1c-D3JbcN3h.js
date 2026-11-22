@@ -1,0 +1,1 @@
+import{C_ as e}from"./shared-206-DmJmFrn0.js";function t(e){e.repeat&&(e.key==="Enter"||e.key===" ")&&e.preventDefault()}function n(t){let n=t.repeat&&(t.key==="Enter"||t.key===" "),r=t.key==="Enter"&&(t.metaKey||t.ctrlKey||t.altKey||t.shiftKey);(n||r)&&e.at(t.target,"menu")!==null&&(t.preventDefault(),t.stopPropagation())}export{t as n,n as t};

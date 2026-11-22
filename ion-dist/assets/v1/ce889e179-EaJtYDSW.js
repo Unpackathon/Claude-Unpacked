@@ -1,0 +1,1 @@
+import{kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e({defaultMessage:"Continue",id:"acrOozm08x"});export{t};

@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{lT as e,sT as t}from"./shared-107-D8fgcL1q.js";import{jt as n}from"./vendor-all-1-BocQA2O8.js";var r="1jd3dhi";function i(){let $=J9(2),i=n();return J1($,0,i)?K1($,0,i,t(i.messages,r)?e({id:r,intl:i}):void 0):$[1]}export{i as t};

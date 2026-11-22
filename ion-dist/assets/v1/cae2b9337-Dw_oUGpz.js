@@ -1,0 +1,1 @@
+function e(e,t){return e?.[t]??30}export{e as t};

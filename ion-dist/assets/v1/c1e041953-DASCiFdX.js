@@ -1,0 +1,1 @@
+import{sl as e}from"./shared-25-DapkFWlH.js";import{Mb as t}from"./shared-238-CGzDEQRA.js";function n(){let n=e("tamarind_a2"),r=n==="a"||n==="b"?n:"control",i=t("tamarind_a2s"),a=r!=="control"&&i;return{active:a,hide5x:a&&r==="a",arm:r}}export{n as t};

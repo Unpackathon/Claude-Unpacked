@@ -1,0 +1,1 @@
+import{kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e({defaultMessage:"Usage",id:"/na3E29UgN"});export{t as r};

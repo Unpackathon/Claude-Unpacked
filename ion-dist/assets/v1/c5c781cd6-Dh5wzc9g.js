@@ -1,0 +1,1 @@
+import{yg as e}from"./shared-0-D23kmOCB.js";function t(t,n){return e(t)?t.toLowerCase():n}export{t};

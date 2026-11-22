@@ -1,0 +1,1 @@
+import{lo as e}from"./vendor-frame-Dy-urf5a.js";import{n as t,t as n}from"./c957d98fc-Cs5tD4O5.js";function r(){let r=e(n)!==null,{inDialog:i}=e(t);return r&&i}export{r as t};

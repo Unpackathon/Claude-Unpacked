@@ -1,0 +1,1 @@
+import{$y as e,Wy as t,Yy as n}from"./shared-174-Uzjlgfhw.js";function r(r,i){let a=i?e(i):null;return a!==null&&a.getTime()>n().getTime()?r.formatDate(a,t).replaceAll(" ","\u00A0"):null}export{r as t};

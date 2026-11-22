@@ -1,0 +1,1 @@
+import{Di as e}from"./shared-25-DapkFWlH.js";import{Nn as t}from"./shared-19-CxubpVir.js";import{r as n}from"./ce58ea209-ieh0g-hT.js";function r(r,i){let a=n(i),{ready:o,offByAdmin:s}=t(),c=e("claude-ai:activity:get");return o?a&&s&&c:void 0}export{r as useSmartReportsCardTargeting};

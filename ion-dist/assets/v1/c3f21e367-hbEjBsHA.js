@@ -1,0 +1,1 @@
+import{Gt as e,Jt as t,Xt as n,Yt as r,Zt as i,qt as a}from"./shared-38-BJgM_wzP.js";var o=i(()=>{let i=r({title:n(e),description:e,bullets:t(a(t(e),8))});return r({title:e,options:n(a(i,8)),summary:e})});export{o as t};

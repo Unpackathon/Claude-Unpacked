@@ -1,0 +1,1 @@
+var e=["onboarding_connector_first","onboarding_connector_first_prosumer","onboarding_connector_first_prosumer_v2","onboarding_connector_first_deep1","onboarding_connector_first_deep3","onboarding_connector_first_deep3_artifacts"];function t(t){return typeof t=="string"&&e.includes(t)}function n(e){let n=e?.guided_mode;return t(n)?n:void 0}export{n as r};

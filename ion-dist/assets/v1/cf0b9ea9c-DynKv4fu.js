@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";function t(){return!e("claude_ai_share_age_verification_disabled")}export{t};

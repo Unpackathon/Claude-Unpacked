@@ -1,0 +1,1 @@
+function e(e){return e==="SURFACE_SESSION_GROUPING"||e==="SURFACE_HEARTH"}export{e as t};

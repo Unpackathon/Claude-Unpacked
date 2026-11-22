@@ -1,0 +1,1 @@
+import{t as e}from"./cbc4b4ef2-YApFQ6dT.js";function t(e){return`org-behind-current:${e}`}function n(n,r){return[n.formatMessage(e.orgSavedAsNewVersion,{name:r.name}),{description:n.formatMessage(r.scanning?e.orgBehindCurrentScanning:e.orgBehindCurrent),timeout:2e4,uniqueKey:t(r.pluginId)}]}export{n,t};

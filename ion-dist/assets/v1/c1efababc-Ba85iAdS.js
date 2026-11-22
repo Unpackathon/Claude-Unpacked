@@ -1,0 +1,1 @@
+import{ho as e}from"./shared-0-D23kmOCB.js";import{Tn as t}from"./shared-73-DfCPGdCT.js";function n(){let t=new URLSearchParams(window.location.search).get("platform");return t===e.IOS||t===e.ANDROID?t:void 0}var r=e=>n=>(n.header.set("anthropic-client-platform",t("claude-dot")),e(n));export{n,r as t};

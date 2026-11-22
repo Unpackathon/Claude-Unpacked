@@ -1,0 +1,1 @@
+import{E as e,T as t}from"./vendor-zod-Ddu6wnrm.js";import{dl as n}from"./shared-25-DapkFWlH.js";var r=e({fps:t().min(0)}),i={fps:1};function a(){return n("cowork_activity_panel_live_preview",i,r)?.fps??i.fps}export{a as t};

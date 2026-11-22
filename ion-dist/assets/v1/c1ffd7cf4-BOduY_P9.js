@@ -1,0 +1,1 @@
+import{lo as e}from"./vendor-frame-Dy-urf5a.js";import{$ as t,z as n}from"./vendor-all-1-BocQA2O8.js";function r(){let r=n(),{reducedMotion:i}=e(t);return i==="never"?!1:i==="always"||r}export{r as t};

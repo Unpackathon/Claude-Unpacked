@@ -1,0 +1,1 @@
+var e=new WeakMap;function t(t,n=Date.now()){e.has(t)||e.set(t,n)}function n(t){e.delete(t)}export{n as t,t as n,e as _jP};

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "key": "design",
+  "title": "Design",
+  "description": "Design canvas for websites, landing pages, screens, UI mockups, wireframes, posters, visual social posts, visuals, ads, invites and digital media: live artboards laid out on a canvas.",
+  "contract": "0.2.47",
+  "favicon": "🎨",
+  "icon": "Palette",
+  "tint": "violet",
+  "capabilities": {
+    "downloads": {},
+    "artifact": {},
+    "comments": {
+      "composer_only": true,
+      "customAnchors": true
+    },
+    "room": {},
+    "db": {
+      "rules": [
+        {
+          "path": "",
+          "write": "admin"
+        }
+      ]
+    },
+    "assets": {},
+    "user": {
+      "scopes": [
+        "profile"
+      ]
+    },
+    "sample": {},
+    "paste": {},
+    "flags": {
+      "keys": [
+        "appifact_bottom_toolbar",
+        "appifact_icon_set",
+        "design_artboards_at_address",
+        "design_bright_quilt",
+        "design_cross_canvas_paste_confirm",
+        "design_fast_edit",
+        "design_fast_edit_sample",
+        "design_fixed_fade_wait",
+        "design_index_read_first",
+        "design_no_script_preload",
+        "design_theme_tab",
+        "tidal_glowing_ember"
+      ]
+    }
+  },
+  "artifact": {
+    "prod": {
+      "slug": "bcd2878f-a88d-4094-a616-8e39d8a5fd8a"
+    }
+  }
+}

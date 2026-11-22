@@ -1,0 +1,1 @@
+function e(e){let t=null,n=[];for(let r of e.split("&"))r.startsWith("jt=")&&r.length>3?t??=r.slice(3):r!==""&&n.push(r);return{key:t,rest:n.join("&")}}function t(e){try{History.prototype.replaceState.call(window.history,window.history.state,"",window.location.origin+window.location.pathname+window.location.search+(e===""?"":`#${e}`))}catch{}}export{e as n,t};

@@ -1,0 +1,1 @@
+import{fo as e,xo as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Jd as J2,rf as K3}from"./shared-frame-DeSSgTpM.js";function n(n,r){let $=J9(4),i=r===void 0?5e3:r,[a,o]=t(!1),s,c;return J2($,0,i,n)?(s=()=>{if(!n)return;let e=setTimeout(()=>o(!0),i);return()=>clearTimeout(e)},c=[n,i],K3($,0,i,n,s,c)):(s=$[2],c=$[3]),e(s,c),n&&!a}export{n as t};

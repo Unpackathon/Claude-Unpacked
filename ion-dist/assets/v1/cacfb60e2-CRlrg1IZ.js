@@ -1,0 +1,1 @@
+var e=/^mcp_[0-9a-f]{8}-[0-9a-f]{4}-/;function t(t){return t.includes(":")||t.startsWith("mcp__")||e.test(t)}export{t};

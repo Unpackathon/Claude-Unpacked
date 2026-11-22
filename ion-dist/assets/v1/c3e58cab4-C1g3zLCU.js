@@ -1,0 +1,2 @@
+import"./vendor-frame-Dy-urf5a.js";import{$d as J9,Wu as e,Yd as J3,ed as t,rf as K3}from"./shared-frame-DeSSgTpM.js";import{Vv as n}from"./shared-107-D8fgcL1q.js";import{jt as r}from"./vendor-all-1-BocQA2O8.js";import"./shared-33-BnmCH4hK.js";import{t as i}from"./c242aa103-B_Q12aPz.js";function a(){let $=J9(4),a=r(),o=e(),{addInfo:s}=n();return J3($,0,s,a,o)?K3($,0,s,a,o,e=>{let n=typeof e=="string"?i(e):e.map(i).join(`
+`);return t(o,n).then(e=>{e==="written"&&s(a.formatMessage({defaultMessage:"Copied to clipboard.",id:"8qZ4HE/bvM"}))})}):$[3]}export{a as n};

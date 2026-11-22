@@ -1,0 +1,1 @@
+var e={pathname:"",why:""};function t(t,n=""){e={pathname:t,why:n}}var n=!1;function r(e){n=!0;try{return e()}finally{n=!1}}function i(){return!n}function a(t,n){return n||(e.why||=t),n}function o(t){return e.pathname===t?e.why||"other_page":"no_intent"}export{o as a,i,t as n,a as r,r as t};

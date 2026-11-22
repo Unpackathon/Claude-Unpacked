@@ -1,0 +1,1 @@
+import{Gs as e}from"./shared-41-CFsocOl8.js";function t(e){return`group-name-${e}`}var n=e.__built("cai_steady_origami");export{t as n,n as t};

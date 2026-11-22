@@ -1,0 +1,1 @@
+import{t as e}from"./c0d0644b9-CmFJGTol.js";import{capCanvasSize as t}from"./c20cdd8b7-CdW5oPSN.js";function n(n){return e(n,t)}export{n as toCappedPngBlob};

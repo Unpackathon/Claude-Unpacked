@@ -1,0 +1,21 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Zd as e}from"./shared-0-D23kmOCB.js";import{Kt as t}from"./vendor-all-1-BocQA2O8.js";import{sg as n}from"./shared-26-HtKWSjuR.js";import{Jd as r}from"./shared-6-Bi6NjF-Q.js";import{t as i}from"./cf1f713c9-5g7ERS3K.js";function a(e){r("claudeai.epitaxy.pr_comment.replied",e)}function o(e){r("claudeai.epitaxy.pr_comment.resolved",e)}function s(e){r("claudeai.epitaxy.pr_comment.unresolved",e)}function c(e){r("claudeai.epitaxy.diff_comment.created",e)}var l=e(()=>/[^\P{C}\t\n]|[^\P{Z} ]|\p{Default_Ignorable_Code_Point}|\u2800/u);function u(e,t){let r=e.replaceAll(`\r
+`,`
+`);return n(e)!==e||l().test(r)||/[ \t]$/m.test(r)||d(r,t??"")}function d(e,t){let n=new Set(t.replaceAll(`\r
+`,`
+`).split(`
+`));return e.split(`
+`).some(e=>[...e].some(e=>e>"~")&&!n.has(e))}function f(e){return e.replaceAll(`\r
+`,`
+`).trimEnd()}function p(e,t){return e!==void 0&&t!==void 0&&f(e)===f(t)}function m(e,t){return e!==void 0&&f(e)===f(t)}function h(e,t,n,r,i,a){if(u(i,r))return null;let o=e.split(/\r?\n/),s=x(o);if(t<1||n<t||n>s.length||f(o.slice(t-1,n).join(`
+`))!==f(r)||!S(s,t,n,r,a))return null;let c=_(i.replaceAll(`\r
+`,`
+`)),l=n-t+1;return c.length>l&&b(s,t,c)?a!==void 0&&!b(x(a.split(/\r?\n/)),t,c)?e:null:g(e,t,l,c)}function g(e,t,n,r){let i=e.split(/\r?\n/),a=e.match(/\r?\n/g)??[],o=a[t-1]??a.at(-1)??`
+`;return i.splice(t-1,n,...r),a.splice(t-1,n,...r.map(()=>o)),i.map((e,t)=>e+(t<i.length-1?a[t]:"")).join("")}function _(e){return e===""?[]:e.split(`
+`)}function v(e,t){let n=Math.min(e.length,t.length),r=0;for(;r<n&&e[r]===t[r];)r++;let i=0;for(;i<n-r&&e.at(-1-i)===t.at(-1-i);)i++;return{head:r,tail:i}}function y(e,{startLine:t,above:n,lines:r,below:i},a){let o=e.startsWith("\uFEFF")?"\uFEFF":"",s=e.slice(o.length),c=x(s.split(/\r?\n/)),l=[...n,...r,...i],u=e=>l.every((t,n)=>c[e+n]===t),d=t-1-n.length;if(!u(d))return"changed";if(c.some((e,t)=>t!==d&&u(t)))return"repeated";let f=_(a),{head:p,tail:m}=v(r,f);return{written:o+g(s,t+p,r.length-p-m,f.slice(p,f.length-m))}}function b(e,t,n){return e.slice(t-1,t-1+n.length).map(e=>e.trimEnd()).join(`
+`)===n.join(`
+`)}function x(e){return e.at(-1)===""?e.slice(0,-1):e}function S(e,t,n,r,i){if(i===void 0)return E(e,n-t+1,r);let a=x(i.replaceAll(`\r
+`,`
+`).split(`
+`));if(n>a.length||f(a.slice(t-1,n).join(`
+`))!==f(r))return!1;let o=a.map(e=>e.trimEnd()),s=e.map(e=>e.trimEnd()),c=C(o),l=C(s),u=e=>c.get(e)===1&&l.get(e)===1,d=e=>u(o[e])||w(o,s,u,e);return d(t-1)&&(n===t||d(n-1))}function C(e){let t=new Map;for(let n of e)t.set(n,(t.get(n)??0)+1);return t}function w(e,t,n,r){let i=(e,t,r)=>{let i=t;for(;i>=0&&i<e.length&&!n(e[i]);)i+=r;return i},a=i(e,r-1,-1),o=i(t,r-1,-1),s=i(e,r+1,1),c=i(t,r+1,1);if(e[a]!==t[o]||e[s]!==t[c])return!1;let l=e.slice(a+1,s),u=t.slice(o+1,c),d=T(l,u,-1,-1,Math.min(400,Math.floor(8e5/(l.length+u.length))));return d!==void 0&&T(l,u,r-a-1,r-o-1,d)===void 0}function T(e,t,n,r,a){return i([...e.keys()],[...t.keys()],{comparator:(i,a)=>e[i]===t[a]&&(i!==n||a!==r),maxEditLength:a})?.reduce((e,t)=>e+(t.added||t.removed?t.count:0),0)}function E(e,t,n){let r=f(n),i=0;for(let n=0;n+t<=e.length;n++)f(e.slice(n,n+t).join(`
+`))===r&&i++;return i===1}var D=t(()=>({bySession:new Map})),O={register(e,t){D.setState(n=>{let r=new Map(n.bySession);return r.set(e,[...r.get(e)??[],t]),{bySession:r}})},unregister(e,t){D.setState(n=>{let r=n.bySession.get(e);if(!r?.includes(t))return n;let i=r.filter(e=>e!==t),a=new Map(n.bySession);return i.length>0?a.set(e,i):a.delete(e),{bySession:a}})}};function k(e){let $=J9(2),t=J1($,0,e)?K1($,0,e,t=>t.bySession.get(e)?.at(-1)):$[1];return D(t)}function A(e){let $=J9(2),t=J1($,0,e)?K1($,0,e,t=>t.bySession.get(e)?.at(-1)?.readReviewedFile):$[1];return D(t)}var j=t(()=>({bySession:new Map})),M={register(e,t){return j.setState(n=>{let r=new Map(n.bySession);return r.set(e,t),{bySession:r}}),()=>{j.setState(n=>{let r=new Map(n.bySession);return r.get(e)===t&&r.delete(e),{bySession:r}})}}};function N(e){let $=J9(2),t=J1($,0,e)?K1($,0,e,t=>t.bySession.get(e)):$[1];return j(t)}export{A as a,h as c,m as d,v as f,s as g,o as h,k as i,_ as l,a as m,O as n,p as o,c as p,N as r,y as s,M as t,u};

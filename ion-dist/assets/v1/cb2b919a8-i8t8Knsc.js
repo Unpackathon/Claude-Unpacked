@@ -1,0 +1,1 @@
+class VoiceSdkCapture extends AudioWorkletProcessor{constructor(){super(),this.port.onmessage=e=>this.port.postMessage(e.data)}process(e){let t=e[0]&&e[0][0];if(t&&t.length>0){let e=t.slice();this.port.postMessage(e,[e.buffer])}return!0}}registerProcessor("voice-sdk-capture-2",VoiceSdkCapture);

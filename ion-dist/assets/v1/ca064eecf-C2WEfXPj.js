@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";function t({children:t,className:n,"data-testid":r}){return e("span",{className:`inline-flex items-center gap-1.5 text-body text-primary ${n??""}`,"data-testid":r,children:e("span",{className:"min-w-0 truncate",children:t})})}export{t};

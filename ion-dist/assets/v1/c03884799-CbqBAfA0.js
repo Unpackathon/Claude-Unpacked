@@ -1,0 +1,1 @@
+var e="?add=1";export{e as t};

@@ -1,0 +1,1 @@
+function e(e){return e&&e.type!=="landing"?e:null}export{e as a};

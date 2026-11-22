@@ -1,0 +1,1 @@
+import{lT as e,sT as t}from"./shared-107-D8fgcL1q.js";function n(n){let r="1whubps";return t(n.messages,r)?e({id:r,intl:n}):n.formatMessage({defaultMessage:"Failed to send message. You can try again.",id:"L74XIWqMmc"})}export{n as t};

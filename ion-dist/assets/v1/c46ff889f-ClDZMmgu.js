@@ -1,0 +1,1 @@
+import{yl as e}from"./shared-25-DapkFWlH.js";import"./shared-174-Uzjlgfhw.js";import{o as t}from"./c193c6cb5-n2MbKsMk.js";function n(){return e("trials_and_tribulations_of_high_school_football")}function r(){let r=n(),i=e("claudeai_skills"),a=t("i8hrwu");return r&&i&&a}export{r as t};

@@ -1,0 +1,1 @@
+var e=["Upload","Calendar","Chart","File","Search","Star","Projects"],t=/^[a-z][a-z0-9_]{0,31}$/;function n(e){return typeof e=="string"&&t.test(e)}function r(e){return n(e)?e:void 0}function i(e){return n(e)?e:void 0}export{r as i,i as n,n as r,e as t};

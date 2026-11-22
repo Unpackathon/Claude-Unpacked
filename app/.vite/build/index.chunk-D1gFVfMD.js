@@ -1,0 +1,2 @@
+"use strict";try{(function(){var e=typeof window<"u"?window:typeof global<"u"?global:typeof globalThis<"u"?globalThis:typeof self<"u"?self:{},t=new e.Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]="fb4f71ef-2132-4474-9641-2ff52ad25b6e",e._sentryDebugIdIdentifier="sentry-dbid-fb4f71ef-2132-4474-9641-2ff52ad25b6e")})()}catch{}require("./index.chunk-CMoS3SOQ.js"),require("./index.chunk-CCkEi--u.js");async function e(){}exports.loadPaneHookForBridge=e;
+//# sourceMappingURL=index.chunk-D1gFVfMD.js.map

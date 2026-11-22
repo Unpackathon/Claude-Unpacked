@@ -1,0 +1,1 @@
+import{hi as e}from"./shared-25-DapkFWlH.js";function t(){return e()}export{t as n};

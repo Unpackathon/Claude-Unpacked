@@ -1,0 +1,1 @@
+import{vi as e}from"./shared-25-DapkFWlH.js";var t={consumer:"https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",commercial:"https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training"};function n(){let n=e()?.activeOrganization?.capabilities?.includes("raven")===!0;return t[n?"commercial":"consumer"]}export{n as t};

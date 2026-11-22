@@ -1,0 +1,1 @@
+import{Qa as e,lo as t}from"./vendor-frame-Dy-urf5a.js";var n=e(!0),r=e(!1);function i(){return t(r)}function a(){return t(n)!==!1}function o(){return t(n)==="ownWorkspace"}var s=e(!0);function c(){return t(s)}var l=e(!1);function u(){return t(l)}var d=e(!1);function f(){return t(d)}export{f as a,c,i as d,o as i,r as l,l as n,u as o,s as r,a as s,d as t,n as u};

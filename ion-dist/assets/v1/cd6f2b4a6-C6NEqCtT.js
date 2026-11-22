@@ -1,0 +1,1 @@
+import{lT as e,sT as t}from"./shared-107-D8fgcL1q.js";function n(n){let r="1eop4rv";return t(n.messages,r)?e({id:r,intl:n}):n.formatMessage({defaultMessage:"Open",id:"JfG49wNHKP"})}export{n as t};

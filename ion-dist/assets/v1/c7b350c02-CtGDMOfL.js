@@ -1,0 +1,1 @@
+import{Ha as e}from"./shared-31-BVA5hc9B.js";function t(e){return e.untrustedAuthorSurface?e.isFullscreenMiniChat?!1:e.ownSession||e.servedCards&&"served_only":!0}function n(e,t){return e===!0||e==="served_only"&&t}function r(t){return e("skillProposalCardStaysGuarded")||t}export{t as n,r,n as t};

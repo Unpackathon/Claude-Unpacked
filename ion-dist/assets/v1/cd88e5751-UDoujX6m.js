@@ -1,0 +1,1 @@
+var e=[{name:"gnuplot",scopeName:"source.gnuplot",displayName:"Gnuplot",patterns:[],repository:{}}];export{e as default};

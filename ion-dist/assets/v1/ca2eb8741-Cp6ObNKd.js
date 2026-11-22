@@ -1,0 +1,1 @@
+import{Ia as e}from"./shared-206-DmJmFrn0.js";import{t}from"./ccee188ad-C4pwSyIA.js";function n(n,r){return r instanceof t?e(n):void 0}export{n as t};

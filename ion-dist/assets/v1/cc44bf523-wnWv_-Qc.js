@@ -1,0 +1,1 @@
+function e(e,t){return e.formatNumber(t,{notation:"compact",maximumFractionDigits:1})}export{e as t};

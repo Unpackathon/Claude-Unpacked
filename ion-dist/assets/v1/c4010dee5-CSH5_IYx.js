@@ -1,0 +1,1 @@
+import{M as e}from"./vendor-query-DjWagZkY.js";function t(t,n,r,i){t.setQueryData(n,t=>{let n=t?.findIndex(e=>e.id===r)??-1;if(t===void 0||n<0)return;let a=e(t[n],i(t[n]));return a===t[n]?void 0:t.map((e,t)=>t===n?a:e)})}export{t};

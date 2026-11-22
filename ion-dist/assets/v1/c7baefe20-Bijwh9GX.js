@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({custom:{defaultMessage:"Custom",id:"Sjo1P44FYy"}}),n=e({customRoles:{defaultMessage:"Custom roles",id:"cXYrLKfSsE"},adminRoles:{defaultMessage:"Admin roles",id:"qSZjQ0z3LS"}});export{t as n,n as t};

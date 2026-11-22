@@ -1,0 +1,1 @@
+import{Bw as e}from"./shared-107-D8fgcL1q.js";import{n as t}from"./c16f659b9-BfwWSKRD.js";import{r as n,s as r}from"./c4acc1503-CuKbqFAd.js";function i(i){let a=r(i);if(a===null)return;let o=e(URL.parse(a)?.pathname??"")?a:n(a)??a;t(()=>{window.open(o,"_blank","noopener,noreferrer")})}export{i as t};

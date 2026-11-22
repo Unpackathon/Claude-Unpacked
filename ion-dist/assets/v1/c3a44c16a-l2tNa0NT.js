@@ -1,0 +1,1 @@
+function e(e){if(typeof e!="object"||!e||!("type"in e)||e.type!=="image"||!("source"in e))return!1;let{source:t}=e;return typeof t!="object"||!t||!("type"in t)?!1:t.type==="base64"||t.type==="url"}export{e as t};

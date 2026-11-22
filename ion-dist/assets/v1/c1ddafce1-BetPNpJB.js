@@ -1,0 +1,1 @@
+import{qf as e}from"./shared-73-DfCPGdCT.js";var t=new Set;function n(n,r){for(let{key:i,tap:a}of t)i===e(n)&&a(r)}function r(n,r){let i={key:e(n),tap:r};return t.add(i),()=>t.delete(i)}export{n,r as t};

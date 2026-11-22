@@ -1,0 +1,1 @@
+import{Qa as e,fo as t,lo as n}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Yd as J3,if as K4}from"./shared-frame-DeSSgTpM.js";var r=e(null),i={"data-ef-spotlight":""};function a(e,i){let $=J9(5),a=n(r),o,s;J3($,0,e,i,a)?(o=()=>{e&&a?.(i)},s=[e,i,a],K4($,0,e,i,a,o,s)):(o=$[3],s=$[4]),t(o,s)}function o(e){let{exp:t}=e;return a(!0,t),null}export{a as i,r as n,o as r,i as t};

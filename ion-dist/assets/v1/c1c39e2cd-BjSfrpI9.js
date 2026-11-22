@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({stillIn:{defaultMessage:"Couldn\u2019t switch to {requested}. Still using {current}.",id:"o0MRLiNTN+"},plain:{defaultMessage:"Couldn\u2019t switch to {requested}.",id:"IkPENslSw1"}});function n(e,n,r){return r?e.formatMessage(t.stillIn,{requested:n,current:r}):e.formatMessage(t.plain,{requested:n})}export{n as t};

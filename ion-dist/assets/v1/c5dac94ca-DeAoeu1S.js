@@ -1,0 +1,1 @@
+import{c as e,l as t}from"./shared-25-DapkFWlH.js";function n(n,r){if(n!=="failure"){t("onboardingStarted",n);return}let i=e(r);t("onboardingStarted",n,{...i,error_type:i.error_type??"api_error",error_code:i.error_code??"bootstrap_failed"})}function r(n,r){t("onboardingCompleted",n,e(r))}function i(n,r,i){t("phoneCodeSent",n,{variant:r,...e(i)})}export{n,i as r,r as t};

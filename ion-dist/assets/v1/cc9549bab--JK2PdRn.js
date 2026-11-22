@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{vw as e}from"./shared-141-K5japEQk.js";import{t}from"./c016d7e6a-lmE3_XW_.js";function n(){let $=J9(2),{status:n}=e("project_sharing");return!(J1($,0,n)?K1($,0,n,t.has(n)):$[1])}export{n as t};

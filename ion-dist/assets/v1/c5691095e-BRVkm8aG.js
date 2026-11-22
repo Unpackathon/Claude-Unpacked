@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";function t(t){let $=J9(2),{children:n}=t;return J1($,0,n)?K1($,0,n,e("ul",{role:"list",className:"flex w-full min-w-0 flex-col",children:n})):$[1]}export{t};

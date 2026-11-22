@@ -1,0 +1,31 @@
+{
+  "capabilities": [
+    "downloads",
+    "mcp",
+    "permissions",
+    "self",
+    "user"
+  ],
+  "changes": [
+    "downloads",
+    "mcp",
+    "mcp-call-cache",
+    "mcp-selection-required",
+    "mcp-v2",
+    "permissions",
+    "scroll-keep",
+    "self",
+    "user"
+  ],
+  "core": [
+    "permissions"
+  ],
+  "inertChanges": [
+    "downloads-doc-trim",
+    "mcp-no-public-guidance",
+    "mcp-observed-call-rule",
+    "mcp-prompt-section",
+    "mcp-reauth-docs",
+    "mcp-resilience-guidance"
+  ]
+}

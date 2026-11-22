@@ -1,0 +1,1 @@
+import{In as e}from"./shared-6-Bi6NjF-Q.js";function t(t,n){let r=t.type==="local";return n===!0&&r===!1&&e(t)==="verified"}export{t};

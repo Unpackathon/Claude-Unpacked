@@ -1,0 +1,1 @@
+import{vl as e}from"./shared-25-DapkFWlH.js";function t(e){return e==="inline"?"inline":"overlay"}function n(n){let r=e("admin_onboarding_checklist_variant",n,"overlay");return n?t(r):"overlay"}export{n,t};

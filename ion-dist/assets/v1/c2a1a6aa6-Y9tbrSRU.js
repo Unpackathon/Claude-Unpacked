@@ -1,0 +1,1 @@
+var e=new Set;function t(t){return e.add(t),()=>{e.delete(t)}}function n(){for(let t of Array.from(e))try{t()}catch(e){queueMicrotask(()=>{throw e})}}export{t as n,n as t};

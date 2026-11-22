@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({auto:{defaultMessage:"System",id:"ghSj3dz9nV"},light:{defaultMessage:"Light",id:"A0UsqIrpdq"},dark:{defaultMessage:"Dark",id:"BX2/DcCVek"}});export{t};

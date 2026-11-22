@@ -1,0 +1,35 @@
+{
+  "name": "@ant/desktop",
+  "productName": "Claude",
+  "desktopName": "com.anthropic.Claude.desktop",
+  "version": "6.28899.6",
+  "versionBase": {
+    "major": 0,
+    "commit": "388130fc36d53c58b148fd7f7efa481eaeef201c",
+    "depth": 188784
+  },
+  "author": "Anthropic PBC",
+  "description": "Desktop application for Claude.ai",
+  "main": ".vite/build/launcher.js",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "//installConfig": "bun honours hoistingLimits \"workspaces\": with it, bun gives apps/desktop its own copy of a dependency it shares with another workspace, even where Desktop's pin equals the shared entry's version. Keep it: Desktop's latest publish check (installed() in packages/workflow-scripts/src/desktop-latest-publish/lib/sdk.ts) reads the SDK's package.json at apps/desktop/node_modules.",
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@ant/claude-for-chrome-mcp": "*",
+    "@ant/claude-native": "*",
+    "@ant/claude-swift": "*",
+    "@ant/computer-use-mcp": "*",
+    "@ant/imagine-server": "*",
+    "@loc/electron-window": "catalog:",
+    "https-proxy-agent": "^7.0.6",
+    "ws": "catalog:"
+  },
+  "optionalDependencies": {
+    "node-pty": "1.2.0-beta.14"
+  }
+}

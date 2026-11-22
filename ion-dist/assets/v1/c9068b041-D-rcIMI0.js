@@ -1,0 +1,1 @@
+var e=new WeakSet,t={onKeyDown:t=>{let n=t.currentTarget;t.target===n&&(t.key!==" "&&e.delete(n),(t.key==="Enter"||t.key===" ")&&(t.preventDefault(),!t.repeat&&(t.key==="Enter"?n.click():e.add(n))))},onKeyUp:t=>{let n=t.currentTarget;t.key===" "&&t.target===n&&e.delete(n)&&n.click()},onPointerDown:t=>{e.delete(t.currentTarget)},onBlur:t=>{e.delete(t.currentTarget)}};export{t};

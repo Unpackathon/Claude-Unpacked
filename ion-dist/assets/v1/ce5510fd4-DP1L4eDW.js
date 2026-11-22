@@ -1,0 +1,1 @@
+var e={accent:"bg-fill-accent",success:"bg-fill-success",warning:"bg-fill-warning",danger:"bg-fill-danger"};function t(e,t,n){let r=n==="sm"||n==="xs"?4:8;return`translateX(calc(${e} * (100% - min(100%, max(${(t*100).toFixed(1)}%, ${t>0?r:0}px)))))`}export{t as n,e as t};

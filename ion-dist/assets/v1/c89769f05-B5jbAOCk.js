@@ -1,0 +1,1 @@
+function e(e){e!==null&&(e.focus({preventScroll:!0}),e.setSelectionRange(e.value.length,e.value.length))}export{e as t};

@@ -1,0 +1,1 @@
+import{Wn as e,hf as t}from"./shared-0-D23kmOCB.js";function n(n){return n instanceof t&&n.errorCode==="org_weekly_seat_limit_reached"&&e(n)==="user_facing"}export{n as t};

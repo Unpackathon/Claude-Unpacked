@@ -1,0 +1,1 @@
+var e={disconnected:0,connecting:1,connected:2},t=new Set(["revoked","resolved","ended"]);function n(e){return t.has(e)}function r(e){return e!=="paused"&&!n(e)}function i(e){return e==="paused"?2:e===void 0?0:1}export{i,n,r,e as t};

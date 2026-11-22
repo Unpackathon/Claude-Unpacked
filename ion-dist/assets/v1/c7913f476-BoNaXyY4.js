@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({removeFromAllowlist:{defaultMessage:"Remove from allowlist",id:"+IiLva9Ycy"}});export{t};

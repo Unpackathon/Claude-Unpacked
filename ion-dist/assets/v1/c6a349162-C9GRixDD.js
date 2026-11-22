@@ -1,0 +1,3 @@
+function e(e){let t=/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(e);if(!t)return{frontmatter:"",body:e};let n={};for(let e of t[1].split(/\r?\n/)){let t=/^(\w+):\s*((?:\S.*)?)$/.exec(e);if(!t)continue;let r=t[2].trim().replace(/^["']|["']$/g,"");n[t[1]]=r}return{name:n.name||void 0,description:n.description||void 0,type:n.type||void 0,frontmatter:t[0].endsWith(`
+`)?t[0]:t[0]+`
+`,body:e.slice(t[0].length)}}export{e as t};

@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";import{t}from"./c80c79f6c-B68W2OLf.js";var n=e({addMenuItem:{defaultMessage:"Add custom connector",id:"5NO7mmK1QL"},customConnector:{defaultMessage:"Custom connector",id:"vcwg+TScpi"}}),r={addMenuItem:n.addMenuItem,customConnector:n.customConnector};function i(e){return e===!0?n.customConnector:t.custom}export{i as n,r as t};

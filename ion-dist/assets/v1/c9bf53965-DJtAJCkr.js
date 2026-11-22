@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";function t(t){return t.split(/(?<![:/])(?=[./])/).flatMap((t,n)=>n===0?t:[e("wbr",{"aria-hidden":!0},n),t])}function n({value:n}){return e("bdi",{dir:"ltr",className:"whitespace-normal wrap-anywhere",children:t(n)})}export{n as t,t as _Z0};

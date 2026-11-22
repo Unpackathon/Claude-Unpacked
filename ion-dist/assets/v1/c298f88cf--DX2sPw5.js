@@ -1,0 +1,1 @@
+function e(e){return`plugin-install-${e}`}export{e as t};

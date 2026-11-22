@@ -1,0 +1,1 @@
+import{B as e,F as t,I as n,S as r}from"./shared-0-D23kmOCB.js";function i(e){return n(e)?.internal??!1}function a(n){let a=t(n)??t(e(n));return a?[a.base,a.suffix,a.ctx].filter(Boolean).join(" "):i(n)?r(n):n}export{i as _Bx,a as t};

@@ -1,0 +1,1 @@
+import{cr as e}from"./shared-107-D8fgcL1q.js";var t=/[\p{Cc}\p{Cs}\p{Zl}\p{Zp}\p{Bidi_Control}]/u;function n(e){return[...e].length<=100&&!t.test(e)}function r(e){return typeof e=="string"&&e.trim()||void 0}function i(t){let i=r(t?.email);if(!i||!e(i))return;let a=r(t?.display_name);return{name:a&&n(a)?a:void 0,email:i}}export{i as n,n as t};

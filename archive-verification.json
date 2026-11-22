@@ -1,0 +1,63 @@
+[
+  {
+    "archive": "app.asar",
+    "sha256": "1165371d698a7e247475cd7bfbf2ea52b06846a1a514bdf5727c135cdfdd3b66",
+    "files": 1251,
+    "verified_index_hashes": 1245,
+    "without_index_hash": 0,
+    "companion_files": 6,
+    "companion_mismatches": [
+      {
+        "path": "node_modules/@ant/claude-native/claude-native-binding.node",
+        "index_bytes": 8299008,
+        "observed_bytes": 8319824,
+        "index_sha256": "2d6be090f1b92bffba554b8a49b53a99e197d8ad473507196ca7ce3aebba192a",
+        "observed_sha256": "af417219dcbd9218aa587de1c58e67f5d9515fa225bbde6e2f95358d9b5bb28e"
+      },
+      {
+        "path": "node_modules/node-pty/prebuilds/win32-x64/conpty.node",
+        "index_bytes": 291328,
+        "observed_bytes": 312144,
+        "index_sha256": "ad13c71d64b3bc889e625fb3c4b5ca87cc8e09eeb6e4a9bb355e411111561418",
+        "observed_sha256": "8363640a8b9ea187d41673153ff95d886f515b8287ee56971dacc6420ece3b22"
+      },
+      {
+        "path": "node_modules/node-pty/prebuilds/win32-x64/conpty_console_list.node",
+        "index_bytes": 134656,
+        "observed_bytes": 155472,
+        "index_sha256": "e83669e99a699d6bea4de15a3914b3279c19449744dc3cf10c22734ae98935f5",
+        "observed_sha256": "b0fb9d6b96f49f8c872cbcac6024c7351bfaeb3f861f160a0017e4ba22817d39"
+      },
+      {
+        "path": "resources/github-mcp/github-mcp-server.exe",
+        "index_bytes": 25655808,
+        "observed_bytes": 25676624,
+        "index_sha256": "d129655807a19c6c58a0f228e11301404d42694d65c45eca9f2816aeef15b798",
+        "observed_sha256": "e8d7864106a8da026eafc8b0974c99dda54c79b2079f6e5d819d40d4dd120c2d"
+      },
+      {
+        "path": "resources/office365-mcp/msal-node-runtime.node",
+        "index_bytes": 345088,
+        "observed_bytes": 365904,
+        "index_sha256": "f01ab20de6cd3b8bbe6c86613b4472d8aa34b348a8002fdb7782439ee1d10c17",
+        "observed_sha256": "f2442936f7ce7665b9d468c3bc6091e5d31a65e50bbc72ecb03043668594e2f1"
+      },
+      {
+        "path": "resources/office365-mcp/msalruntime.dll",
+        "index_bytes": 3240736,
+        "observed_bytes": 3261536,
+        "index_sha256": "37df91917c1aae8d4f5f2bc6414b7660b81657994309dad1a7282ce6dd0d429a",
+        "observed_sha256": "9c6a3b3e6e04daa5c06942bf3ed8dad55ab207d6b1170f8e154f97524e9f054d"
+      }
+    ]
+  },
+  {
+    "archive": "ion-dist.asar",
+    "sha256": "f0a85d25778a59c4ee8018c6c00500ed4a687a85ec5ca61f129b54265afe86d4",
+    "files": 6848,
+    "verified_index_hashes": 6848,
+    "without_index_hash": 0,
+    "companion_files": 0,
+    "companion_mismatches": []
+  }
+]

@@ -1,0 +1,1 @@
+import{Qa as e,Va as t}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";var n={kind:"native"},r=e(void 0);function i(e){let $=J9(6),{owned:n,sessionId:i,children:a}=e,o=J2($,0,n,i)?K2($,0,n,i,{owned:n,sessionId:i}):$[2];return J2($,3,a,o)?K2($,3,a,o,t(r.Provider,{value:o,children:a})):$[5]}export{r as n,n as r,i as t};

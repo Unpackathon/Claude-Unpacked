@@ -1,0 +1,1 @@
+var e={wording_version:"2026-11-18",content_hash:"02170b8262471e996d7ed4bd424ffc9ee9daaf26ea98c56a2e97acc6533e4c2e"};function t({capabilities:t,settings:n}){return!(Array.isArray(t)&&!t.includes("taint:hipaa_regulated"))&&n?.claude_in_slack_settings?.install_enabled!==!0&&n?.claude_tag_notice_accepted_version!==e.wording_version}export{t as n,e as t};

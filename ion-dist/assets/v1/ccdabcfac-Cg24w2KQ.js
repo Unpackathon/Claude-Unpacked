@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/v1/shared-frame-kvmio2lb.css","assets/v1/shared-styles-DyIGYKNa.css","assets/v1/c537d322c-CNuNtCht.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-sR4dxpO6.js";import{Oy as t,_r as n}from"./shared-206-DmJmFrn0.js";function r(e){return n(e)?`${e.skillId}:${e.backingPluginId}`:e.skillId}var i={id:"skill_detail_panel",tier:"T2",fetchBeforeImport:()=>!0,load:()=>e(()=>import("./c4313ee9e-BPXWyJ9R.js"),__vite__mapDeps([0,1,2]))},a=t(i);export{r as _xN,i as t,a as n};

@@ -1,0 +1,1 @@
+import{tr as e}from"./shared-206-DmJmFrn0.js";function t(t){let n=t.skills?.[0];if(n)return{...e({...n,description:t.description??n.description,enabled:!0,updated_at:t.updated_at,source:"plugin",backing_plugin_id:t.id,content_scan:t.content_scan??n.content_scan}),displayName:t.display_name??null}}export{t};

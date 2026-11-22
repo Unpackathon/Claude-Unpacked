@@ -1,0 +1,1 @@
+import{Kh as e}from"./shared-73-DfCPGdCT.js";import{gE as t,oE as n}from"./shared-107-D8fgcL1q.js";var r=e(!1);t("projects-setup-starting",a,{holdsClientNavigation:!1});function i(e){r.set(e)}function a(){return r.read()}function o(){return n(r,s)}function s(){return!1}export{i as n,o as r,a as t};

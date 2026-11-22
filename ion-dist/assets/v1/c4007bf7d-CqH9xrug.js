@@ -1,0 +1,1 @@
+var e="AT.BE.BG.CY.CZ.DE.DK.EE.ES.FI.FR.GR.HR.HU.IE.IT.LT.LU.LV.MT.NL.PL.PT.RO.SE.SI.SK".split(".");function t(t){return e.includes(t.toUpperCase())}function n(e){return t(e)||e.toUpperCase()==="GB"}export{n as t};

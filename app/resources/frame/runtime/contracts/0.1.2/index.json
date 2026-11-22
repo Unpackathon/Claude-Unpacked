@@ -1,0 +1,12 @@
+{
+  "capabilities": [
+    "mcp"
+  ],
+  "changes": [
+    "mcp"
+  ],
+  "inertChanges": [
+    "mcp-prompt-section",
+    "mcp-reauth-docs"
+  ]
+}

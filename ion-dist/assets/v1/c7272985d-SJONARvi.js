@@ -1,0 +1,1 @@
+function e(e){return e.replace(/\s+/g,"").toLowerCase()}function t(t,n,r){let i=e(t);return!i||r!==void 0&&i===e(r)?!1:n.some(t=>e(t)===i)}function n(t,n){let r=new Set(n.map(e)),i=t;for(let n=2;r.has(e(i));n++)i=`${t} ${n}`;return i}export{n,t};

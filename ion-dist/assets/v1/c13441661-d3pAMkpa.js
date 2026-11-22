@@ -1,0 +1,1 @@
+import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{Vv as e}from"./shared-107-D8fgcL1q.js";function t(){let $=J9(3),{addInfo:t,addWarning:n}=e();return J2($,0,t,n)?K2($,0,t,n,(e,r)=>{r==="notice"?t(e,{timeout:1e4}):n(e)}):$[2]}export{t};

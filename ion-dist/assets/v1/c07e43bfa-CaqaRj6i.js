@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Do as t,qd as J1,ql as n,tf as K1}from"./shared-frame-DeSSgTpM.js";import{n as r}from"./cd9e4c7f2--3PFEwU8.js";function i(){let $=J9(2),{px:i}=n[r()];return J1($,0,i)?K1($,0,i,e(t,{as:"span",decorative:!0,width:i,height:i,className:"shrink-0 animate-placeholder-reveal"})):$[1]}export{i as t};

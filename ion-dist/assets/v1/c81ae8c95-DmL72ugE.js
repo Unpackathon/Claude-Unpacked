@@ -1,0 +1,1 @@
+function e(e){if(e==null)return;let t;for(let n of e){if(n.status==="active")return n;t===void 0&&n.status!=="failed"&&(t=n)}return t}function t(e){if(e!=null&&e.length!==0)return e.find(e=>e.status==="active")??e[0]}export{e as n,t};

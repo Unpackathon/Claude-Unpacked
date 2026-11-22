@@ -1,0 +1,1 @@
+var e="[unicode-bidi:plaintext] [text-align:-webkit-match-parent] supports-[text-align:match-parent]:[text-align:match-parent]";export{e as t};

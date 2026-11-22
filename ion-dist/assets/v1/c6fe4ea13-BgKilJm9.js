@@ -1,0 +1,1 @@
+function e(e){return["admin_setup_checklist",{orgUuid:e}]}export{e as t};

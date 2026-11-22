@@ -1,0 +1,1 @@
+import{Kt as e}from"./vendor-all-1-BocQA2O8.js";var t=e()(e=>({visible:!1,setVisible:t=>e({visible:t})}));export{t};

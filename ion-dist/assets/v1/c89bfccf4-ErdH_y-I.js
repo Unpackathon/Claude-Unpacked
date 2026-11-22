@@ -1,0 +1,1 @@
+function e(e){return Object.fromEntries(Object.entries(e).map(([e,t])=>[`from_${e}`,t]))}export{e as t};

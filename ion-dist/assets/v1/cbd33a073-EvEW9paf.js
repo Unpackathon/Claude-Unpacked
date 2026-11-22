@@ -1,0 +1,1 @@
+import{zn as e}from"./shared-174-Uzjlgfhw.js";function t(e){return`plugin:${e.carrier?.key??e.plugin.id}:${e.skill.source??"skills"}:${e.skill.name}`}function n(t){return(t??[]).filter(t=>t.enabled&&!e(t)).flatMap(e=>e.skills.map(t=>({plugin:e,skill:t})))}export{t as n,n as t};

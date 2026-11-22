@@ -1,0 +1,1 @@
+var e=["user","membership_admin","owner"],t={user:"User",membership_admin:"Admin",owner:"Owner"},n={inviteMembers:["SCIM_PERMISSIVE","SCIM_ADVANCED","JIT_PERMISSIVE","JIT_ADVANCED"],changeRoles:["SCIM_ADVANCED","JIT_ADVANCED"],removeMembers:["SCIM_PERMISSIVE","SCIM_ADVANCED"]};export{t as n,n as r,e as t};

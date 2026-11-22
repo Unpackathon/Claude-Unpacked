@@ -1,0 +1,1 @@
+function e(e){return`/directory/${encodeURIComponent(e)}`}export{e as t};

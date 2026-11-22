@@ -1,0 +1,1 @@
+import{ov as e}from"./shared-73-DfCPGdCT.js";function t(){e(),window.location.reload()}export{t};

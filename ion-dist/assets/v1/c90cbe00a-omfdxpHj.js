@@ -1,0 +1,1 @@
+import{At as e}from"./vendor-all-1-BocQA2O8.js";var t=e({privacyPolicy:{defaultMessage:"Privacy Policy",id:"7T97iMzMBM"},termsOfService:{defaultMessage:"Terms of service",id:"4Xw5AOLPm0"}});export{t};

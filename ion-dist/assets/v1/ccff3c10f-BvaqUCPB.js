@@ -1,0 +1,1 @@
+import{E as e,O as t,T as n,b as r,f as i}from"./vendor-zod-Ddu6wnrm.js";import"./shared-frame-DeSSgTpM.js";import"./shared-25-DapkFWlH.js";var a={on:!1,since_ms:0},o=r(()=>t(e=>e??{},e({on:i().default(!1),since_ms:n().nonnegative().default(0)})));export{a as t,o as n};

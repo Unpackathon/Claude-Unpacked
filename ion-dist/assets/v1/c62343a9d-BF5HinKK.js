@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{l as t,v as n}from"./c3a41fcbb-Cv49Y8aS.js";import{n as r}from"./c1ec8a7a7-6UExZNCx.js";function i({listClassName:i,trimmed:a=!1}){return e(r,{points:a?n:t,align:"center",className:i})}export{i as t};

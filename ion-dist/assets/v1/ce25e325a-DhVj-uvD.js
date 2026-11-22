@@ -1,0 +1,1 @@
+function e(e){return typeof e=="string"&&(e==="tool_use"||e.endsWith("_tool_use"))}export{e as t};

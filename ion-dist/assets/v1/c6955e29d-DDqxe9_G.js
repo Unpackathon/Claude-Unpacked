@@ -1,0 +1,1 @@
+import"./shared-37-BxNtUyNK.js";import"./shared-238-CGzDEQRA.js";import{yl as e}from"./shared-25-DapkFWlH.js";function t(){return e("trials_and_tribulations_of_high_school_football")}export{t as _DD};

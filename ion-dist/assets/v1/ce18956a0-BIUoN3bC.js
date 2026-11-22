@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";var t=new Map([["salesforce",{logo:t=>e("img",{src:"/images/crochet/chips/salesforce.svg",alt:"",width:t,height:t}),betaPlugins:new Set(["salesforce-for-sales"])}]]);function n({isDefaultCatalog:e,marketplaceName:n}){return e&&n?t.get(n):void 0}function r(e,t){return n(e)?.logo(t)??null}export{r as n,n as t};

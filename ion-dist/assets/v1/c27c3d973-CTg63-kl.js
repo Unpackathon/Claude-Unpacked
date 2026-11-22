@@ -1,0 +1,1 @@
+import{qS as e}from"./shared-141-K5japEQk.js";import{Dy as t}from"./shared-206-DmJmFrn0.js";function n(n){let r=t(n);e(import.meta.url)?r?.prime("open_idle",{thenIdle:!0}):r?.enqueueIdle()}export{n as t};

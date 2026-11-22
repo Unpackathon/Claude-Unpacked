@@ -1,0 +1,1 @@
+var e={list:"App view tool list",call:"App view tool",setDisplayMode:"App view display mode"};export{e as t};

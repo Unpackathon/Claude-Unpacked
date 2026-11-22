@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Yd as J3,rf as K3}from"./shared-frame-DeSSgTpM.js";import{Et as t}from"./shared-1-uKWXuHc9.js";import{ci as n}from"./shared-33-BnmCH4hK.js";function r(r){let $=J9(4),{className:i,children:a}=r,o=n(),s=t()||o?"section":"main";return J3($,0,s,a,i)?K3($,0,s,a,i,e(s,{className:i,children:a})):$[3]}export{r as t};

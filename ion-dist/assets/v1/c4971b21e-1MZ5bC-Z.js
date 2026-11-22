@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{Nu as t}from"./shared-frame-DeSSgTpM.js";import{_T as n,vT as r}from"./shared-107-D8fgcL1q.js";function i(e,t){return t==="rtl"||r(e)&&!n(e)?"auto":"ltr"}function a({as:n="bdi",children:r,...a}){let o=t();return e(n,{...a,dir:i(r??"",o),children:r})}export{i as n,a as t};

@@ -1,0 +1,1 @@
+import{Ms as e}from"./shared-141-K5japEQk.js";function t(t){return t.remoteStreamFirstPassComplete&&e(t)&&!t.remoteStreamEndedBeforeConnectionStates&&!t.remoteStreamProbesWithoutVerdict}export{t};

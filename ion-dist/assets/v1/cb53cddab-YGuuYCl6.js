@@ -1,0 +1,1 @@
+import{bo as e,co as t,fo as n}from"./vendor-frame-Dy-urf5a.js";function r(r,i,a={autoInvoke:!1}){let o=e(null),s=t((...e)=>{o.current||=window.setTimeout(()=>{r(e),o.current=null},i)},[i]),c=t(()=>{o.current&&=(window.clearTimeout(o.current),null)},[]);return n(()=>(a.autoInvoke&&s(),c),[c,s]),{start:s,clear:c}}export{r as t};

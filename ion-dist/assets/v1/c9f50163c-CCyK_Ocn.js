@@ -1,0 +1,1 @@
+var e=/^Couldn't start the remote server: This host doesn't have the version of Claude this app needs\. Ask your admin to install it, then try again\. (?<rest>Not found: \/usr\/libexec\/claude-desktop-ssh\/[A-Za-z0-9._/-]{1,120}(?:, \/usr\/libexec\/claude-desktop-ssh\/[A-Za-z0-9._/-]{1,120})? \[NOT_PREINSTALLED\])$/;export{e as t};

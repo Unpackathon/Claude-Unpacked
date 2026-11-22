@@ -1,0 +1,1 @@
+function e(e){if(typeof e!="object"||!e||!("settings"in e))return"unknown";let t=e.settings;return typeof t!="object"||!t?"unknown":"has_sensitive_data"in t?t.has_sensitive_data===!0?"marked":t.has_sensitive_data===!1?"clear":"unknown":"clear"}export{e as t};

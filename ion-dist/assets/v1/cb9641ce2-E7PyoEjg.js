@@ -1,0 +1,1 @@
+import{Di as e}from"./shared-25-DapkFWlH.js";function t(){return e("claude-ai:project-tag:update")}export{t};

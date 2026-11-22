@@ -1,0 +1,1 @@
+import{xo as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";function t(t){let $=J9(2),n=J1($,0,t)?K1($,0,t,{retrying:t,failures:0}):$[1],[r,i]=e(n);return r.retrying!==t&&i({retrying:t,failures:r.failures+ +!t}),r.failures}export{t};

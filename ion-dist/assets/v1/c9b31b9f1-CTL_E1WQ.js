@@ -1,0 +1,1 @@
+import{Ol as e}from"./shared-25-DapkFWlH.js";import{Zx as t}from"./shared-26-HtKWSjuR.js";var n="__gb__1639557023";function r(r){let i=t("cai_peaceful_horizon");return e(n,i&&r)}function i(r){let i=t("cai_peaceful_horizon");return e(n,i&&r)}export{i as n,r as t};

@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{Dt as t}from"./vendor-all-1-BocQA2O8.js";function n(){return e(t,{defaultMessage:"Add a payment method to continue.",id:"tK2O1mWUSU"})}function r(){return e("p",{"data-testid":"pay-disabled-reason",className:"text-end text-caption text-muted-as-secondary",children:e(n,{})})}export{n,r as t};

@@ -1,0 +1,1 @@
+import{ts as e}from"./shared-25-DapkFWlH.js";function t(t,n){return t.key==="Backspace"&&n===""&&!t.repeat&&!e(t)}export{t};

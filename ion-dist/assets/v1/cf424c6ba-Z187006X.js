@@ -1,0 +1,1 @@
+import{cv as e}from"./shared-206-DmJmFrn0.js";function t(t){t&&e(t)&&(t.tabIndex=-1,t.classList.add("rounded","focus-visible:shadow-focus","focus-visible:outline-hidden"),t.focus())}export{t};

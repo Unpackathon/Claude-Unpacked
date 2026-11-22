@@ -1,0 +1,1 @@
+import{bo as e,fo as t,xo as n}from"./vendor-frame-Dy-urf5a.js";import{cy as r,oy as i}from"./shared-25-DapkFWlH.js";function a(a,o="signInVerified"){let[s,c]=n(()=>!r(o)),l=e(s);return t(()=>{!a||l.current||(l.current=!0,Promise.resolve(i(o)).then(()=>c(!0)))},[a,o]),s}export{a as t};

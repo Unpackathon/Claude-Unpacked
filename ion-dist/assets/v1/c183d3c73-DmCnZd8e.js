@@ -1,0 +1,1 @@
+var e=()=>void 0,t=()=>!1;export{e as i,t as a};

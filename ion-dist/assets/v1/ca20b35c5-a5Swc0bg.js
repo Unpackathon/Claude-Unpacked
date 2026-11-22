@@ -1,0 +1,1 @@
+function e(e){if(e===void 0)return;let t=Date.parse(e);return Number.isNaN(t)?void 0:t}function t(t){return typeof t=="string"&&e(t)!==void 0?t:void 0}export{e as n,t as r};

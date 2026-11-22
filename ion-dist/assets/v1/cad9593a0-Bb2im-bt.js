@@ -1,0 +1,1 @@
+import{n as e,r as t,t as n}from"./c9785bf41-BMn3tyG9.js";function r(n){let r=new Set;if(n==="")return r;let i=t(n);for(let[t,a]of e)(t.startsWith(n)||i.includes(t))&&r.add(a);return r}export{r as iconsForSearch,n as projectAppearanceFromName};

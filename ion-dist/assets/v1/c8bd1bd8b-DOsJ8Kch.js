@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{Tn as e,sd as t}from"./shared-73-DfCPGdCT.js";function n(){let $=J9(2),{track:n}=t();return J1($,0,n)?K1($,0,n,t=>n({...t,client_platform:e("claude-dot")})):$[1]}export{n as t};

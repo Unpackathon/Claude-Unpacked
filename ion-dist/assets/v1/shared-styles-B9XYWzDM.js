@@ -1,0 +1,1 @@
+globalThis.performance?.mark?.("entry_eval:start"),globalThis.__earlyRun?.enter?.(import.meta.url);var e={animating:"_animating_ta2es_10",wordAnimating:"_wordAnimating_ta2es_12",fadeInText:"_fadeInText_ta2es_1",blocks:"_blocks_ta2es_47"},t={grapheme:"_grapheme_1plog_4","grapheme-reveal":"_grapheme-reveal_1plog_1"};export{e as n,t};

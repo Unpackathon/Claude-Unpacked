@@ -1,0 +1,1 @@
+function e(e){let t=e?.tool_host_status;return t==null||typeof t=="object"&&t.engine==="bridge"}export{e as t};

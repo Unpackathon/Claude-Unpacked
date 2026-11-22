@@ -1,0 +1,1 @@
+function e({messageCount:e}){return e>0}export{e as t};

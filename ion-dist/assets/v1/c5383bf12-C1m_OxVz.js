@@ -1,0 +1,1 @@
+import{Kn as e,hf as t}from"./shared-0-D23kmOCB.js";import{Ct as n}from"./shared-73-DfCPGdCT.js";import{n as r}from"./c1836d2e5-HJ71TAZt.js";function i(i){return r(i)||n(i)?{error_code:null,status_code:null}:{error_code:i instanceof t?i.errorCode??null:null,status_code:e(i)??null}}export{i as t};

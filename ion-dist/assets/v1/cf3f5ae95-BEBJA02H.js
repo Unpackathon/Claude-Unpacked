@@ -1,0 +1,1 @@
+function e(e,t){t===void 0||e.key!=="Enter"||!(e.metaKey||e.ctrlKey)||e.altKey||e.shiftKey||e.defaultPrevented||e.nativeEvent.isComposing||e.keyCode===229||(e.preventDefault(),e.repeat||t())}export{e as t};

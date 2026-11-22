@@ -1,0 +1,1 @@
+import{bo as e,fo as t,po as n}from"./vendor-frame-Dy-urf5a.js";function r(r,i){let a=e(!1),o=n(i);t(()=>{r&&!a.current&&(a.current=!0,o())},[r])}export{r as t};

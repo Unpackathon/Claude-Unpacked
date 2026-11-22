@@ -1,0 +1,1 @@
+import{Zu as e}from"./shared-frame-DeSSgTpM.js";import{Ng as t}from"./shared-0-D23kmOCB.js";import{n}from"./cc1fe53e2-BLMYrocK.js";function r(r,i){let a=n(i),o=a?t(a):null;return o?e(r,o,"_blank","noopener,noreferrer"):!1}export{r as t};

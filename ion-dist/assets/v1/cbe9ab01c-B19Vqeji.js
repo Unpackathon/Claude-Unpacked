@@ -1,0 +1,1 @@
+function e(e){let t=e.length;return e.charCodeAt(t-1)===10&&(t--,e.charCodeAt(t-1)===13&&t--),e.slice(0,t)}export{e as t};

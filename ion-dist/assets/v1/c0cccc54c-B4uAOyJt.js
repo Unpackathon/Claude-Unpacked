@@ -1,0 +1,1 @@
+var e=["messages-to-Claude","messages-that-start-a-new-session"];function t(t){return e.includes(t)}function n(e){return e.toLowerCase().replace(/[._-]+/g,"").replace(/[i1]/g,"l").replace(/0/g,"o")}function r(t){return e.some(e=>n(t)===n(e))}export{r as n,t};

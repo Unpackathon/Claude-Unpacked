@@ -1,0 +1,9 @@
+{
+  "chunks": 6212,
+  "edges": 101438,
+  "multiChunkSccs": 0,
+  "sccs": [],
+  "warnedSccs": 0,
+  "warnedEagerReachableSccs": 0,
+  "warnedSccNames": []
+}

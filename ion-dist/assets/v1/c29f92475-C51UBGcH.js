@@ -1,0 +1,1 @@
+import{So as e,co as t}from"./vendor-frame-Dy-urf5a.js";import{C as n,p as r}from"./vendor-query-DjWagZkY.js";function i(i,a){let o=r(a),s=o.getQueryCache();return e(t(e=>s.subscribe(n.batchCalls(e)),[s]),()=>o.isFetching(i),()=>o.isFetching(i))}export{i as t};

@@ -1,0 +1,1 @@
+var e=new WeakSet;function t(t){return e.add(t),t}function n(t){return!!t&&e.has(t)}export{t as n,n as t};

@@ -1,0 +1,1 @@
+var e;function t(t){let n=e;e??=performance.now();try{return t()}finally{e=n}}function n(){return e!==void 0&&performance.now()-e>=8}export{n,t};

@@ -1,0 +1,11 @@
+{
+  "capabilities": [
+    "mcp"
+  ],
+  "changes": [
+    "mcp"
+  ],
+  "inertChanges": [
+    "mcp-prompt-section"
+  ]
+}

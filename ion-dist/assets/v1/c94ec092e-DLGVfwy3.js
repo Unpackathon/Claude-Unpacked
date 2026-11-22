@@ -1,0 +1,1 @@
+import{Ku as e}from"./shared-33-BnmCH4hK.js";import{Qa as t}from"./vendor-frame-Dy-urf5a.js";var n=t(null);function r(t){return n=>{e(n)||(n.preventDefault(),t())}}export{n as _u0,r as t};

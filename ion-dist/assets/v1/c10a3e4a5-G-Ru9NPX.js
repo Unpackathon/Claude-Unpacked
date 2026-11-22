@@ -1,0 +1,1 @@
+(function(){Object.getOwnPropertyDescriptor(window,"__antRealmRelay")||Object.defineProperty(window,"__antRealmRelay",{value:Object.freeze({postMessage:function(e,t,n,r){if(typeof n!="string"||n==="*")throw TypeError("realm relay: an explicit targetOrigin is required");e.postMessage(t,n,r||[])}}),writable:!1,configurable:!1,enumerable:!1})})();

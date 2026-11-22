@@ -1,0 +1,1 @@
+function e(){let e=window.desktopPreferredLanguages,t=Array.isArray(e)?e.filter(e=>typeof e=="string"):[];return t.length>0?t:navigator.languages}export{e as t};

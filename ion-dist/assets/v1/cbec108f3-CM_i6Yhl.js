@@ -1,0 +1,1 @@
+import{s_ as e}from"./shared-0-D23kmOCB.js";import{Tm as t}from"./shared-73-DfCPGdCT.js";var n=new Set,r=e(),i=r.subscribe,a=r.notify,o=i;function s(e){return n.has(e)}var c=new Set;t(()=>{c.size>0&&(c.clear(),a())});function l(e){return c.has(e)}function u(e){c.has(e)||(c.add(e),a())}export{l as t,s as n,n as _nw,u as r,a as _T3,o as a};

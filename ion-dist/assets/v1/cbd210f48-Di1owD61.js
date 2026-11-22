@@ -1,0 +1,5 @@
+var e=/(?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)/gm;function t(t){let n=Object.create(null),r=t.replace(/\r\n?/gm,`
+`),i;for(;(i=e.exec(r))!==null;){let e=i[1],t=i[2]??"";t=t.trim();let r=t[0];t=t.replace(/^(['"`])([\s\S]*)\1$/gm,"$2"),r==='"'&&(t=t.replace(/\\n/g,`
+`),t=t.replace(/\\r/g,"\r")),n[e]=t}return n}function n(e,t=""){let n=e.slice(e.search(/[=:]/)+1),r=t.trim();return n[n.indexOf(r)+r.length]==="#"&&!/^(['"`])(?:\\\1|(?!\1).)*\1$/.test(r)}function r(t,r){let i=t.replace(/\r\n?/g,`
+`).replace(e,(e,t,r)=>n(e,r)?e:e.replace(/[^\n]/g,"")).split(`
+`);for(let e=0;e<i.length;e++){let t=i[e].trim();if(!(!t||t.startsWith("#"))&&!(r?.allowTrailingBareKey&&e===i.length-1&&/^(?:export\s+)?[\w.-]+(?::?|\s*[=:]\s*(['"`])(?!.*\1).*)$/.test(t)))return e+1}}export{t as n,r as t};

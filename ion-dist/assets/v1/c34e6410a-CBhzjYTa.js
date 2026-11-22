@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/v1/shared-frame-kvmio2lb.css","assets/v1/shared-styles-DyIGYKNa.css"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-sR4dxpO6.js";import{An as t,fo as n}from"./shared-0-D23kmOCB.js";var r,i,{promise:a,resolve:o}=t();function s(){return i??=n({origin:"background",tag:"code_highlight_stack"},()=>e(()=>import("./cce0118b1-BOcSu5YU.js"),__vite__mapDeps([0,1]))).then(e=>(r=e,o(e),e)),i}export{s as t,r as _yV,a as _0H};

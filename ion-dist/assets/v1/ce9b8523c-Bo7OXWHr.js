@@ -1,0 +1,1 @@
+function e(e,t){return e.reduce((e,t)=>e+Math.round(t.length/4),0)+t*1800<=12500}export{e as t};

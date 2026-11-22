@@ -1,0 +1,1 @@
+import"./shared-frame-DeSSgTpM.js";import{sa as e}from"./shared-1-uKWXuHc9.js";function t(){let{resolvedMode:t}=e();return t==="dark"?"dark":"light"}function n(){let{ownMode:t}=e();return t==="dark"?"dark":"light"}export{n,t as i};

@@ -1,0 +1,1 @@
+import{Ex as e}from"./shared-141-K5japEQk.js";var t=e()?.bootstrapConfig?.status==="supported";function n(){return!0}export{n,t};

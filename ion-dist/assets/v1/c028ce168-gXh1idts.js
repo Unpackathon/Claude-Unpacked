@@ -1,0 +1,1 @@
+import"./vendor-frame-Dy-urf5a.js";import"./shared-frame-DeSSgTpM.js";var e=0,t=new WeakSet,n=new WeakSet;function r(t){return e+=1,t===void 0?{seq:e}:{seq:e,pressedAt:t}}export{r as t,t as _9g,n as _R0};

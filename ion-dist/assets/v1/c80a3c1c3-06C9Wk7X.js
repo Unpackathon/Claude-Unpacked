@@ -1,0 +1,1 @@
+import{Or as e}from"./shared-100-Clpp0bXi.js";function t(t){return e(t.toolName)}export{t};

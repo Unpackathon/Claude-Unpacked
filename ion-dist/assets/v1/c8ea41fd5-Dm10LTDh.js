@@ -1,0 +1,1 @@
+import{wm as e}from"./shared-73-DfCPGdCT.js";import{oE as t}from"./shared-107-D8fgcL1q.js";var n=e(()=>void 0);function r(e){n.set(e)}function i(){n.set(void 0)}function a(){return n.read()!==void 0}function o(e){let r=t(n);return r!==void 0&&r.connector===e?r.tool:void 0}export{o as i,i as n,a as r,r as t};

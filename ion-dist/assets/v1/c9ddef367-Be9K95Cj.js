@@ -1,0 +1,1 @@
+import"./c5cb8177e-CXRBvrFb.js";function e(e){return e.formatMessage({defaultMessage:"Terminal",id:"GE7Vqpsyct"})}function t(t,n,r){return n.name??(r?e(t):t.formatMessage({defaultMessage:"Terminal {n}",id:"dVnXY34i9I"},{n:n.ordinal}))}export{e as n,t as r};

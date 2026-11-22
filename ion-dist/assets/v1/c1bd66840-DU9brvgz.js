@@ -1,0 +1,1 @@
+function e(e){let t=!1;return queueMicrotask(()=>{t||e()}),()=>{t=!0}}export{e as t};

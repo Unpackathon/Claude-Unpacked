@@ -1,0 +1,1 @@
+import{Bd as e}from"./shared-frame-DeSSgTpM.js";function t(t){t.key==="Enter"&&!t.metaKey&&!t.ctrlKey&&e(t.target)?.tagName==="INPUT"&&t.preventDefault()}export{t};

@@ -1,0 +1,1 @@
+import{Ks as e}from"./shared-0-D23kmOCB.js";function t(t){return e(t)&&t.show_card===!0}function n(t){try{let n=JSON.parse(t);return!e(n)||n.card!=="shown"?null:Array.isArray(n.connectors)?n.connectors.length:0}catch{return null}}export{n,t};

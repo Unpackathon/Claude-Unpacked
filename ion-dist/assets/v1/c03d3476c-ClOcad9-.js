@@ -1,0 +1,2 @@
+import{Dn as e,_pi as t}from"./shared-238-CGzDEQRA.js";function n(e){return e.map(e=>e.map(t).join(",")+`
+`).join("")}function r(t,r){let i=t=>t.map(e);return`\uFEFF${n([i(r.map(e=>e.header)),...t.map(e=>i(r.map(t=>t.cell(e))))])}`}export{r as t};

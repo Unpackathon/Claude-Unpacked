@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{so as e}from"./shared-1-uKWXuHc9.js";function t(){let $=J9(2),t=e();return J1($,0,t)?K1($,0,t,e=>{t(()=>e.currentTarget.select())}):$[1]}export{t};

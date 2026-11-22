@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{Dt as t}from"./vendor-all-1-BocQA2O8.js";import{t as n}from"./c8380d1d8-ChB5kzOa.js";function r(){return e(t,{...n.browserNotVerified,values:{link:t=>e("a",{className:"underline",href:"https://support.anthropic.com/",target:"_blank",children:t})}})}export{r as t};

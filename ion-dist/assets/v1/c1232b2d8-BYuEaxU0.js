@@ -1,0 +1,1 @@
+import{Hp as e}from"./shared-0-D23kmOCB.js";async function t(t){return await e?.getPluginOptions?.(t,{mode:"ccd"})??null}export{t};

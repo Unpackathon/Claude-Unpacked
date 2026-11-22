@@ -1,0 +1,1 @@
+function e(e){return e.source==="rollout_default"||e.source==="default_block"}function t(e){return(e??[]).some(e=>e.tool_name==="*"&&e.max_permission==="blocked"&&e.reenable_required!==!1)}export{t as n,e as t};

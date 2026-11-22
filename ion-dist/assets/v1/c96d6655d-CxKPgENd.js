@@ -1,0 +1,1 @@
+function e(e){return Array.from(e.matchAll(/`[^`]+`/g),e=>({start:e.index,end:e.index+e[0].length}))}function t(t){let n=[],r=0;for(let{start:i,end:a}of e(t))i>r&&n.push({text:t.slice(r,i),isCode:!1}),n.push({text:t.slice(i+1,a-1),isCode:!0}),r=a;return r<t.length&&n.push({text:t.slice(r),isCode:!1}),n.length>0?n:[{text:t,isCode:!1}]}export{t as n,e as t};

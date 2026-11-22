@@ -1,0 +1,1 @@
+import{Zl as e,fl as t}from"./shared-25-DapkFWlH.js";import{eh as n}from"./shared-73-DfCPGdCT.js";function r(e){let t=e?.isNonprofitEligible??!1;return{isLabs:!t&&(e?.isLabsEligible??!1),isNonprofit:t}}function i(i){let a=t("raven_admin","default_max_org_members",150,e),{isLabs:o}=r(i);return n(o,{when:i!==void 0,mode:"latest"})?25:a}export{r as n,i as t};

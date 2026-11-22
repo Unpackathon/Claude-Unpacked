@@ -1,0 +1,1 @@
+import{Ws as e}from"./shared-0-D23kmOCB.js";import{Kh as t,_v as n}from"./shared-73-DfCPGdCT.js";import{oE as r}from"./shared-107-D8fgcL1q.js";var i="/create/team?src=work_prompt",a=t(!1);function o(){a.set(!1)}e(o),n(o);function s(e){return a.set(e.get("src")==="work_prompt"),a.read()}function c(){return r(a,l)}function l(){return!1}a.read;export{s as n,c as r,i as t};

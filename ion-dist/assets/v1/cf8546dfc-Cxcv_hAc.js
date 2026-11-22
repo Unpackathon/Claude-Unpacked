@@ -1,0 +1,1 @@
+import{Va as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Jd as J2,nf as K2}from"./shared-frame-DeSSgTpM.js";import{x as t}from"./shared-8-DsNRSgHE.js";function n(n){let $=J9(3),{onCancel:r,onDiscard:i}=n;return J2($,0,r,i)?K2($,0,r,i,e(t,{open:!0,onOpenChange:r,onDiscard:i})):$[2]}export{n as SettingsPluginsPageLeaveConfirmation};

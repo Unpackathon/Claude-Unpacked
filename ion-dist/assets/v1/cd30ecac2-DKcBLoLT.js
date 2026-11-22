@@ -1,0 +1,1 @@
+function e(e,t){return`notif-dismiss:${e}:${t}`}export{e as t};

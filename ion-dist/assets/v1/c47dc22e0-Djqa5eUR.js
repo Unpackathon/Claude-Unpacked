@@ -1,0 +1,1 @@
+function e(e){return e.annotations?.readOnlyHint===!0?"readOnly":e.annotations?"write":"unspecified"}export{e as t};

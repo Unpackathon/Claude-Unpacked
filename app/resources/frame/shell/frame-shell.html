@@ -1,0 +1,1532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="frame-shell-i18n" data-shipped="en-US,de-DE,fr-FR,ko-KR,ja-JP,es-419,es-ES,it-IT,hi-IN,pt-BR,id-ID" data-catalogs="de-DE:5094afe66d7e,fr-FR:a86609a4989e,ko-KR:dbaed4f26938,ja-JP:71924b15888d,es-419:ea943cca234d,es-ES:27940510770b,it-IT:0aeaedae0027,hi-IN:8307b7574b32,pt-BR:4d20af65550c,id-ID:26de9b6dfd7d" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <!-- The share key (?sk=) rides in this page's URL on every authorized
+         view (shell.ts replaceState's it in). It gates only the
+         request-access shell, never read access, but it still shouldn't
+         travel outbound in a Referer header. Page-level so both the
+         authorized view and the request-access error state are covered. -->
+    <meta name="referrer" content="no-referrer" />
+    <title>Artifact</title>
+    <!--
+      ion-edge HTMLRewriter appends <link rel="preconnect"> here for the
+      per-frame user-content host, and CF emits the same as a Link: header
+      for 103 Early Hints.
+    -->
+    <!-- Before the stylesheet so data-embedded and the embedder's CDS
+         theme axes (desktop preload or ?m/d/p/f params) apply on first
+         paint. data-embedded is also set when parent and top are both
+         same-origin (claude.ai iframing itself, e.g. the Cowork drawer).
+         The embed check must never read parent/top location: Firefox reports
+         the caught cross-origin SecurityError to window.onerror anyway
+         (Sentry FRAME-SHELL-N), so it decides from ancestorOrigins
+         (Chromium/WebKit — [0] is the parent, the last entry is top) or,
+         in Firefox (no ancestorOrigins), from the referrer origin, which
+         names the embedding document and so can vouch only for the
+         immediate parent — hence the parent === top gate. Cross-origin
+         ancestors, an opaque (sandboxed-iframe) origin, and an empty
+         referrer all land on not-embedded, exactly like the old catch
+         path. The page's frame-ancestors CSP (ion-edge frame-shell.ts)
+         admits 'self' plus the Chrome extension's origins (at /view, Slack's
+         hosts instead), so cross-origin ancestors do load: the extension's side
+         panel above claude.ai/cic above this shell. There this script lands on
+         not-embedded, but ion-edge (frame-shell.ts isSameOriginIframeLoad)
+         also bakes data-embedded into <html> from the browser-set fetch
+         metadata, which is computed from the initiator (the claude.ai
+         parent), so the shell still boots embedded; this script only ever
+         SETS the attribute, so the two compose. What keeps a cross-origin
+         top out of the host-tools handoff is not the stamp but the
+         handoff's own check that a port comes from the parent and from
+         this document's origin (packages/frame-shell/src/hostTools.ts
+         onWindowMessage). The nested-shell check reads the parent only
+         through window.frameElement, which is null — never a throw —
+         whenever the framing document is not same-origin, in every engine,
+         so it needs neither ancestorOrigins nor a parent.location read.
+         This page's inline scripts must stay inline, in the head, and
+         on the built document's first line, and the __frameInlineProbe
+         assignment must stay their first statement: telemetry.ts's
+         `injected` heuristic treats the served column that Error's
+         stack reports (no first-party line-1 frame can sit left of it)
+         and the width the scripts occupy (stamped at build by
+         frameShell, which fails the build otherwise) as the only place
+         a first-party line-1 frame can live. -->
+    <script>
+      window.__frameInlineProbe = new Error();
+      (function (ds, p, q) {
+        // A reload of an app tab whose URL is masked as this artifact's link goes
+        // back to the app page under the mask. sync: settleMaskedEntryOnLoad.ts
+        try {
+          var hs = window === top && history.state,
+            tl = hs && hs.__tempLocation;
+          if (tl && hs.__tempKey === undefined && typeof tl.href === "string") {
+            var real = new URL(tl.href, location.origin);
+            if (real.origin === location.origin) {
+              location.replace(real.href);
+              ds.leaving = "";
+            }
+          } else if (window === top) {
+            // claude.ai's own page for an artifact shares this address, so its reload lands here; ion-edge leaves the address with a
+            // trailing slash to the app. sync: artifactAppPageMark.ts, dropArtifactPageSlashOnLoad.ts
+            var nav = performance.getEntriesByType("navigation")[0];
+            if (
+              !(nav ? nav.type === "reload" : performance.navigation.type === 1)
+            )
+              sessionStorage.removeItem("artifact-app-page");
+            else if (
+              ds.frameUuid &&
+              sessionStorage.getItem("artifact-app-page") ===
+                ds.frameUuid.toLowerCase() &&
+              !q.has("standalone") &&
+              !q.has("chrome")
+            ) {
+              // A mask with a __tempKey can show /docs/x in the bar while the app's page is at tl.pathname, /artifact/x.
+              var at = /^\/(?:code\/)?artifact\/[\w-]+$/.exec(
+                  (tl && tl.pathname) || location.pathname,
+                ),
+                org = hs && hs.__frameLinkOrg;
+              if (at) {
+                // The app keeps a link's organization in the entry's state, which a replace drops.
+                if (typeof org === "string" && !q.has("org")) q.set("org", org);
+                var s = "" + q;
+                location.replace(at[0] + "/" + (s && "?" + s) + location.hash);
+                ds.leaving = "";
+              }
+            }
+            // Back from the app's page to this one, kept in the back/forward cache, runs no script.
+            window.addEventListener("pageshow", function (e) {
+              try {
+                if (e.persisted) sessionStorage.removeItem("artifact-app-page");
+              } catch {}
+            });
+          }
+        } catch {}
+        // An ad click parameter in the fragment never reaches the edge, so ask again with it in the query.
+        // ion-edge writes data-ad-click-params only where FRAME_SEARCH_AD_FRAGMENT is on.
+        try {
+          var ad = ds.adClickParams && ds.adClickParams.split(" "),
+            moved = 0;
+          if (
+            ad &&
+            window === top &&
+            !p &&
+            !("leaving" in ds) &&
+            !ad.some(function (name) {
+              return q.has(name);
+            })
+          ) {
+            location.hash.split(/[#?&]/).forEach(function (kv) {
+              var i = kv.indexOf("=");
+              if (
+                i > 0 &&
+                kv.length > i + 1 &&
+                ad.indexOf(kv.slice(0, i)) >= 0
+              ) {
+                q.set(
+                  kv.slice(0, i),
+                  kv
+                    .slice(i + 1)
+                    .replace(/[^\w.-]/g, "")
+                    .slice(0, 256),
+                );
+                moved = 1;
+              }
+            });
+            if (moved) {
+              location.replace(location.origin + location.pathname + "?" + q);
+              ds.leaving = "";
+            }
+          }
+        } catch {}
+        if (p?.embedded) ds.embedded = ds.host = "";
+        // An app opened this from an emailed invitation: nothing of the artifact loads until shell.ts heldBootFetch confirms it.
+        if (p?.embedded && p.platform !== "desktop" && q.has("invite"))
+          ds.inviteHold = q.get("invite");
+        if (parent !== window) {
+          var o = location.origin,
+            ao = location.ancestorOrigins;
+          if (ao) {
+            if (ao[0] === o && ao[ao.length - 1] === o) ds.embedded = "";
+          } else if (parent === top && document.referrer) {
+            try {
+              // URL() throws only TypeError (malformed referrer) — inert
+              // to the Firefox onerror quirk, which is SecurityError-only.
+              if (new URL(document.referrer).origin === o) ds.embedded = "";
+            } catch {}
+          }
+          // Framed directly by another served shell (its <html> carries ion-edge's
+          // data-frame-uuid): booting would recurse. sync: shell.ts nestedInShell
+          try {
+            var fe = window.frameElement;
+            if (
+              fe &&
+              fe.ownerDocument.documentElement.hasAttribute("data-frame-uuid")
+            )
+              ds.nested = "";
+          } catch {}
+        }
+        // Host-chrome embed: ?chrome=none suppresses the shell header
+        // entirely — for hosts that draw their own panel chrome (Share +
+        // attribution). Honored ONLY when the embed marker is already set,
+        // so a top-level link can't strip the header by appending the param.
+        if ("embedded" in ds && (p?.chrome ?? q.get("chrome")) === "none") {
+          ds.chrome = "none";
+          // Embeds draw full-bleed (env(safe-area-inset-*) readable); scoped so the top-level header never underlaps a notch.
+          document
+            .querySelector("meta[name=viewport]")
+            .setAttribute(
+              "content",
+              "width=device-width,initial-scale=1,viewport-fit=cover",
+            );
+        }
+        // Host capability declaration (?hostcaps=, space-separated known
+        // tokens). "comment-mode": the host declares it draws the
+        // comment-mode control, which suppresses the shell's floating
+        // comment-mode toggle (Comments.tsx hostDrawsCommentMode).
+        // "comments-list": the host also draws its own entry to the
+        // all-comments list, which suppresses the shell's floating
+        // "All comments" chip (Comments.tsx hostDrawsCommentsList).
+        // "comment-composer" (with "comment-mode"): the host also draws the
+        // new-comment composer and posts the comment itself; the shell mounts none
+        // and tells it where the draft sits and whom "@" lists (hostDrawsComposer).
+        // "comment-threads" (with those two and "comments-list"): the host also
+        // shows comment threads itself; the shell opens no card for a pin or a
+        // comment link and names the thread to it (Comments.tsx hostShowsThreads).
+        // "page-comments": that control also seats a Claude Page's own
+        // comments panel (headless comments), so the shell may adopt an
+        // open the page declares into the forwarded mode and echo it
+        // pressed (Comments.tsx hostSeatsPageComments); a host without
+        // it exits any mode it did not command.
+        // "artifact-nav": the host declares it accepts artifact
+        // navigation requests — bare artifact→artifact links post the
+        // destination to the host instead of opening a new tab
+        // (deferred.ts handleNav). "artifact-nav-vanity": it also takes a
+        // link's title slug, so title-slug links post too.
+        // "comment-summon": the host takes committed Send-to-Claude
+        // summons into its own open session (Comments.tsx
+        // deliverSummon handoff), which stands the shell's wake down.
+        // "open-in-claude": the host takes only the summons nothing
+        // proves a session hears (the shell's conversation rung) and
+        // runs Claude's chain in place (Comments.tsx handToHost rung).
+        // "open-chat": the host can put a claude.ai chat beside the
+        // artifact when a chat-only viewer asks (SendTarget.tsx
+        // hostOpensChat, "Start one now").
+        // "stage-in-chat": the host opens that chat for a page's staged room
+        // send, left unsent (SendTarget.tsx embedTakesStage).
+        // "cloud-session": the pane sits beside a cloud session, which
+        // cannot handle comments yet — the no-watcher helper line says
+        // so (SendTarget.tsx useSendTarget cloudSession).
+        // "cowork-task": the comment-summon handoff's session is the
+        // conversation beside the pane (Cowork task or chat) — the send
+        // caption is omitted (SendTarget.tsx useSendTarget coworkTask).
+        // "no-send-all": the comment-summon host takes single summons
+        // only, never the Send-all sweep — the list header's Send all
+        // button stays disabled, with the reason (SendTarget.tsx
+        // useSendTarget noSendAll).
+        // "summon-into-chat" | "summon-into-session" | "summon-into-channel":
+        // what the comment-summon hand-off lands in, told to the CP on each
+        // Send and read by claudeTarget.ts pageSendAnswerStands.
+        // "connector-off": the comment-summon host's conversation cannot
+        // answer here — no hand-off, Send withheld (claudeTarget.ts paneOff).
+        // The Send-to-Claude hand-off tokens and "chat-beside"
+        // (below; protocol.ts LiveHostcap) the host may also re-stamp after boot
+        // with its __frame_chrome "hostcaps" command; every other token is
+        // fixed by this stamp for the document.
+        // "confirm-page-sends": the comment-summon host takes text the
+        // Artifact's own comment UI composed only after the viewer's Send in
+        // the shell's dialog, or unasked where the shell vouches for it
+        // (claudeTarget.ts pageSendVouched); the hand-off carries confirmed.
+        // "viewer-context": the shell forwards the viewer's own room
+        // presence (less cursor and name) to the host (viewerContext.ts).
+        // "context-card": the host stages a page's gestured "Ask Claude"
+        // context card in its own composer (contextCard.ts relay).
+        // "context-send": the host stages a page's room sendToClaudeSession
+        // in its own composer (claudeSend.ts); its own token, so a host
+        // that predates the send reads as none.
+        // "context-send-held": what that host stages waits for the viewer's own
+        // send, so a deliver: "send" is staged where no click is provable.
+        // "vouched-send" (with "context-send"): the host submits a send the
+        // shell stamped vouched with no dialog of its own, so the shell
+        // decides in that pane whether to ask.
+        // "chrome": on a chrome=none embed the host
+        // receives the page's own header facts — save state, open
+        // comment count and declared header actions (chromeReport.ts
+        // lane) — to draw in its header, and may post a declared
+        // action's id back down the same lane.
+        // "export": with "chrome", the host also receives the page's
+        // declared export formats in that snapshot and may ask for one
+        // (chromeReport.ts exportCommand) — the viewer confirms in the
+        // shell, naming the host's destination, before any bytes reach
+        // the host. Its own token so a host that predates it sees
+        // byte-identical snapshots.
+        // "page-foot": with "chrome", the host floats a control of its
+        // own over the page's foot and also receives, in that snapshot,
+        // how many pixels the page keeps there and its ground colour
+        // (chromeReport.ts hostLayout). Its own token so a host that
+        // floats nothing sees byte-identical snapshots and none for a
+        // change of those two alone.
+        // "header": on a chrome=none embed the host draws the title row
+        // itself and receives what goes in it — title, About block,
+        // attribution verdict, status pills, the artifact's menu rows and
+        // version list (chrome/hostHeader.ts) — and may ask the shell to
+        // open its viewer share sheet, Report, Permissions or Activity
+        // dialog in place.
+        // "duplicate": with "header", the host runs Duplicate when that
+        // viewer share sheet's button is pressed (chrome/hostHeader.ts
+        // postHostDuplicate); without it the sheet withholds the copy.
+        // "report": on a chrome=none embed the host draws its own Report item
+        // and may ask the shell to open its Report dialog in place.
+        // "viewer-share": on a chrome=none embed, the host's share command also opens the read-only viewer sheet for a viewer who cannot manage a person's artifact's sharing.
+        // "sheet-arrow": on a chrome=none embed the host draws the share
+        // sheet's arrow inside its own header band; the shell hangs the
+        // sheet just under its top edge and echoes the sheet's box and
+        // hairline row (chrome/hostSheet.ts) so arrow and sheet read as
+        // one popover the artifact cannot imitate.
+        // "sheet-backdrop": with "sheet-arrow", "header" and "chrome", the host dims that band while the echo says open with no box and
+        // draws the title menu's Export row; only then does the shell open Export in a dialog (BRIDGE.md "Header echo").
+        // "sheet-scrim": the host hears the Share sheet open and close, and dims its chrome while the echo says open with no box (BRIDGE.md "Host-chrome commands").
+        // "chrome-readonly": with "chrome", the host declares its header
+        // words the page's reported read-only state; the shell forwards
+        // the word to the page on its re-report poke (chromeReport.ts,
+        // BRIDGE.md "Words the chrome draws") so the page may fold its
+        // own read-only chip. One token per word the host draws.
+        // "selection-menu": a native host draws the OS text-selection
+        // menu itself and renders a page's declared comment_selection
+        // action as that menu's Comment item; without "chrome" it is the
+        // declared-actions lane's narrow key (chromeReport.ts
+        // selectionMenuOnly: declaration-only relay, no page chrome). Also,
+        // from a top-level native host only, a word token: forwarded on the
+        // poke as selection_menu so a page declaring that id may fold its
+        // own toolbar's Comment.
+        // "page-list-row": a top-level native host draws a row for a page's
+        // declared open_page_list action; forwarded on the poke as page_list_row so a
+        // page declaring that id may fold its own control for that list.
+        // "leave-loses-work": with "selection-menu" and without "chrome", the host's
+        // copy of the snapshot also carries leaveLosesWork (chromeReport.ts withWork).
+        // "chat-beside": with "chrome", the host's pane sits beside a
+        // claude.ai conversation the viewer has not put away (the chat
+        // drawer, re-stamped live as the chat is put away or restored);
+        // forwarded on the poke as the word chat_beside so a page may
+        // fold its own ask-Claude entry.
+        // "chat-toggle", "chat-draft": declared live only, never here (BRIDGE.md § Chat toggle, § Page comment control).
+        // "f6-stop": declared live only, never here (BRIDGE.md § Host shortcuts).
+        // "chat-rung": declared live only, never here (BRIDGE.md § Host-chrome commands).
+        // "menu-cut", "bar-tip": declared live only, never here (BRIDGE.md § Menu cut, § Bar tip).
+        // "schedule-updates", "schedule-offer": declared live only, never here (BRIDGE.md § Schedule updates).
+        // "doc-start-layout": declared live only, never here (BRIDGE.md § Doc start).
+        // "click-edit-fresh": declared live only, never here (BRIDGE.md § Click to edit).
+        // "claude-file-computer", "claude-file-drive": declared live only, never here (BRIDGE.md § File for Claude).
+        // "chat-in-view": declared live only, never here (BRIDGE.md § Chat in view).
+        // "turn-into": declared live only, never here (BRIDGE.md § Turn into).
+        // "header-controls", "top-edge": declared live only, never here (BRIDGE.md § Header controls, § Top edge).
+        // "header-window": declared live only, never here (BRIDGE.md § Header window).
+        // "presence": on a chrome=none embed the host receives the live
+        // channel's validated presence roster (presenceRelay.ts) to
+        // draw the facepile the shell draws on standalone boots.
+        // "host-nav": on a chrome=none embed the host is offered link
+        // clicks that pass handleNav's gates (deferred.ts offerHostNav)
+        // and may claim them to open in-app; unclaimed clicks fall
+        // through unchanged.
+        // "host-tools": the host may hand the shell document a
+        // MessagePort for host: mcp servers (hostTools.ts); the stamp
+        // alone grants nothing — without the handoff it is inert.
+        // "url-anchor": on a chrome=none embed the host receives the
+        // page's current Copy-link fragment (anchorRelay.ts) to reflect
+        // in its own address bar; a standalone shell writes its own and
+        // needs no token.
+        // "edge-to-edge": the native host's chrome is translucent, and the host is
+        // told which edges to extend its web view under (hostLayout.ts).
+        // "edge-to-edge-sides": with it, that chrome also covers the sides; see hostLayout.ts
+        // "edge-to-edge-top-checked": beside "edge-to-edge": a page that answers clear of the top runs beneath it; see hostLayout.ts
+        // "keyboard-done": host draws the keyboard's Done; see keyboardDone.ts
+        // "invite-offer": host draws the pending invitation and asks the shell to accept; see pendingInvite.ts
+        // "page-background": beside "edge-to-edge", or alone from a same-origin
+        // iframe host: the host is told the page's background colour, to paint
+        // beside the page (hostLayout.ts).
+        // "content-height": the host sizes its frame to the page (contentHeight.ts).
+        // "host-loader": the host shows its own loader behind the web view (BRIDGE.md § Host layout).
+        // "scroll-chain": the host's own page scrolls around the embed, so
+        // a wheel the artifact cannot use chains out to it (shell.css).
+        // "save-file": on a chrome=none embed the host, not the shell, writes
+        // a file the viewer confirmed downloading (downloads.ts hostSave).
+        // "save-blob": the same, but the file goes to the same-origin parent
+        // page as one Blob and that page starts the browser download
+        // (downloads.ts hostSave, claude.ai useFrameSaveFileHost).
+        // "host-keys": the host acts on its own keyboard chords (⌘K…) pressed
+        // inside the artifact or this document, which the shell relays to it
+        // by id — the chords come beside it as ?hostkeys=, read by hostKeys.ts
+        // only under this token; without it every chord stays with the page
+        // (a composed page gets its table as data-hostkeys from the edge instead).
+        // "device-*": the marker host can honor that device capability, counted
+        // only under data-host (BRIDGE.md § Native hosts).
+        // "read-aloud": the marker host lets the shell speak; counted only under data-host (BRIDGE.md § Read aloud).
+        // "transparent", "host-messages": an overlay page over the host, trading
+        // messages with it (BRIDGE.md § Host messages; needs hostOverlayEnabled).
+        // Embed-gated like chrome=none (grants nothing — only ever
+        // toggles shell UI, rewords a hint, keeps a nav inside an opted-in
+        // pane, answers the pane's same-origin host with the viewer's own
+        // state, relays to it what the shell already shows this viewer:
+        // their own gesture, the page's own header facts or facts of
+        // the page's own layout, the room's presence roster, or a file
+        // they confirmed saving, tells the page facts of the host's
+        // layout, lets a wheel the artifact cannot use
+        // scroll the host's page, lets the host offer a bridge the shell
+        // still pins, names the host's device capabilities or read-aloud, relays overlay messages, or accepts the viewer's own invitation);
+        // the header storage line's
+        // figure needs no token — chrome=none alone carries it (storageRelay.ts);
+        // unknown tokens and duplicates are dropped.
+        // A host that plants the marker declares hostcaps as a MEMBER of
+        // it; its query is never a declaration, except the one token each
+        // pre-member host build put there (the desktop pane's host-tools,
+        // the mobile viewers' comment-mode). Same-origin iframe hosts have
+        // no marker and declare in the query.
+        var legacy = p?.platform === "desktop" ? "host-tools" : "comment-mode";
+        var declared = !("embedded" in ds)
+          ? ""
+          : !p
+            ? q.get("hostcaps")
+            : p.hostcaps != null
+              ? p.hostcaps
+              : (" " + q.get("hostcaps") + " ").indexOf(" " + legacy + " ") < 0
+                ? ""
+                : legacy;
+        var hc = String(declared || "")
+          .split(" ")
+          .filter(function (t, i, a) {
+            return (
+              (t === "comment-mode" ||
+                t === "comments-list" ||
+                t === "comment-composer" ||
+                t === "comment-threads" ||
+                t === "page-comments" ||
+                t === "artifact-nav" ||
+                t === "artifact-nav-vanity" ||
+                t === "comment-summon" ||
+                t === "open-in-claude" ||
+                t === "open-chat" ||
+                t === "stage-in-chat" ||
+                t === "cloud-session" ||
+                t === "cowork-task" ||
+                t === "no-send-all" ||
+                t === "summon-into-chat" ||
+                t === "summon-into-session" ||
+                t === "summon-into-channel" ||
+                t === "connector-off" ||
+                t === "confirm-page-sends" ||
+                t === "viewer-context" ||
+                t === "chrome" ||
+                t === "export" ||
+                t === "page-foot" ||
+                t === "foot-bar-hidden" ||
+                t === "chrome-readonly" ||
+                t === "selection-menu" ||
+                t === "page-list-row" ||
+                t === "leave-loses-work" ||
+                t === "chat-beside" ||
+                t === "header" ||
+                t === "duplicate" ||
+                t === "report" ||
+                t === "viewer-share" ||
+                t === "sheet-arrow" ||
+                t === "sheet-backdrop" ||
+                t === "sheet-scrim" ||
+                t === "presence" ||
+                t === "host-tools" ||
+                t === "context-card" ||
+                t === "context-send" ||
+                t === "vouched-send" ||
+                t === "context-send-held" ||
+                t === "host-nav" ||
+                t === "url-anchor" ||
+                t === "edge-to-edge" ||
+                t === "edge-to-edge-top-checked" ||
+                t === "edge-to-edge-sides" ||
+                t === "keyboard-done" ||
+                t === "invite-offer" ||
+                t === "page-background" ||
+                t === "content-height" ||
+                t === "host-loader" ||
+                t === "scroll-chain" ||
+                t === "save-file" ||
+                t === "save-blob" ||
+                t === "host-keys" ||
+                t === "device-camera" ||
+                t === "device-microphone" ||
+                t === "device-speech" ||
+                t === "device-geolocation" ||
+                t === "device-motion" ||
+                t === "device-screenshare" ||
+                t === "device-midi" ||
+                t === "read-aloud" ||
+                t === "transparent" ||
+                t === "host-messages") &&
+              a.indexOf(t) === i
+            );
+          });
+        if (hc.length) ds.hostcaps = hc.join(" ");
+        // TMP: start transparent only if an earlier load stored frame_host_loader = "1" (BRIDGE.md § Host layout).
+        var hostLoaderOn = false;
+        if (
+          "host" in ds &&
+          ds.chrome === "none" &&
+          hc.indexOf("host-loader") >= 0
+        ) {
+          try {
+            hostLoaderOn = localStorage.getItem("frame_host_loader") === "1";
+          } catch (e) {}
+        }
+        if (hostLoaderOn) {
+          var tellHost = function (covered) {
+            parent.postMessage(
+              {
+                __frame_chrome_state: true,
+                state: "host_loader",
+                covered: covered,
+              },
+              location.origin,
+            );
+          };
+          window.__frameCoverHostLoader = function () {
+            if (ds.hostLoader !== "shown") return;
+            ds.hostLoader = "covered";
+            // Two frames give the background time to paint before the host hides its loader.
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                tellHost(true);
+              });
+            });
+          };
+          setTimeout(window.__frameCoverHostLoader, 10000);
+          ds.hostLoader = "shown";
+          tellHost(false);
+        }
+        // density is NOT an axis: shell.css's fixed-px header geometry is
+        // tuned for compact only (the shell ships no CDS runtime to scale
+        // the static layer), so the chrome hard-codes it.
+        // URL params are caller-controlled — only stamp known CDS axis
+        // values (keep in sync with the Cds* axis types in packages/cds).
+        var axes = {
+          mode: ["light", "dark", "system"],
+          platform: ["web", "desktop"],
+          font: ["anthropic", "system"],
+        };
+        for (var k of Object.keys(axes)) {
+          var v = p?.[k] ?? q.get(k[0]);
+          // Standalone pages inherit the claude.ai app's theme preference
+          // (same-origin localStorage — sync: ThemeProvider.tsx
+          // "userThemeMode" via useSmartLocalStorage, which wraps the value
+          // as {value,tabId,timestamp}; older writers stored the bare JSON
+          // string — mirror its dual-format read). An explicit light/dark
+          // outranks a link's ?m= hint, never an embedder's stamp:
+          // embedders own the theme axis in panes. "auto"/absent stays
+          // unstamped so the CSS system palette live-tracks the OS,
+          // matching the app's "auto". Own try/catch so disabled storage
+          // (it throws on ACCESS) or a garbage value can't kill the other
+          // axes' stamping.
+          if (k === "mode" && p?.mode == null && !("embedded" in ds)) {
+            try {
+              // getItem's null coerces to the string "null" — parses to
+              // null, same as the previous explicit fallback.
+              var st = JSON.parse(localStorage.getItem("LSS-userThemeMode"));
+              if (st && typeof st === "object") st = st.value;
+              if (st === "light" || st === "dark") v = st;
+            } catch (e) {}
+          }
+          if (axes[k].includes(v)) ds[k] = v;
+        }
+        // sync: readStoredReduceMotionMode() in packages/contexts/reduceMotion.tsx.
+        try {
+          var rm = JSON.parse(
+            localStorage.getItem("LSS-appearance:reduceMotion"),
+          );
+          if (rm === "reduce" || rm?.value === "reduce")
+            ds.reduceMotion = "true";
+        } catch {}
+        // sync: decide() and readParts() in packages/frame-shell/src/chrome/flatBar.tsx, except the window's width.
+        try {
+          if (
+            !("embedded" in ds) &&
+            !("host" in ds) &&
+            !location.pathname.startsWith("/mobile/") &&
+            // No mark for a client with the apps' " Claude/" token and not the desktop app's " Electron/" (for WebViews too old to plant data-host).
+            (!navigator.userAgent.includes(" Claude/") ||
+              navigator.userAgent.includes(" Electron/"))
+          )
+            ds.flatBar = "";
+        } catch {}
+      })(
+        document.documentElement.dataset,
+        window.claudeDesktopArtifactPane,
+        new URLSearchParams(location.search),
+      );
+    </script>
+    <!-- Prefetch the /api/frame/{uuid} boot call before the
+         <script type=module> at end-of-body (shell.ts's chunk) downloads
+         and parses. bootOnce() consumes this when its own URL matches; a
+         mismatch (derivation drift) falls through to a fresh fetch, so this
+         script degrades to baseline rather than breaking. In a same-origin
+         host's embed, or a native app's web view, whose host issued this boot
+         itself (BRIDGE.md § Host-supplied boot) the host's answer is taken
+         instead and nothing is fetched.
+         Without an org it also prefetches /api/account, which fetchAccount()
+         adopts. It then starts the warm-up subframe shell.ts mountWarmup adopts.
+         It fetches nothing (boot, /api/account or pre-grant) when a challenge
+         stash would put back a title slug or ?sk=: shell.ts
+         restoreChallengeStash changes the address before the boot, so a
+         prefetched boot would not match. The warm-up subframe still starts.
+         Runs after the data-embedded script above so isStandalone is derivable.
+         Derivation must stay in lockstep with shell.ts (see sync comments);
+         shell.boot.test.ts's "derivation parity" suite is the drift tripwire. -->
+    <script>
+      (function () {
+        try {
+          // ion-edge stamps the validated uuid on <html> (empty on an
+          // invalid route param); reading it means this bails on exactly
+          // the inputs shell.ts bails on.
+          var rd = document.documentElement.dataset,
+            uuid = rd.frameUuid;
+          if (!uuid || "leaving" in rd || "nested" in rd || "inviteHold" in rd)
+            return;
+          // sync: cpHeaders.ts isStandalone
+          var standalone =
+            self === top && !("embedded" in document.documentElement.dataset);
+          // A stash that puts back a slug or ?sk= re-addresses the boot: no
+          // prefetch. sync: shell.ts restoreChallengeStash, CHALLENGE_STASH_*.
+          if (standalone) {
+            try {
+              var craw = sessionStorage.getItem("frame_cf_challenge_stash"),
+                cs =
+                  craw !== null && craw.length <= 4096
+                    ? JSON.parse(craw)
+                    : null,
+                cnow = Date.now();
+              if (
+                cs &&
+                cs.p === location.pathname &&
+                typeof cs.t === "number" &&
+                cs.t <= cnow &&
+                cnow - cs.t < 3600000 &&
+                ((typeof cs.s === "string" && cs.s !== cs.p) ||
+                  typeof cs.k === "string")
+              )
+                return;
+            } catch (e) {}
+          }
+          // sync: shell.ts UUID_SEG (for org validation below)
+          var re =
+            /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+          var sp = new URLSearchParams(location.search);
+          // sync: shell.ts bootOrg (?org= → tab memory on reload → hint → cookie)
+          var orgP = sp.get("org"),
+            orgC = (document.cookie.match(/(?:^|;\s*)lastActiveOrg=([^;]*)/) ||
+              [])[1],
+            orgR = null,
+            orgH = null;
+          // sync: shell.ts orgHintsRead (ORG_HINT_KEY, the 16384 cap, the
+          // {o: org, a: account} row, both UUIDs): the org that last served
+          // this frame to this browser, ahead of the cookie.
+          try {
+            var hraw = standalone
+              ? localStorage.getItem("frame_org_hints")
+              : null;
+            if (hraw !== null && hraw.length <= 16384) {
+              var ho = JSON.parse(hraw),
+                hr = ho && typeof ho === "object" ? ho[uuid] : null;
+              if (
+                hr &&
+                typeof hr === "object" &&
+                typeof hr.o === "string" &&
+                typeof hr.a === "string" &&
+                re.test(hr.a)
+              )
+                orgH = hr.o;
+            }
+          } catch (e) {}
+          // Reload / Back only: a fresh open follows the cookie.
+          var navE =
+            (performance.getEntriesByType &&
+              performance.getEntriesByType("navigation")[0]) ||
+            {};
+          var again = navE.type === "reload" || navE.type === "back_forward";
+          if (standalone && again) {
+            try {
+              orgR = sessionStorage.getItem("frame_boot_org:" + uuid);
+            } catch (e) {}
+          }
+          var org =
+            orgP && re.test(orgP)
+              ? orgP
+              : orgR && re.test(orgR)
+                ? orgR
+                : orgH && re.test(orgH)
+                  ? orgH
+                  : orgC && re.test(orgC)
+                    ? orgC
+                    : null;
+          // No org: the boot goes out org-less, as shell.ts's first boot
+          // does. The CP answers it as an anonymous boot, and a signed-in
+          // viewer then re-boots under one of their orgs.
+          // sync: shell.ts bootVia — ?? (not ||): an empty ?via= stays "".
+          var viaP = sp.get("via");
+          var via =
+            viaP !== null ? viaP : standalone ? "user_open" : "embedded_view";
+          var sk = sp.get("sk");
+          // sync: bootOnce() q.set order (org, via, sk, vanity, bk, actor, vt, rw, ask) — string-matched.
+          var q = new URLSearchParams();
+          if (org) q.set("org", org);
+          if (via) q.set("via", via);
+          // sync: shell.ts SAFE_SHARE_KEY_RE
+          if (sk && /^[A-Za-z0-9_-]{16,64}$/.test(sk)) q.set("sk", sk);
+          // sync: shell.ts pageVanity + SAFE_VANITY_RE — the slugged URL
+          // form's "{title-slug}-" prefix rides the boot like sk. The id
+          // tail is the uuid or its 22-char form (the edge decoded either
+          // into data-frame-uuid, so a 22-char tail here is this uuid's).
+          var seg = location.pathname.split("/").pop() || "";
+          try {
+            seg = decodeURIComponent(seg);
+          } catch (e) {}
+          var van = "";
+          if (seg.toLowerCase().slice(-37) === "-" + uuid.toLowerCase()) {
+            van = seg.slice(0, seg.length - 37);
+          } else if (
+            seg.length > 23 &&
+            seg.charAt(seg.length - 23) === "-" &&
+            /^[1-9A-HJ-NP-Za-km-z]{22}$/.test(seg.slice(-22))
+          ) {
+            van = seg.slice(0, seg.length - 23);
+          }
+          if (/^[a-z0-9][a-z0-9-]{0,59}$/.test(van)) q.set("vanity", van);
+          // sync: cpHeaders.ts clientVersion / sessionId. The id is minted
+          // here first; cpHeaders.ts's ??= then adopts it for every later call.
+          // Minted before the bk derivation below, which uses it as this
+          // document's claim nonce.
+          var sid = window.__frameSessionId;
+          if (sid == null)
+            sid = window.__frameSessionId = crypto.randomUUID
+              ? crypto.randomUUID()
+              : "";
+          // sync: shell.ts markerPending / chunkReloadPending /
+          // hotHardReloadPending / claimRecoveryMarker / recoveryReloadBoot —
+          // this runs before any boot, so bk is initial unless this document
+          // is one of the shell's recovery reloads: a marker under the same
+          // keys, segment checks and 300000 ms window (a settled marker's
+          // "consumed" segment fails the pin and chunk shapes; the hard-reload
+          // marker is never settled), AND this document's claim on it.
+          // The navigating document armed
+          // <key>_claim = "reload|<marker>|<armed-at epoch-ms>" right
+          // before it reloaded (shell.ts armReloadClaim); the first reader
+          // in the next document — here — swaps it for "<sid>|<marker>",
+          // and shell.ts reads that back as its own. An arm is good for
+          // 30000 ms (shell.ts RELOAD_ARM_MAX_AGE_MS / isArmedFor): older,
+          // its reload produced no reader and the next fresh open in this
+          // tab must not take it. Anything else (no arm: a budget claimed
+          // but never navigated; an expired or two-segment arm; another
+          // document's sid; an older marker; no sid; unwritable storage)
+          // reads as "not mine". Every pending marker is claimed, not just
+          // the first. Unreadable storage reads as "not pending" there too.
+          var bk = "initial";
+          try {
+            // Own try/catch per claim, as shell.ts's: a throw on one key's
+            // claim must not abort the siblings' (the two readers would
+            // otherwise diverge on a key-specific failure).
+            var claim = function (key) {
+              try {
+                var m = sessionStorage.getItem(key);
+                if (!sid || !m) return false;
+                var ck = key + "_claim";
+                var mine = sid + "|" + m;
+                var held = sessionStorage.getItem(ck);
+                if (held === mine) return true;
+                // sync: shell.ts isArmedFor — exactly three segments, this
+                // marker, a finite stamp no older than 30000 ms.
+                var hp = held ? held.split("|") : [];
+                var armedAt = Number(hp[2]);
+                if (
+                  hp.length !== 3 ||
+                  hp[0] !== "reload" ||
+                  hp[1] !== m ||
+                  !Number.isFinite(armedAt) ||
+                  Date.now() - armedAt >= 30000
+                )
+                  return false;
+                sessionStorage.setItem(ck, mine);
+                return sessionStorage.getItem(ck) === mine;
+              } catch (e) {
+                return false;
+              }
+            };
+            // `<uuid>:<epoch-ms>` — pin reloads.
+            var pend = function (key) {
+              var m = sessionStorage.getItem(key);
+              if (!m) return false;
+              var sep = m.lastIndexOf(":");
+              var at = Number(m.slice(sep + 1));
+              return (
+                m.slice(0, sep) === uuid &&
+                Number.isFinite(at) &&
+                Date.now() - at < 300000
+              );
+            };
+            // `<uuid>:<chunk>:<epoch-ms>` — chunk reloads.
+            var cm = sessionStorage.getItem("frame_chunk_reload") || "";
+            var parts = cm.split(":");
+            var cat = Number(parts[2]);
+            var chunkPend =
+              parts[0] === uuid &&
+              (parts[1] === "chrome" ||
+                parts[1] === "deferred" ||
+                parts[1] === "broker") &&
+              Number.isFinite(cat) &&
+              Date.now() - cat < 300000;
+            // `<uuid>:<pin>:<epoch-ms>` — page-requested hard reloads.
+            var hk = "frame_hot_hard_reload:" + uuid;
+            var hs = (sessionStorage.getItem(hk) || "").split(":");
+            var hat = Number(hs[2]);
+            var hotPend =
+              hs[0] === uuid &&
+              Number.isFinite(hat) &&
+              Date.now() - hat < 300000;
+            // Non-short-circuit: each pending marker gets this document's
+            // claim.
+            var pinMine = pend("frame_pin_reload") && claim("frame_pin_reload");
+            var chunkMine = chunkPend && claim("frame_chunk_reload");
+            var hotMine = hotPend && claim(hk);
+            if (pinMine || chunkMine || hotMine) bk = "reboot";
+          } catch (e) {
+            // Storage unusable — not a recovery reload.
+          }
+          q.set("bk", bk);
+          // sync: shell.ts bootOnce — the same actor=id, in the same position.
+          q.set("actor", "id");
+          q.set("vt", "1");
+          q.set("rw", "1");
+          // sync: shell.ts askReturnOwed
+          if (sp.get("ask") === "return" && !again) q.set("ask", "return");
+          var url = "/api/frame/" + uuid + "?" + q.toString();
+          // TMP: the registry key a host page loaded before rw=1 writes (BRIDGE.md
+          // § Host-supplied boot, Across builds, says when this second look goes).
+          q.delete("rw");
+          var preRwUrl = "/api/frame/" + uuid + "?" + q.toString();
+          // sync: cpHeaders.ts SURFACES / PLATFORMS / bound(). Bounded
+          // here so an invalid value falls to the computed fallback and
+          // a control-char value can't reject fetch().
+          var PLATFORMS = ["web", "desktop", "ios", "android", "cli"];
+          var SURFACES = [
+            "chat",
+            "cowork",
+            "code",
+            "slack",
+            "teams",
+            "standalone",
+          ];
+          var bound = function (raw, ok) {
+            var v = raw == null ? null : raw.toLowerCase();
+            return v !== null && ok.indexOf(v) !== -1 ? v : null;
+          };
+          var ua = navigator.userAgent,
+            plat =
+              bound(sp.get("platform"), PLATFORMS) ||
+              (ua.includes(" Electron/")
+                ? "desktop"
+                : /Android/.test(ua)
+                  ? "android"
+                  : /iPad|iPhone|iPod/.test(ua) ||
+                      (ua.includes("Macintosh") && navigator.maxTouchPoints > 1)
+                    ? "ios"
+                    : "web");
+          var h = { "X-Frame-CP": "go", "X-Frame-Platform": plat };
+          var surface =
+            bound(sp.get("surface"), SURFACES) ||
+            (standalone ? "standalone" : "");
+          if (surface) h["X-Frame-Surface"] = surface;
+          // sync: cpHeaders.ts clientVersion (sessionId is minted above).
+          var bt = document.head.querySelector('meta[name="build-timestamp"]');
+          if (bt && bt.content) h["X-Frame-Client-Version"] = bt.content;
+          if (sid) h["X-Frame-Session-Id"] = sid;
+          // Pre-grant: start this boot's renewal-mode /_t grant now, in
+          // renewAssetGrant's frame, so shell.ts can mount bare on it (BRIDGE.md
+          // § Pre-grant has the contract, the gates and who decides). sync:
+          // shell.ts buildFrameSrc + "&__frame_renew=1", SAFE_VER_RE,
+          // SAFE_TOKEN_RE, frameScheme, exchangeMounts, GRANT_LEDGER_KEY,
+          // tokenGrantee, warmGrantRow, ledgerForeign, PREGRANT_DENIED_KEY,
+          // PREGRANT_STANDDOWN_KEY/_MS, pregrantEnabled, GRANT_RENEW_CLEANUP_MS,
+          // takePregrant.
+          var pregrant = function (resP) {
+            var host = rd.frameUchost,
+              pinM = document.head.querySelector(
+                'meta[name="frame-runtime-pin"]',
+              );
+            // Without the pin meta this script would spell another URL than
+            // shell.ts; on a localhost host it cannot tell shell.ts's scheme.
+            if (!host || !pinM || /(^|\.)localhost(:\d+)?$/.test(host)) return;
+            var pin = pinM.content || "";
+            // sync: shell.ts UUID_SEG / SAFE_TOKEN_RE
+            var U =
+              "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}";
+            var tokRe = new RegExp(
+              "^[A-Za-z0-9_-]{24}\\." +
+                U +
+                "\\.(?:" +
+                U +
+                "\\.[0-9]{1,12}(?:\\.(?:" +
+                U +
+                "|oracle|ext|compartment))?(?:\\.v[A-Za-z0-9_-]{1,1023})?|\\.[0-9]{1,12}\\." +
+                U +
+                ")$",
+            );
+            resP
+              .then(function (r) {
+                return r && r.status === 200 && !window.__framePregrantOff
+                  ? r.clone().json()
+                  : null;
+              })
+              .then(function (d) {
+                if (
+                  !d ||
+                  d.kind === "public" ||
+                  d.pregrantEnabled === false ||
+                  d.tokenExchangeEnabled !== true ||
+                  typeof d.ver !== "string" ||
+                  typeof d.assetToken !== "string" ||
+                  !/^[A-Za-z0-9_-]{1,64}$/.test(d.ver) ||
+                  !tokRe.test(d.assetToken) ||
+                  document.visibilityState !== "visible" ||
+                  window.__framePregrantOff ||
+                  window.__framePregrant
+                )
+                  return;
+                // Stand down where shell.ts could not prove the grant or would not
+                // ride it (BRIDGE.md § Pre-grant). sync: bootstrap.ts oldKernel (0.2.12),
+                // shell.ts PREGRANT_NOCRED_KEY/_MS and PREGRANT_STANDDOWN_KEY/_MS.
+                if (typeof PerformanceServerTiming !== "function") return;
+                var ct =
+                  d.runtime && typeof d.runtime.contract === "string"
+                    ? d.runtime.contract
+                    : d.contract;
+                if (typeof ct === "string" && /^\d+\.\d+\.\d+$/.test(ct)) {
+                  var cv = ct.split(".").map(Number);
+                  if (
+                    (cv[0] || cv[1] || cv[2]) &&
+                    (cv[0] < 0 ||
+                      (cv[0] === 0 &&
+                        (cv[1] < 2 || (cv[1] === 2 && cv[2] < 12))))
+                  )
+                    return;
+                }
+                try {
+                  if (localStorage.getItem("frame_pregrant_denied")) return;
+                  var sd = Number(localStorage.getItem("frame_pregrant_noexp"));
+                  if (sd > 0 && Date.now() - sd < 864e5) return;
+                  var nc = (JSON.parse(
+                    localStorage.getItem("frame_pregrant_nocred"),
+                  ) || {})[host + "|" + d.ver];
+                  if (typeof nc === "number" && Date.now() - nc < 2592e6)
+                    return;
+                  var ts = d.assetToken.split("."),
+                    vt = ts.length > 4 && ts[ts.length - 1].charAt(0) === "v",
+                    row = (JSON.parse(
+                      localStorage.getItem("frame_grant_ledger"),
+                    ) || {})[host + "|" + d.ver],
+                    left = row ? row.e - Date.now() : 0;
+                  if (vt) ts.pop();
+                  var g =
+                    ts[1] +
+                    "|" +
+                    ts[2] +
+                    "|" +
+                    (ts[4] || "") +
+                    (vt ? "|v" : "");
+                  // sync: shell.ts warmGrantRow admits an own row with more than
+                  // GRANT_LEDGER_FLOOR_MS (10 min) left.
+                  if (
+                    row &&
+                    (row.v !== g || row.p !== pin
+                      ? left > 0
+                      : left > 10 * 60000)
+                  )
+                    return;
+                } catch (e) {}
+                var f = document.createElement("iframe"),
+                  w = { f: f, sentAt: performance.now() };
+                f.hidden = true;
+                f.setAttribute("aria-hidden", "true");
+                // Empty sandbox: no script, opaque origin. The token-bearing
+                // URL commits only in a document nothing can read.
+                f.setAttribute("sandbox", "");
+                f.referrerPolicy = "no-referrer";
+                f.dataset.pregrant = "true";
+                // A name no earlier visit used, so a WebKit back/forward load
+                // restores no old URL into this frame (BRIDGE.md § Frame name).
+                f.name = "r-" + Math.random().toString(36).slice(2);
+                f.src =
+                  "https://" +
+                  host +
+                  "/_t?__frame_t=" +
+                  encodeURIComponent(d.assetToken) +
+                  "&v=" +
+                  encodeURIComponent(d.ver) +
+                  (pin ? "&__frame_v=" + pin : "") +
+                  "&__frame_renew=1";
+                // A load says the server answered, not that it granted.
+                f.onload = function () {
+                  if (w.loaded === undefined) w.loaded = true;
+                };
+                f.onerror = function () {
+                  if (w.loaded === undefined) w.loaded = false;
+                };
+                // Removes the frame if shell.ts never takes it over.
+                w.cap = setTimeout(function () {
+                  f.remove();
+                  if (window.__framePregrant === w)
+                    window.__framePregrant = undefined;
+                }, 20000);
+                document.documentElement.appendChild(f);
+                window.__framePregrant = w;
+              })
+              .catch(function () {});
+          };
+          var ownFetch = function () {
+            return fetch(url, {
+              // sync: shell.ts bootOnce send(), which says why.
+              cache: "no-store",
+              credentials: "same-origin",
+              headers: h,
+              // The boot gates first paint. Ignored where unsupported.
+              priority: "high",
+              signal: AbortSignal.timeout(20000),
+            });
+          };
+          // While the host marks this iframe as loaded on intent (sync: hostBoot.ts INTENT_SHELL_ATTR, intentHold.ts INTENT_MARK), take only an untaken host answer and fetch nothing.
+          var intentHeld = false;
+          try {
+            intentHeld = !!(
+              window.frameElement &&
+              window.frameElement.hasAttribute("data-frame-intent")
+            );
+          } catch (e) {}
+          // Latched for shell.ts, which may run after the host has removed the mark.
+          if (intentHeld) window.__frameIntentLoad = true;
+          // sync: hostBoot.ts (BRIDGE.md § Host-supplied boot) — a
+          // same-origin host that issued this exact boot itself left it on
+          // its own window: take it, adopt its session id, fetch nothing.
+          if (
+            parent !== window &&
+            "embedded" in document.documentElement.dataset
+          ) {
+            var hb = null;
+            try {
+              var reg = parent.__frameHostBoot;
+              var hbKey = reg && !reg[url] && reg[preRwUrl] ? preRwUrl : url;
+              hb = (reg && reg[hbKey]) || null;
+              // An entry marked held is taken only by a document whose iframe carries data-frame-intent. sync: hostBoot.ts HostBootEntry held.
+              if (hb && hb.held && !intentHeld) hb = null;
+              // A replacement document re-takes a stamped entry; a reload or a
+              // late one drops it. sync: hostBoot.ts HOST_BOOT_RETAKE_MS.
+              // TMP: a shell that never looked under preRwUrl left its entry unstamped; a reload drops that too.
+              if (hb && (hb.takenAt || hbKey !== url)) {
+                var nav = performance.getEntriesByType("navigation")[0];
+                if (
+                  intentHeld ||
+                  (nav && nav.type === "reload") ||
+                  (hb.takenAt && Date.now() - hb.takenAt >= 5000)
+                ) {
+                  delete reg[hbKey];
+                  hb = null;
+                }
+              }
+            } catch (e) {
+              hb = null;
+            }
+            if (hb && hb.res && typeof hb.res.then === "function") {
+              if (!hb.takenAt) hb.takenAt = Date.now();
+              // Replaces the sid minted above: a hit is bk=initial, so no
+              // recovery claim was written with it.
+              if (hb.sid)
+                h["X-Frame-Session-Id"] = window.__frameSessionId = hb.sid;
+              // sync: hostBoot.ts HostBootEntry at/from/open — copied
+              // unvalidated; hostStart.ts deriveHostStart is the only reader.
+              if (typeof hb.at === "number" && typeof hb.from === "string") {
+                window.__frameHostStart = { at: hb.at, from: hb.from };
+                if (typeof hb.open === "string")
+                  window.__frameHostStart.open = hb.open;
+              }
+              // Adopted into this realm so a rejection anywhere in the chain is
+              // this document's, never the host window's.
+              var hres = new Promise(function (res, rej) {
+                hb.res.then(res, rej);
+              }).then(function (p) {
+                // Rebuilt here so bootOnce reads a Response of this realm; an
+                // engine that refuses the rebuild boots as on a miss instead.
+                try {
+                  // TMP: an answer no shell took since its pane opened may hold dead tokens. No Date header: take it.
+                  if (hbKey !== url)
+                    for (var i = 0; i < p.headers.length; i++)
+                      if (
+                        p.headers[i][0] === "date" &&
+                        Date.now() - Date.parse(p.headers[i][1]) > 600000
+                      ) {
+                        if (reg[hbKey] === hb) delete reg[hbKey];
+                        return ownFetch();
+                      }
+                  var bare =
+                    p.status === 204 || p.status === 205 || p.status === 304;
+                  var rebuilt = new Response(bare ? null : p.body, {
+                    status: p.status,
+                    statusText: p.statusText,
+                    headers: p.headers,
+                  });
+                  // The native read takes a task, which would run after the
+                  // host's render of this answer. sync: frameHostBoot.ts.
+                  if (p.status === 200)
+                    rebuilt.json = function () {
+                      return Promise.resolve(p.body).then(JSON.parse);
+                    };
+                  return rebuilt;
+                } catch (e) {
+                  return intentHeld ? Promise.reject(e) : ownFetch();
+                }
+              });
+              hres.catch(function () {});
+              window.__frameBootPrefetch = { url: url, res: hres };
+              // shell.ts drops the entry once its answer is stale for a replacement;
+              // a newer host entry is left alone, a re-offer of this one is a miss.
+              window.__frameHostBootDrop = function () {
+                if (reg[hbKey] === hb) delete reg[hbKey];
+                hb.res = null;
+              };
+              pregrant(hres);
+              return;
+            }
+          }
+          if (intentHeld) return;
+          // sync: hostBoot.ts MarkerBootEntry (BRIDGE.md § Host-supplied boot,
+          // From the marker) — an app that sent this exact boot itself.
+          var mk = window.claudeDesktopArtifactPane,
+            mb = parent === window && "host" in rd && mk.boot,
+            res;
+          if (
+            mb &&
+            delete mk.boot &&
+            mb.url === url &&
+            bk === "initial" &&
+            !again &&
+            re.test(mb.sid)
+          ) {
+            mb.takenAt = Date.now();
+            h["X-Frame-Session-Id"] = window.__frameSessionId = mb.sid;
+            res = new Promise(function (ok, no) {
+              // sync: hostBoot.ts MARKER_BOOT_WAIT_MS
+              setTimeout(no, 6000);
+              mb.res.then(ok, no);
+            })
+              .then(function (p) {
+                // Throws on null, a refusal or a body that is not JSON text.
+                JSON.parse(p.status === 200 ? p.body : "");
+                return new Response(p.body);
+              })
+              .catch(ownFetch);
+          } else res = ownFetch();
+          // Swallow on a fork so a pre-bootOnce rejection isn't an
+          // unhandledrejection; res stays consumable.
+          res.catch(function () {});
+          window.__frameBootPrefetch = { url: url, res: res };
+          pregrant(res);
+          // An org-less anonymous answer waits ORG_FALLBACK_GRACE_MS for the
+          // account, so it starts with the boot. sync: shell.ts fetchAccount.
+          if (!org) {
+            var acct = fetch("/api/account", {
+              credentials: "same-origin",
+              signal: AbortSignal.timeout(8000),
+            });
+            acct.catch(function () {});
+            window.__frameAccountPrefetch = { res: acct };
+          }
+        } catch (e) {
+          // Any failure degrades to no-prefetch; bootOnce() fetches fresh.
+        }
+      })();
+      // The warm-up subframe, started at parse so it overlaps the boot call above.
+      // sync: shell.ts mountWarmup adopts it only if its src is the one it would set.
+      (function () {
+        try {
+          var rd = document.documentElement.dataset,
+            host = rd.frameUchost;
+          if (
+            !rd.frameUuid ||
+            !host ||
+            "leaving" in rd ||
+            "nested" in rd ||
+            "inviteHold" in rd
+          )
+            return;
+          var f = document.createElement("iframe"),
+            w = { f: f };
+          f.hidden = true;
+          f.setAttribute("aria-hidden", "true");
+          f.setAttribute("sandbox", "allow-same-origin");
+          f.referrerPolicy = "no-referrer";
+          f.dataset.warmup = "true";
+          // sync: shell.ts frameScheme, which applies the localhost rule in dev builds only;
+          // where the two disagree shell.ts discards this frame and makes its own.
+          f.src =
+            (rd.frameUcscheme ||
+              (/(^|\.)localhost(:\d+)?$/.test(host)
+                ? location.protocol
+                : "https:")) +
+            "//" +
+            host +
+            "/_warmup";
+          f.onload = function () {
+            if (w.at === undefined) w.at = performance.now();
+          };
+          // sync: shell.ts WARMUP_MAX_MS. Removes the frame if shell.ts never
+          // runs to take it over.
+          w.cap = setTimeout(function () {
+            f.remove();
+          }, 60000);
+          // No body element yet. Do not move it later: re-inserting an iframe
+          // reloads it.
+          document.documentElement.appendChild(f);
+          window.__frameWarmup = w;
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Resolves the viewer's language — an embedding host's declared locale (its
+         marker's locale member, else ?locale=) first, then the way claude.ai's first
+         paint does (keep in sync with src/initialLocale.ts + renderedLocale.ts) — and
+         starts its catalog fetch; both go on window.__frameI18n for
+         packages/frame-shell chrome/useIntl.ts. -->
+    <script>
+      (function () {
+        var st = { locale: "en-US", messages: null, ready: null };
+        window.__frameI18n = st;
+        try {
+          var meta = document.querySelector('meta[name="frame-shell-i18n"]');
+          var shipped = ((meta && meta.getAttribute("data-shipped")) || "")
+            .split(",")
+            .filter(function (l) {
+              return /^[\w-]+$/.test(l);
+            });
+          var carried = Object.create(null);
+          var rows = ((meta && meta.getAttribute("data-catalogs")) || "").split(
+            ",",
+          );
+          for (var i = 0; i < rows.length; i++) {
+            var m = /^([\w-]+):(\w+)$/.exec(rows[i]);
+            if (m && !(m[1] in carried)) carried[m[1]] = m[2];
+          }
+          // sync: resolveEarlyCatalogLocaleFrom (apps/claude-ai
+          // components/ClientBootstrap/i18n-catalog-request.ts), less its
+          // en-US default: null here when no candidate names a shipped language.
+          var match = function (cands) {
+            var map = Object.create(null);
+            for (var j = 0; j < shipped.length; j++) {
+              var low = shipped[j].toLowerCase();
+              map[low] = shipped[j];
+              var pre = low.split("-")[0];
+              if (!(pre in map)) map[pre] = shipped[j];
+            }
+            for (var k = 0; k < cands.length; k++) {
+              var c = cands[k];
+              if (typeof c !== "string" || !c) continue;
+              var cl = c.toLowerCase();
+              if (cl in map) return map[cl];
+              var cp = cl.split("-")[0];
+              if (cp && cp in map) return map[cp];
+            }
+            return null;
+          };
+          // One declared or saved tag: the cut this build carries for it
+          // (pre-release tags included), else its shipped language, else null.
+          var pick = function (tag) {
+            if (typeof tag !== "string" || !tag) return null;
+            for (var t in carried) {
+              if (t.toLowerCase() === tag.toLowerCase()) return t;
+            }
+            return match([tag]);
+          };
+          // An embedding host's choice wins: the marker object's locale, else
+          // ?locale= (read only inside an embed, like ?chrome=); a tag this build
+          // has no language for falls through to the saved and browser choices.
+          var ds = document.documentElement.dataset,
+            hp = window.claudeDesktopArtifactPane;
+          var declared = !("embedded" in ds)
+            ? null
+            : hp && hp.locale != null
+              ? hp.locale
+              : new URLSearchParams(location.search).get("locale");
+          var loc = pick(declared),
+            saved = null;
+          if (loc === null) {
+            try {
+              saved = localStorage.getItem("spa:locale");
+            } catch (e) {}
+            loc = saved
+              ? pick(saved) || "en-US"
+              : match(navigator.languages || []) || "en-US";
+          }
+          st.locale = loc;
+          document.documentElement.lang = loc;
+          // dir="rtl" for a resolved locale in the carrier's data-rtl, or a host's (else saved) tag matching the non-production test meta (src/plugins/frameShellTestDirection.ts) before pick() maps it.
+          var rtlLocales = (
+            (meta && meta.getAttribute("data-rtl")) ||
+            ""
+          ).split(",");
+          var rtlMeta = document.querySelector(
+            'meta[name="frame-shell-rtl-test-locale"]',
+          );
+          var rtlTag = rtlMeta && rtlMeta.getAttribute("content");
+          var isRtlTag = function (tag) {
+            return (
+              typeof tag === "string" &&
+              !!rtlTag &&
+              tag.toLowerCase() === rtlTag.toLowerCase()
+            );
+          };
+          // Never set dir="ltr": Tailwind's ltr: variant would then match inside right-to-left content.
+          if (
+            rtlLocales.indexOf(loc) !== -1 ||
+            isRtlTag(declared) ||
+            isRtlTag(saved)
+          )
+            document.documentElement.dir = "rtl";
+          if (loc !== "en-US" && carried[loc]) {
+            st.ready = fetch(
+              "/_shell/i18n/frame-shell/" + loc + ".json?v=" + carried[loc],
+              {
+                credentials: "same-origin",
+                // No fallback timer without AbortSignal.timeout: a hung fetch just leaves English, right to left on such a page.
+                signal:
+                  typeof AbortSignal !== "undefined" && AbortSignal.timeout
+                    ? AbortSignal.timeout(20000)
+                    : undefined,
+              },
+            )
+              .then(function (res) {
+                return res.ok ? res.json() : null;
+              })
+              .then(function (j) {
+                if (j && typeof j === "object" && !Array.isArray(j))
+                  st.messages = j;
+                else document.documentElement.removeAttribute("dir");
+              });
+            // With no catalog the page stays English, so it lays out left to right.
+            st.ready.catch(function () {
+              document.documentElement.removeAttribute("dir");
+            });
+          }
+        } catch (e) {
+          // Any failure leaves English, which needs nothing fetched.
+        }
+      })();
+    </script>
+    <!-- If the entry module never runs (its chunk or a preloaded dependency hung or
+         failed), nothing would replace the spinner: after IFRAME_TIMEOUT_MS of visible
+         time, counted as shell.ts counts it — or at once when the entry script reports a
+         load error — this paints the pane shell.ts would, with a Try again that reloads.
+         shell.ts disarms it first (window.__framePrebootWatch). -->
+    <script>
+      (function () {
+        try {
+          var ds = document.documentElement.dataset;
+          // A leaving document boots nothing; a nested one is timed out by the shell embedding it.
+          if ("leaving" in ds || "nested" in ds) return;
+          // sync: shell.ts IFRAME_TIMEOUT_MS — one "too long" threshold, before or after boot.
+          var BOUND = 60000;
+          var visible = function () {
+            return document.visibilityState !== "hidden";
+          };
+          var seenMs = 0,
+            seenFrom = visible() ? Date.now() : 0,
+            timer = 0,
+            painted = false;
+          var seen = function () {
+            return seenMs + (seenFrom !== 0 ? Date.now() - seenFrom : 0);
+          };
+          var arm = function (ms) {
+            clearTimeout(timer);
+            timer = setTimeout(onLapse, ms);
+          };
+          // sync: shell.ts onWatchLapse / noteWatchVisibility — hidden time never counts.
+          var onLapse = function () {
+            var s = seen();
+            if (s < BOUND) {
+              if (visible() && seenFrom === 0) seenFrom = Date.now();
+              arm(visible() ? BOUND - s : BOUND);
+              return;
+            }
+            paint("Artifact took too long to load", "Try refreshing.");
+          };
+          var onVisibility = function () {
+            if (!visible()) {
+              seenMs = seen();
+              seenFrom = 0;
+              return;
+            }
+            if (seenFrom !== 0) return;
+            seenFrom = Date.now();
+            arm(Math.max(BOUND - seenMs, 0));
+          };
+          // The entry: the document's first module script with an http(s) src (extensions
+          // can insert their own ahead of it under their own schemes). Absent until parsed.
+          var entry = function () {
+            var all = document.querySelectorAll('script[type="module"][src]');
+            for (var i = 0; i < all.length; i++)
+              if (/^https?:/.test(all[i].src)) return all[i];
+            return null;
+          };
+          // A failed fetch of the entry or of a module it imports fires "error" at its element;
+          // nothing in this document re-requests it, so waiting is pointless.
+          var onError = function (ev) {
+            var en = entry();
+            if (en && ev.target === en) paint("Couldn’t load artifact", "");
+          };
+          var stop = function () {
+            clearTimeout(timer);
+            document.removeEventListener("visibilitychange", onVisibility);
+            document.removeEventListener("error", onError, true);
+          };
+          var make = function (tag, cls, text) {
+            var n = document.createElement(tag);
+            n.className = cls;
+            if (text) n.textContent = text;
+            return n;
+          };
+          // sync: render.ts PANE_MSG tooLong/tryRefreshing/loadFailed/tryAgain + paintNoticeNodes'
+          // shape; logo omitted: its path data ships only in the deferred chunk.
+          var paint = function (head, sub) {
+            var e = document.getElementById("err");
+            stop();
+            if (!e) {
+              // The body has not parsed this far yet: look again shortly.
+              timer = setTimeout(function () {
+                paint(head, sub);
+              }, 1000);
+              return;
+            }
+            var retry = make("button", "err-btn", "Try again");
+            retry.type = "button";
+            retry.onclick = function () {
+              location.reload();
+            };
+            var actions = make("div", "err-actions");
+            actions.append(retry);
+            e.replaceChildren(
+              make("h2", "err-head", head),
+              make("h3", "err-sub", sub),
+              actions,
+            );
+            var l = document.getElementById("loading");
+            if (l) l.hidden = true;
+            e.hidden = false;
+            if (window.__frameCoverHostLoader) window.__frameCoverHostLoader();
+            painted = true;
+            // Announced like the deferred chunk's notice panes; never steals a host page's focus.
+            if (document.hasFocus()) {
+              e.tabIndex = -1;
+              e.focus();
+            }
+          };
+          window.__framePrebootWatch = {
+            // shell.ts is running: stop the clock and hand it back the pristine DOM.
+            disarm: function () {
+              stop();
+              if (!painted) return;
+              painted = false;
+              var e = document.getElementById("err"),
+                l = document.getElementById("loading");
+              var hadFocus = !!e && e.contains(document.activeElement);
+              if (e) {
+                e.hidden = true;
+                e.replaceChildren();
+              }
+              if (l) {
+                l.hidden = false;
+                // sync: shell.ts paintStall — focus the pane held goes to the loading status.
+                var st = l.querySelector(".loading-status");
+                if (hadFocus && st) st.focus();
+              }
+            },
+          };
+          document.addEventListener("visibilitychange", onVisibility);
+          document.addEventListener("error", onError, true);
+          arm(BOUND);
+        } catch (e) {
+          // Any failure leaves the plain spinner.
+        }
+      })();
+    </script>
+    <!-- Preloaded so the first paint usually lands with the brand face and
+         the header's icon glyphs already available (the icon font is
+         display: block — until it arrives they render empty). -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/_shell/fonts/AnthropicSansMicro-Text-Variable.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/_shell/fonts/anthropicons-variable.woff2"
+    />
+    <script type="module" crossorigin src="/_shell/frame-shell.js"></script>
+    <link rel="modulepreload" crossorigin href="/_shell/chunk-BrZ_AoH2.js">
+    <link rel="modulepreload" crossorigin href="/_shell/chunk-DGYVVVR7.js">
+    <link rel="modulepreload" crossorigin href="/_shell/chunk-C97fOuyp.js">
+    <link rel="modulepreload" crossorigin href="/_shell/chunk-1bMwSqS5.js">
+    <style>:root{--font-anthropic-sans:"anthropic-sans", "anthropic-sans-roman-fallback", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", "Kohinoor Devanagari", "Kohinoor Bangla", "Kohinoor Telugu", "Tamil Sangam MN", "Kohinoor Gujarati", "Malayalam Sangam MN", "Nirmala UI", "Noto Sans Devanagari UI", "Noto Sans Devanagari", "Noto Sans Bengali UI", "Noto Sans Bengali", "Noto Sans Telugu UI", "Noto Sans Telugu", "Noto Sans Tamil UI", "Noto Sans Tamil", "Noto Sans Gujarati UI", "Noto Sans Gujarati", "Noto Sans Kannada UI", "Noto Sans Kannada", "Noto Sans Malayalam UI", "Noto Sans Malayalam", Thonburi, "Leelawadee UI", "Noto Sans Thai UI", "Noto Sans Thai", Kefa, Ebrima, "Noto Sans Ethiopic", "Abyssinica SIL", sans-serif;--font-anthropic-sans-display:"anthropic-sans-display", var(--font-anthropic-sans)}@font-face{font-family:anthropic-sans;src:url(/_shell/fonts/AnthropicSansMicro-Text-Variable.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0, "ss01" 1, "ss02" 1;unicode-range:U+0-5B,U+5D-A0,U+A2-A3,U+A5-316,U+318-3C8,U+3CA-DFFF,U+E140-10FFFF}@font-face{font-family:anthropic-sans-roman-fallback;src:url(/_shell/fonts/AnthropicSans-Roman-Variable.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0;unicode-range:U+5C,U+A1,U+A4,U+E000-E13F}@font-face{font-family:anthropic-sans;src:url(/_shell/fonts/AnthropicSans-Italic-Variable.woff2)format("woff2");font-weight:300 800;font-style:italic;font-display:swap;font-feature-settings:"dlig" 0}@font-face{font-family:anthropic-sans-display;src:url(/_shell/fonts/AnthropicSansMicro-Display-Variable.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0, "ss01" 1, "ss02" 1;unicode-range:U+0-3C8,U+3CA-10FFFF}@font-face{font-family:anthropic-sans-display;src:url(/_shell/fonts/AnthropicSans-Italic-Variable.woff2)format("woff2");font-weight:300 800;font-style:italic;font-display:swap;font-feature-settings:"dlig" 0}:root{--font-anthropic-serif:"anthropic-serif", ui-serif, Georgia, "Times New Roman", "Kohinoor Devanagari", "Kohinoor Bangla", "Kohinoor Telugu", "Tamil Sangam MN", "Kohinoor Gujarati", "Malayalam Sangam MN", "Nirmala UI", "Noto Sans Devanagari UI", "Noto Sans Devanagari", "Noto Sans Bengali UI", "Noto Sans Bengali", "Noto Sans Telugu UI", "Noto Sans Telugu", "Noto Sans Tamil UI", "Noto Sans Tamil", "Noto Sans Gujarati UI", "Noto Sans Gujarati", "Noto Sans Kannada UI", "Noto Sans Kannada", "Noto Sans Malayalam UI", "Noto Sans Malayalam", Thonburi, "Leelawadee UI", "Noto Sans Thai UI", "Noto Sans Thai", Kefa, Ebrima, "Noto Sans Ethiopic", "Abyssinica SIL", serif}@font-face{font-family:anthropic-serif;src:url(/_shell/fonts/AnthropicSerif-Roman-Variable.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0}@font-face{font-family:anthropic-serif;src:url(/_shell/fonts/AnthropicSerif-Italic-Variable.woff2)format("woff2");font-weight:300 800;font-style:italic;font-display:swap;font-feature-settings:"dlig" 0}:root{--bg:#fff;--fg:#0b0b0b;--mut:#52514e;--spin:#898781;--line:#0b0b0b1a;--div:#0b0b0b0d;--bord:#0b0b0b33;--hov:#0b0b0b0d;--surf:#fff;--brand:#ba5b3c;--primary:#0b0b0b;--primary-hov:#2c2c2a;--on-primary:#fff;--sec:#ffffff1a;--sec-ring:#0b0b0b1a;--sec-hov:#0b0b0b0d;--picto:#e7e6e1;--page:#fcfcfb}@media (prefers-color-scheme:dark){html:not([data-mode]){--bg:#1a1a19;--fg:#f0efec;--mut:#c3c2b7;--line:#ffffff1a;--div:#ffffff0d;--bord:#fff3;--hov:#ffffff13;--surf:#20201f;--primary:#fff;--primary-hov:#e1e0d9;--on-primary:#0b0b0b;--sec:#ffffff1a;--sec-ring:transparent;--sec-hov:#ffffff24;--picto:#454442;--page:#151515}}html[data-mode=light]{--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}html[data-mode=dark]{--bg:#1a1a19;--fg:#f0efec;--mut:#c3c2b7;--line:#ffffff1a;--div:#ffffff0d;--bord:#fff3;--hov:#ffffff13;--surf:#20201f;--primary:#fff;--primary-hov:#e1e0d9;--on-primary:#0b0b0b;--sec:#ffffff1a;--sec-ring:transparent;--sec-hov:#ffffff24;--picto:#454442;--page:#151515;--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}@font-face{font-family:Anthropicons-Variable;src:url(/_shell/fonts/anthropicons-variable.woff2)format("woff2-variations");font-weight:400 700;font-display:block}@property --bar{syntax:"<length>";inherits:true;initial-value:0}@property --foot-bar-room{syntax:"<length>";inherits:true;initial-value:0}@property --host-inset-right{syntax:"<length>";inherits:true;initial-value:0}@property --host-inset-left{syntax:"<length>";inherits:true;initial-value:0}:root{--bar-h:calc(2.5rem * var(--cds-rem-scale,1));--bar:var(--bar-h);--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark}@media (prefers-color-scheme:dark){:root{--lightningcss-light: ;--lightningcss-dark:initial}}@media not all and (width<=768px){html[data-flat-bar]{--bar-h:calc(3rem * var(--cds-rem-scale,1))}@media (hover:hover) and (pointer:fine),(hover:hover) and (pointer:none){html[data-flat-bar]{--bar-h:calc(2.75rem * var(--cds-rem-scale,1) + 1px)}}}@layer{*{box-sizing:border-box;margin:0;padding:0}button{font:inherit;border:0;background:0 0;cursor:pointer;color:inherit}}html,body{overscroll-behavior:none;background:var(--bg);height:100%;color:var(--fg);overflow:hidden}html[data-hostcaps~=scroll-chain],html[data-hostcaps~=scroll-chain] body{overscroll-behavior:auto}body{font:13px/1.4 anthropic-sans,anthropic-sans-roman-fallback,-apple-system,BlinkMacSystemFont,system-ui,sans-serif}#hdr{height:var(--bar-h);justify-content:space-between;align-items:center;gap:8px;padding:0 12px;display:flex;position:relative}html:not([data-embedded]) #hdr,html:not([data-embedded]) #hdr-degraded{border-bottom:1px solid var(--div)}#top-edge{height:var(--bar);background-color:var(--bg);position:fixed;top:0;left:0;right:0}html[data-embedded] #top-edge{display:none}.l,.r{align-items:center;gap:8px;display:flex}.l{flex:1;min-width:0}.r{flex:none}.byline{font-size:var(--cds-font-size-caption,.75rem);color:var(--mut);white-space:nowrap;text-overflow:ellipsis;flex-shrink:0;max-width:312px;overflow:hidden}.l>button[data-title-menu]{flex-shrink:1000;min-width:0;margin-inline-start:-6px;overflow:hidden}.l button[data-title-menu]>span,.l button[data-title-menu] .truncate{min-width:0}.skel{background:var(--hov);border-radius:4px;display:inline-block}.skel-home{flex:none;width:16px;height:16px;margin-inline-end:4px}.skel-title{width:8em;height:1em}.skel-avatar{border-radius:50%;width:24px;height:24px}.degraded-title{white-space:nowrap;text-overflow:ellipsis;font-size:13px;font-weight:400;overflow:hidden}#hdr-degraded,body.chrome-degraded #hdr{display:none}body.chrome-degraded #hdr-degraded{height:var(--bar-h);align-items:center;gap:8px;padding:0 12px;display:flex;position:relative}@media (width<=768px){html:not([data-embedded]) .l{grid-template-columns:minmax(0,1fr);place-items:center start;gap:0;display:grid}html:not([data-embedded]) .l>*{max-width:100%}html:not([data-embedded]) .l>.byline{margin-top:-3px}html:not([data-embedded]) .l>[data-storage]{margin-top:-4px}html:not([data-embedded]) .l:has(~.r[data-labeled]){min-width:96px}html:not([data-embedded]) .r[data-labeled]{flex:0 auto;min-width:0}html:not([data-embedded]) .r[data-labeled]>*{flex-shrink:0}html:not([data-embedded]) .r[data-labeled]>[data-artifact-label]{flex-shrink:1;min-width:0}}html[data-embedded]{--bar-h:calc(2.625rem * var(--cds-rem-scale,1))}html[data-embedded] #hdr{padding:0 8px}html[data-embedded] .byline{flex-shrink:1;max-width:100%}html[data-embedded] .skel-home,html[data-embedded] .skel-title,html[data-embedded] .skel-avatar,html[data-embedded][data-chrome=none] #hdr,html[data-embedded][data-chrome=none] #hdr-degraded,html[data-header-hidden] #hdr,html[data-header-hidden] #hdr-degraded,html[data-header-hidden] #top-edge,html[data-header-hidden] [data-chrome-pill]{display:none}html[data-embedded][data-chrome=none],html[data-header-hidden]{--bar:0px}html[data-host][data-chrome=none]{--bar:env(safe-area-inset-top,0px)}@media screen{html[data-embedded][data-chrome=none][data-header-window]:not([data-header-hidden]){--bar:var(--header-window-h,0px)}html[data-header-window=open] #frame-slot>iframe,html[data-header-window=held] #frame-slot>iframe,html[data-header-window=open] #frame-slot>iframe.swap:not(.ready),html[data-header-window=held] #frame-slot>iframe.swap:not(.ready){top:calc(-1 * var(--bar));height:calc(100% + var(--bar));clip-path:inset(var(--bar) 0 0 0)}html[data-header-window=open] body:not(.err) #frame-slot>#frame-content:not([inert]){clip-path:none}}html[data-host][data-chrome=none][data-hostcaps~=edge-to-edge][data-hostcaps~=edge-to-edge-sides]{--host-inset-right:env(safe-area-inset-right,0px);--host-inset-left:env(safe-area-inset-left,0px);--host-clear-width:calc(100vw - var(--host-inset-right) - var(--host-inset-left))}body>main{inset:var(--bar) 0 0 0;display:flex;position:absolute}html[data-composed-sidebar-open=beside] #hdr,html[data-composed-sidebar-open=beside] #hdr-degraded{margin-inline-start:var(--composed-sidebar-width,0px)}html[data-composed-sidebar-open=beside] body>main{inset-inline-start:var(--composed-sidebar-width,0px)}html[data-composed-chat=beside] #hdr,html[data-composed-chat=beside] #hdr-degraded{margin-inline-start:calc(var(--composed-sidebar-width,0px) + var(--composed-chat-width,0px))}html[data-composed-chat=beside] body>main,html[data-composed-chat=beside] #err{inset-inline-start:calc(var(--composed-sidebar-width,0px) + var(--composed-chat-width,0px))}body>main[data-comments-docked]{inset-inline-end:calc(320px + var(--host-inset-end,0px))}html[data-foot-bar]:not([data-transparent]):not([data-hostcaps~=foot-bar-hidden]){--foot-bar-room:calc(3rem + 12px)}html[data-transparent] [data-foot-bar-band],body.err [data-foot-bar-band]{display:none}#hdr[data-composed-sidebar-peek] [data-composed-sidebar-toggle]{z-index:36;position:relative}html[data-composed-sidebar-open=beside] [data-composed-sidebar-toggle]{display:none}html[data-host][data-chrome=none][data-extended-edges~=top] body>main{top:0}html[data-host][data-chrome=none][data-extended-edges~=top] #loading{top:var(--bar)}#frame-slot{flex:1;min-width:0;position:relative}#frame-slot:focus{outline:none}#loading{inset:0 var(--host-inset-right,0px) 0 var(--host-inset-left,0px);justify-content:center;align-items:center;display:flex;position:absolute}#loading[hidden]{display:none}#loading.slow{text-align:center;color:var(--mut);flex-direction:column;gap:12px;padding:0 24px;font-size:13px}#loading.slow>button{order:1}#loading:after{content:"";box-sizing:border-box;background:conic-gradient(transparent 40%, var(--spin)) border-box, linear-gradient(var(--line), var(--line)) border-box;border:2px solid #0000;border-radius:50%;width:20px;height:20px;animation:1s linear infinite spin;mask:radial-gradient(farthest-side,#0000 calc(100% - 2px),#000 calc(100% - 1.5px))}@keyframes spin{to{transform:rotate(360deg)}}#frame-content{opacity:.001;border:0;width:100%;height:100%;transition:opacity 1ms;position:absolute;inset:0}#frame-slot>iframe{-webkit-user-select:none;user-select:none}#frame-slot>iframe.swap:not(.ready){opacity:.001;pointer-events:none;border:0;width:100%;height:100%;position:absolute;inset:0}#frame-slot>iframe.swap.hot-under:not(.ready){opacity:1}#frame-slot>iframe.hot-under~#frame-content{background:var(--bg)}@supports (background:color-mix(in srgb, red 50%, transparent)){#frame-slot>iframe.hot-under~#frame-content{background:color-mix(in srgb, var(--bg) 99.6%, transparent)}}html[data-embedded][data-transparent] body>:not(main){display:none}html[data-embedded][data-transparent],html[data-embedded][data-transparent] body,html[data-embedded][data-transparent] #frame-slot>iframe.hot-under~#frame-content{background:0 0}html[data-embedded][data-transparent] #frame-slot>:not(iframe){display:none}:where(html[data-embedded][data-transparent]) #frame-content{transition:opacity .12s}html[data-embedded][data-transparent] #frame-slot>iframe:not([data-host-msg-sent]){opacity:0;transition:none}#frame-slot>iframe.retired{opacity:0;pointer-events:none;border:0;width:100%;height:100%;position:absolute;inset:0}#frame-content.swap{transition:none}#frame-content.swap.crossfade{transition:opacity .12s}#frame-slot>iframe.fading-out{opacity:1;pointer-events:none;border:0;width:100%;height:100%;position:absolute;inset:0}#frame-content.ready{opacity:1}html[data-host-loader=shown],html[data-host-loader=shown] body{background:0 0}html[data-host-loader=shown] #loading:after{opacity:0}@media (prefers-reduced-motion:reduce){#loading:after{animation:none}#frame-content{transition:none}}:where([data-reduce-motion=true]) #loading:after{animation:none}:where([data-reduce-motion=true]) #frame-content{transition:none}body.err #hdr,body.err #hdr-degraded,body.err #top-edge,#err[hidden]{display:none}#err{padding:96px calc(16px + var(--host-inset-right,0px)) 128px calc(16px + var(--host-inset-left,0px));text-align:center;color:var(--fg);place-content:safe center;gap:8px;display:grid;position:absolute;inset:0;overflow-y:auto}#err:focus{outline:none}.err-head{color:var(--fg);font-family:anthropic-serif,ui-serif,Georgia,Times New Roman,serif;font-size:20px;font-weight:400;line-height:1.1}.err-sub{color:var(--mut);font-size:16px;font-weight:400}.err-sub:empty{display:none}.err-actions{justify-content:center;align-items:center;gap:12px;margin-top:16px;display:flex}.err-btn{background:var(--primary);color:var(--on-primary);border:1px solid #0000;border-radius:8px;padding:8px 16px;font-size:14px;text-decoration:none;display:inline-block}.err-btn.secondary{color:var(--fg);border:1px solid var(--bord);background:0 0}.err-btn.secondary:hover{background:var(--hov)}
+@font-face{font-family:Anthropicons-Variable;src:url(/_shell/fonts/anthropicons-variable.woff2)format("woff2-variations");font-weight:400 700;font-display:block}
+</style></head>
+  <body>
+    <!-- Keep this first in body: it is empty and paints behind the header.
+         shell.css, #top-edge, says why it exists. -->
+    <div id="top-edge" aria-hidden="true"></div>
+    <!-- Skeleton loading state; the lazy chrome chunk mounts on #hdr and
+         replaces ALL children in one React commit. The hidden sibling is
+         the degraded fallback (outside #hdr so a successful React mount
+         can't remove it before a later render error). -->
+    <!-- Named + programmatically focusable: an unclaimed Escape inside the
+         artifact lands keyboard focus here on a standalone page (BRIDGE.md
+         § Escape to chrome), announced as "Artifact controls,
+         banner" rather than a nameless landmark. -->
+    <header id="hdr" tabindex="-1" aria-label="Artifact controls">
+      <span class="skel skel-home" aria-hidden="true"></span>
+      <div class="l" aria-hidden="true">
+        <span class="skel skel-title"></span>
+      </div>
+      <div class="r" aria-hidden="true">
+        <span class="skel skel-avatar"></span>
+      </div>
+    </header>
+    <div id="hdr-degraded">
+      <span class="degraded-title"></span>
+      <span class="byline">Content is user-generated and unverified.</span>
+    </div>
+    <main>
+      <!--
+        ion-edge HTMLRewriter sets data-frame-{uuid,uchost} on #frame-slot
+        (the only per-request data the worker touches — uuid is from the URL,
+        uchost is uuid + a config literal). shell.ts reads them post-parse,
+        fetches /api/frame/{uuid} via the scriptless /api/ route, and builds
+        the iframe via DOM APIs.
+      -->
+      <div id="frame-slot">
+        <div id="loading">
+          <div
+            class="loading-status"
+            role="status"
+            aria-label="Loading"
+            tabindex="-1"
+          ></div>
+        </div>
+      </div>
+    </main>
+    <div id="err" hidden></div>
+  </body>
+</html>

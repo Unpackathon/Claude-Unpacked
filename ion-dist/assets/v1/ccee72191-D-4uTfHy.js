@@ -1,0 +1,1 @@
+function e(e){return e.sentByAddedPerson===!0}export{e as t};

@@ -1,0 +1,1 @@
+import{_v as e}from"./shared-73-DfCPGdCT.js";import{Kt as t}from"./vendor-all-1-BocQA2O8.js";var n=t()(e=>({approvedAt:new Map,note:t=>e(e=>({approvedAt:new Map(e.approvedAt).set(t.toLowerCase(),Date.now())}))}));e(()=>n.setState({approvedAt:new Map}));export{n as t};

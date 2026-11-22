@@ -1,0 +1,1 @@
+function e(e,t){for(let n of t){e.push(`@@ -${n.oldStart},${n.oldLines} +${n.newStart},${n.newLines} @@`);for(let t of n.lines)t.startsWith("\\")||e.push(t)}}export{e as t};

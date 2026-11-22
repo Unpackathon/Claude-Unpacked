@@ -1,0 +1,1 @@
+import{Tt as e}from"./shared-1-uKWXuHc9.js";function t(){let t=e("capabilities")!==void 0,n=e("data-privacy-controls")!==void 0;return t&&n}export{t};

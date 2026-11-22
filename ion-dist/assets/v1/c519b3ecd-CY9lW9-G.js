@@ -1,0 +1,1 @@
+import{Bn as e,_zT as t,kc as n}from"./shared-18-D9aEQHpt.js";import{sT as r}from"./shared-107-D8fgcL1q.js";function i(e,n){return e==="moved_to_project"&&r(n,t.label)?t:null}function a(t){let r=n(t.enabled,t.endedReason,t.suspensionReason);return r==="auto-disabled"||r==="on-hold"?r:r==="completed"||e(t)?"completed":"paused"}export{a as t,i as _lK};

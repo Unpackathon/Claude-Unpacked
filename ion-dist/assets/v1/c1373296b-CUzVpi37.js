@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{os as e}from"./shared-73-DfCPGdCT.js";import{uy as t}from"./shared-141-K5japEQk.js";function n(){let $=J9(2),n=t();return J1($,0,n)?K1($,0,n,t=>t.target==="ccd"?n(t.sessionId):`/code/${e(t.sessionId)}`):$[1]}export{n as t};

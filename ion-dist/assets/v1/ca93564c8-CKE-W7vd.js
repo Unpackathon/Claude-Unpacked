@@ -1,0 +1,1 @@
+import{$d as J9,qd as J1,tf as K1}from"./shared-frame-DeSSgTpM.js";import{vi as e}from"./shared-25-DapkFWlH.js";var t=["@anthropic.com","@sillylittleguy.org"];function n(){let $=J9(2),n=e()?.account?.email_address;return J1($,0,n)?K1($,0,n,t.some(e=>n?.endsWith(e)??!1)):$[1]}export{n as t};

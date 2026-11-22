@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "key": "slides",
+  "title": "Slides",
+  "description": "Presentation decks: 16:9 or 4:3 slides to present, page through and download.",
+  "contract": "0.2.47",
+  "favicon": "📽️",
+  "icon": "Slides",
+  "tint": "yellow",
+  "capabilities": {
+    "downloads": {},
+    "artifact": {},
+    "comments": {
+      "composer_only": true,
+      "customAnchors": true
+    },
+    "room": {},
+    "db": {
+      "rules": [
+        {
+          "path": "",
+          "write": "admin"
+        },
+        {
+          "path": "notes",
+          "read": "admin",
+          "write": "admin"
+        }
+      ]
+    },
+    "assets": {},
+    "user": {
+      "scopes": [
+        "profile"
+      ]
+    },
+    "mcp": {
+      "servers": [
+        {
+          "server": "Google Drive",
+          "tools": [
+            "create_file",
+            "gdrive_upload"
+          ]
+        }
+      ]
+    },
+    "flags": {
+      "keys": [
+        "appifact_bottom_toolbar",
+        "appifact_icon_set",
+        "slides_phone_remote",
+        "slides_send_to_google_slides",
+        "slides_source_decks",
+        "slides_theme_tab",
+        "tidal_glowing_ember"
+      ]
+    }
+  },
+  "artifact": {
+    "prod": {
+      "slug": "3e9dc3d6-8a10-4143-ac0b-5af4f2b03a61"
+    }
+  }
+}

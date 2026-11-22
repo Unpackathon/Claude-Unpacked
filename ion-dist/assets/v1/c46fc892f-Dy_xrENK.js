@@ -1,0 +1,1 @@
+function e(e){return e>8}export{e as t};

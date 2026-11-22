@@ -1,0 +1,1 @@
+import{t as e}from"./cd9bb9103-BLmRERTh.js";function t(t){let n=`[data-gallery-card="${CSS.escape("frame:"+t)}" i] a[data-primary]`;e(()=>document.querySelector(n))}export{t};

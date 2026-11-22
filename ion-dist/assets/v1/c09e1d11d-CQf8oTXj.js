@@ -1,0 +1,1 @@
+import{In as e}from"./shared-9-BGHwpAny.js";import{i as t}from"./c8421fb65-BvLRfe8A.js";function n(n,r,i){let a=e(n,r),o=t.getState().byConversation,s=a===void 0?void 0:o[a],c=i||void 0;a!==void 0&&s!==void 0&&s.leftShowing!==c&&t.setState({byConversation:{...o,[a]:{...s,leftShowing:c,at:s.at+1}}})}var r=new Set;export{n,r as t};

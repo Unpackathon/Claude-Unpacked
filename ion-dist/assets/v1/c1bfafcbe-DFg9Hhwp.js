@@ -1,0 +1,1 @@
+import{fo as e,xo as t}from"./vendor-frame-Dy-urf5a.js";import{Ys as n}from"./shared-25-DapkFWlH.js";import{Xf as r}from"./shared-206-DmJmFrn0.js";function i(i){let a=n(),[o]=t(()=>a.get(i));return e(()=>{o!==null&&r(i)},[o,i]),o}export{i as t};

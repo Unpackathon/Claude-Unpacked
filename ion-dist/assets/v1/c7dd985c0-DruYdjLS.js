@@ -1,0 +1,1 @@
+var e=/^\uE001[\w=-]{40,}$/;function t(t){return e.test(t)}function n(e,n){return t(e)?n.formatMessage({defaultMessage:"Can\u2019t show this edit. Ask your admin for help.",id:"QQvv3TGeOI"}):e}export{n,t};

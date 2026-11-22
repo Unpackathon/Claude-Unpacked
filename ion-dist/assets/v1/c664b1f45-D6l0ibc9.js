@@ -1,0 +1,1 @@
+import{x as e}from"./vendor-query-DjWagZkY.js";function t(){let t;return(n,r)=>(r>=3e5&&(t=n),t!==void 0&&n-t<6e4?!1:e.isOnline())}export{t};

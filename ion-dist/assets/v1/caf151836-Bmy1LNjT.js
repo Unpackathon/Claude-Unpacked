@@ -1,0 +1,1 @@
+import{fo as e}from"./vendor-frame-Dy-urf5a.js";import{$d as J9,Vu as t,Yd as J3,if as K4}from"./shared-frame-DeSSgTpM.js";import{uS as n}from"./shared-1-uKWXuHc9.js";function r(r,a){let $=J9(5),o=a!==void 0&&a,s=t(),c,l;J3($,0,r,s,o)?(c=()=>r&&s!==void 0?n(s,i,{promptOnly:o}):void 0,l=[r,s,o],K4($,0,r,s,o,c,l)):(c=$[3],l=$[4]),e(c,l)}function i(){return!0}export{r as t};

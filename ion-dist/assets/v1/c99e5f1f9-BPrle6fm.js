@@ -1,0 +1,1 @@
+import"./shared-frame-DeSSgTpM.js";import{Zc as e}from"./shared-25-DapkFWlH.js";import"./shared-5-psTP1UDv.js";var t="__gb__486064014";function n(e){return e.toLowerCase().endsWith(".zip")}function r(r){return n(r)&&e(t)}export{t as _NC,n as _7C,r as t};

@@ -1,0 +1,1 @@
+import{$d as J9,Yd as J3,rf as K3}from"./shared-frame-DeSSgTpM.js";import{Si as e}from"./shared-25-DapkFWlH.js";import{zm as t}from"./shared-238-CGzDEQRA.js";function n(n){let $=J9(4),r=n!==void 0&&n,i=e("taint:claude_code_zdr"),a=t("cobalt_plinth")?.restricting_taints;return J3($,0,i,a,r)?K3($,0,i,a,r,i&&(a===void 0?r:!a.includes("taint:claude_code_zdr"))):$[3]}export{n as t};

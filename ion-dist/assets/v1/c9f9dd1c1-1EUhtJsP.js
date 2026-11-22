@@ -1,0 +1,1 @@
+import{t as e}from"./c570a564a-Dv3tlcE7.js";var t={read_organization:[[["- identity: SSO, ","- identity: SSO, allowed IP ranges, "],[", idp_groups_truncated}","}"]],{}]};function n(n){return e(n,t,{})}export{n as withReadIpAllowlistText};

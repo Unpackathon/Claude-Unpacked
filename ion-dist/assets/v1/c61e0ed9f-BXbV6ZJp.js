@@ -1,0 +1,1 @@
+import"./shared-frame-DeSSgTpM.js";import{Ks as e}from"./shared-0-D23kmOCB.js";import"./shared-25-DapkFWlH.js";function t(t){return t?.is_error===!0&&t.meta?.error_type==="tool_error"&&e(t.structured_content)&&Object.keys(t.structured_content).length>0}export{t};

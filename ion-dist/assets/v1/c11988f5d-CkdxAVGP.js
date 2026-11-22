@@ -1,0 +1,1 @@
+import{t as e}from"./c9c0413df-C5CxxFD7.js";import{Ht as t,Xt as n}from"./shared-206-DmJmFrn0.js";function r(e,r){let i=n(e);return i==="draft"||i==="open"&&!t(r)}function i(t){if(typeof t=="string"&&t!=="")try{let n=new URL(t);return n.protocol==="https:"?e(n.href)??void 0:void 0}catch{return}}export{r as _SC,i as t};

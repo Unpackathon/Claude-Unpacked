@@ -1,0 +1,1 @@
+function e(e){return e>=8e3?e>=32e3?"ge_32k":"8k-31999":e>=500?e>=2e3?"2k-7999":"500-1999":e>=50?e>=200?"200-499":"50-199":e>=10?"10-49":"1-9"}function t(t,n){return typeof t=="number"&&t>=1?{history_rows:t,history_rows_bucket:e(t),history_rows_unit:n}:null}export{t};
